@@ -105,12 +105,12 @@
                     <div class="row">
                       <div class="col-lg-6">
                       <div class="card-head-row card-tools-still-right">
-                      <div class="card-title">Equipments</div>
+                      <div class="card-title">Leads</div>
                       
                     </div>
                       </div>
                       <div class="col-lg-6 text-end">
-                      <a href="#" class="btn greybtn">View Equipments</a>
+                      <a href="#" class="btn greybtn">View Leads</a>
                       </div>
                     </div>
                     

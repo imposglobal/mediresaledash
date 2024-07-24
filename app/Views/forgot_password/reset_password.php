@@ -71,16 +71,29 @@
   color: #7D7D7D;
 }
 
+.pr-60
+{
+    padding-right:260px !important;
+}
+
+.forgotblock
+{
+    background-color: #ebebeb;
+    padding: 40px 10px;
+    border-radius: 20px;
+}
  </style>
 </head>
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-       
-        <div class="col-lg-8 mx-auto d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
-            <img src="<?= base_url('assets/img/logo.png'); ?>" width="320" class="mb-4">
-            <h1 class="mb-4 loginheading">Reset Password</h1>
+    <div class="row d-flex flex-column justify-content-center align-items-center"  style="height: 100vh;">
+        
+       <div class="col-lg-4 mx-auto text-center">
+        <img src="<?= base_url('assets/img/logo.png');?>" width="320" class="mb-4">
+        </div>
+        <div class="col-lg-4 mx-auto forgotblock">
+            <h1 class="mb-5 loginheading text-center">Reset Password</h1>
            <!-- flash message code -->
            <?php if (session()->has('success')): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -92,17 +105,17 @@
                 <?php endif; ?>
             <!-- flash message code end-->
             <form id="updatePasswordForm" action="<?php echo base_url('/update_password') ?>" method="POST">
-                <div class="mb-5">
-                    <label for="password" class="form-label"><strong>Enter new Password</strong></label>
+                <div class="mb-5 d-flex flex-column justify-content-center align-items-center">
+                    <label for="password" class="form-label pr-60"><strong>Enter new Password</strong></label>
                     <input type="password" name="new_password" class="form-control formclass" id="" required>
                 </div>
 
-                <div class="mb-5">
-                    <label for="password" class="form-label"><strong>Confirm Password</strong></label>
+                <div class="mb-5 d-flex flex-column justify-content-center align-items-center">
+                    <label for="password" class="form-label pr-60"><strong>Confirm Password</strong></label>
                     <input type="password" name="confirm_password" class="form-control formclass" id="" required>
                 </div>
                
-                <div class="mb-5 text-center">
+                <div class="text-center">
                 <input type="hidden"  name="id" id="id" class="form-control" value="<?php echo $id;?>">  
                 <button type="submit" class="btn btn-blue">Submit</button>
                 </div>

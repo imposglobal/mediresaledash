@@ -71,6 +71,18 @@
   color: #7D7D7D;
 }
 
+.forgotblock
+{
+    background-color: #ebebeb;
+    padding: 40px 10px;
+    border-radius: 20px;
+}
+
+.pr-60
+{
+    padding-right:260px !important;
+}
+
  </style>
  
 
@@ -78,11 +90,13 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-       
-        <div class="col-lg-8 mx-auto d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
-            <img src="<?= base_url('assets/img/logo.png'); ?>" width="320" class="mb-4">
-            <h1 class="mb-4 loginheading">Forgot Password</h1>
+    <div class="row d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-lg-4 mx-auto text-center">
+        <img src="<?= base_url('assets/img/logo.png'); ?>" width="320" class="mb-4">
+        </div>
+        <div class="col-lg-4 mx-auto text-center forgotblock">
+            
+            <h1 class="mb-5 loginheading">Forgot Password</h1>
             <!-- flash message code -->
             <?php if (session()->has('msg')): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -94,14 +108,15 @@
             <?php endif; ?>
             <!-- flash message code end-->
             <form action="<?php echo base_url('/send_email') ?>" method="POST">
-                <div class="mb-5">
-                    <label for="email" class="form-label"><strong>Enter your email</strong></label>
-                    <input type="email" name="email" class="form-control formclass" id="" required>
+               
+                <div class="mb-5  d-flex flex-column justify-content-center align-items-center">
+                    <label for="email" class="form-label pr-60"><strong>Enter Your Email ID</strong></label>
+                    <input type="email" name="email" class="form-control formclass"  placeholder="e.g. dansmith@gmail.com" required>
                 </div>
                
               
 
-                <div class="mb-5 text-center">
+                <div class="text-center">
                 <button type="submit" class="btn btn-blue">Submit</button>
                 </div>
                

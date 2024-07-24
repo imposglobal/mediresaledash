@@ -113,7 +113,7 @@
         </div>
         <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
             <img src="<?= base_url('assets/img/logo.png'); ?>" width="320" class="mb-4">
-            <h1 class="mb-4 loginheading">LOG IN</h1>
+            <h1 class="mb-4 pt-5 loginheading">LOG IN</h1>
              <!-- flash message code -->
              <?php if (session()->has('msg')): ?>
              <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -134,7 +134,7 @@
                     <input type="password" name="password"  class="form-control formclass" id="" required>
                 </div>
                 <div class="mb-5 text-end">
-                <a href="<?php echo base_url('/forgot_password') ?>" class="grey-text">Forgot Password?</a>
+                <a href="<?php echo base_url('/forgot_password') ?>" class="text-danger">Forgot Password?</a>
                 </div>
               
 
