@@ -124,93 +124,29 @@ class Property extends BaseController
     }
 
 
-   
+// public function view_all_property(): string
+// {
+//      if(!session()->get('isLoggedIn'))
+//          return redirect()->to('/');
 
-
-    /************************************ function to add property ******************************* */
-
-//     public function add_property()
-//    {
+         
 //     $PropertyModel = new PropertyModel();
-   
-
-//     // Handle multiple file uploads
-//     $images = $this->request->getFiles();
-//     $validImages = [];
-//     $imageNames = [];
-
-//     // Check if 'equipment_image' field exists
-//     if (isset($images['equipment_image'])) {
-//         foreach ($images['equipment_image'] as $file) {
-//             if ($file->isValid() && !$file->hasMoved()) {
-//                 $newName = $file->getRandomName();
-//                 $file->move(WRITEPATH . '../assets/uploads', $newName);
-//                 $imageNames[] = $newName; // Store the new name of the file
-//             } else {
-//                 // Log or handle file upload errors
-//                 log_message('error', 'File upload error: ' . $file->getErrorString());
-//             }
-//         }
-//     } else {
-//         log_message('error', 'No files uploaded');
-//     }
-
-//     // Convert array of image names to a comma-separated string
-//     $imageNamesString = !empty($imageNames) ? implode(',', $imageNames) : null;
-
-
-//     $StateModel = new StateModel();
-//     $CityModel = new CityModel();
-
-//     $stateId = $this->request->getPost('state');
-//     $cityId = $this->request->getPost('city');
-
-//     // Fetch state name
-//     $state = $StateModel->where('id', $stateId)->first();
-//     $stateName = $state['name'] ?? 'state not found.';
-
-//     // Fetch city name
-//     $city = $CityModel->select('cities.city as city_name')
-//                       ->join('states', 'cities.state_id = states.id')
-//                       ->where('cities.id', $cityId)
-//                       ->first();
-//     $cityName = $city['city_name'] ?? 'City not found.';
-
-    
-//     // Get data from the form and map it to the database fields
-//     $data = [
-//         'name' => $this->request->getPost('name'),
-//         'description' => $this->request->getPost('description'),
-//         'state' => $stateName,
-//         'city' => $cityName,
-//         'zipcode' => $this->request->getPost('zipcode'),
-//         'address' => $this->request->getPost('address'),
-//         'built_year' => $this->request->getPost('built_year'),
-//         'total_area' => $this->request->getPost('total_area'),
-//         'price' => $this->request->getPost('price'),
-//         'parking' => $this->request->getPost('parking'),
-//         'equipment_image' => $imageNamesString
-//     ];
-
-//     // Save data to the database
-//     if ($PropertyModel->save($data)) {
-//         return $this->response->setJSON(['status' => 'success', 'message' => 'Property added successfully']);
-//     } else {
-//         return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to add property'], 500);
-//     }
+//     $data['properties'] =  $PropertyModel->findAll();
+//     return view('property/view_all_property', $data);
 // }
 
 
 public function view_all_property(): string
 {
-
-     //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
-     if(!session()->get('isLoggedIn'))
-         return redirect()->to('/');
-
-         
+    if(!session()->get('isLoggedIn'))
+    return redirect()->to('/');
     $PropertyModel = new PropertyModel();
-    $data['properties'] =  $PropertyModel->findAll();
+    
+    $data = [
+        'properties' => $PropertyModel->paginate(3),
+        'pager' => $PropertyModel->pager
+    ];
+    
     return view('property/view_all_property', $data);
 }
 

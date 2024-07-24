@@ -122,6 +122,17 @@
                         </tbody>
                       </table>
                     </div>
+
+                     <!-- Pagination -->
+    <div class="d-flex justify-content-end">
+    <?php if ($pager) :?>
+        <?php $pagi_path='/view_all_property'; ?>
+        <?php $pager->setPath($pagi_path); ?>
+        <nav aria-label="Page navigation">
+            <?= $pager->links() ?>
+        </nav>
+    <?php endif ?>
+   </div>
                   </div>
                 </div>
               </div>

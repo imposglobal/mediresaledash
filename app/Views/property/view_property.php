@@ -10,30 +10,26 @@
    
 <div class="container">
     <div class="page-inner">
-        <div class="page-header">
-            <h3 class="fw-bold mb-3">View Property</h3>
+        <div class="page-header">      
             <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
-                    <a href="#">
-                        <i class="icon-home"></i>
+                    <a href="<?php echo base_url('dashboard')?>">
+                    Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">View Property</a>
                 </li>
             </ul>
+            <h3 class="fw-bold mt-4">Property</h3>
         </div>
 
-        <div class="row">
+        <div class="row carouselbox">
   <?php if (!empty($viewproperty) && is_array($viewproperty)): ?>
     <?php foreach ($viewproperty as $item): ?>
       <div class="col-md-6">
@@ -68,11 +64,7 @@
 
       <div class="col-md-6">
         <div class="card-body">
-          <div class="d-flex">
-            <div class="avatar">
-              <img src="<?= base_url('assets/img/logo-small.png'); ?>" alt="..." class="avatar-img rounded-circle" />
-            </div>
-          </div>
+         
           <div class="separator-solid"></div>
           <p class="card-category text-info mb-1">
             <a href="#">2024-12-24</a>
@@ -81,24 +73,51 @@
             <a href="#"><?= esc($item['name']) ?> </a>
           </h3>
          
-          <?= esc($item['state']) ?>, <?= esc($item['city']) ?>
+        
          
-          <p class="card-text">
+          <p class="card-text mt-3 mb-4">
           <?= esc(strip_tags($item['description'])) ?>
           </p>
-          <div class="d-flex">
-            <div class="info-post">
-              <span class="textgrey">Zip-Code</span> - <span class="ms-2 fs16"><?= esc($item['zipcode']) ?></span>
-              <br>
-              <span class="textgrey">Total Area</span> - <span class="ms-2 fs16"><?= esc($item['total_area']) ?></span>
-              <br>
-              <span class="textgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></span>
-              <br>
-              <span class="textgrey">Parking</span> - <span class="ms-2 fs16"><?= esc($item['parking']) ?></span>
-              <br>
-              <span class="textgrey">Built Year</span> - <span class="ms-2 fs16"><?= esc($item['built_year']) ?></span>
+      
+
+          <div class="row">
+            <div class="col-lg-6">
+            <span class="textgrey">State</span> - <span class="ms-2 fs16"><?= esc($item['state']) ?></span>
             </div>
+            <div class="col-lg-6"><span class="textgrey">City</span> - <span class="ms-2 fs16"><?= esc($item['city']) ?></div>   
           </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+            <span class="textgrey">Zip-Code</span> - <span class="ms-2 fs16"><?= esc($item['zipcode']) ?></span>
+            </div>
+            <div class="col-lg-6"><span class="textgrey">Total Area</span> - <span class="ms-2 fs16"><?= esc($item['total_area']) ?></div>
+            
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+            <span class="textgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></span>
+            </div>
+            <div class="col-lg-6"><span class="textgrey">Built Year</span> - <span class="ms-2 fs16"><?= esc($item['built_year']) ?></div>
+            
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+            <span class="textgrey">Parking</span> - <span class="ms-2 fs16"><?= esc($item['parking']) ?></span>
+            </div>
+            
+            
+          </div>
+
+         
+
+          
+
+          
+
+
+          
         </div>
       </div>
     <?php endforeach; ?>

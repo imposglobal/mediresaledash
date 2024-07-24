@@ -210,13 +210,14 @@ padding: 12.5px 10px !important;
 .textgrey
 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.6; 
 }
 
 .fs16
 {
     font-size: 16px;
+    color: #4664AE;
 }
 
 .card-stats .card-title {
@@ -252,4 +253,56 @@ padding: 12.5px 10px !important;
 .fs18
 {
     font-size: 18px !important;
+}
+
+.carouselbox
+{
+    background-color: #fff;
+    padding: 30px !important;
+    border-radius: 15px !important;
+    margin: 20px !important;
+
+}
+
+.carousel-indicators [data-bs-target]
+{
+    width: 10px;
+    height: 10px;
+    background-color: #48abf7;
+    border-radius: 50%;
+  
+}
+
+/* pagination */
+
+.pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span, .pagination>li>a, .pagination>li>span {
+    border-radius: 50% !important;
+    color: #4664AE !important;
+    border-color: #4664AE !important;
+    font-size: 13px;
+
+   
+}
+
+.pagination .active a, .pagination .active span {
+    height: 20px !important;
+    width: 20px !important;
+    color: white !important; /* Ensures text is visible on the background */
+    border-radius: 50% !important;
+  
+}
+
+/* Additional styling for active page number */
+.pagination .active {
+    background-color: rgba(86,198,221,0.5) !important;
+    color: white !important; /* Ensures text is visible on the background */
+    border-radius: 50% !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.pagination .active a:hover, .pagination .active span:hover {
+  
+    color: white !important; /* Ensures text is visible on the background */
+
 }

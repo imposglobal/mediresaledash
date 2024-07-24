@@ -35,15 +35,13 @@
                     </div>
                   </div>
                   <div class="card-body">
-                   
-
+                  
                     <div class="table-responsive">
                       <table
                         id="add-row"
                         class="display table table-striped table-hover"
                       >
-                        <thead>
-                       
+                        <thead>                       
                           <tr>
                             <th>Id</th>
                             <th>Date</th>
@@ -105,18 +103,24 @@
                                     <?php else: ?>
                                         <tr><td colspan="6">No products found</td></tr>
                                     <?php endif; ?>
-                        
-
-
-
-                         
-                        
-                          
                         </tbody>
                       </table>
 
                      
                     </div>
+
+
+     <!-- Pagination -->
+    <div class="d-flex justify-content-end">
+    <?php if ($pager) :?>
+        <?php $pagi_path='/view_all_equipments'; ?>
+        <?php $pager->setPath($pagi_path); ?>
+        <nav aria-label="Page navigation">
+            <?= $pager->links() ?>
+        </nav>
+    <?php endif ?>
+   </div>
+
                   </div>
                 </div>
               </div>

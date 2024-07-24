@@ -20,26 +20,23 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h3 class="fw-bold">Add Equipment</h3>
+           
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
-                        <i class="icon-home"></i>
+                    <a href="<?php echo base_url('dashboard')?>">
+                       Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Add Equipment</a>
+                    <a href="#">Update Equipment</a>
                 </li>
             </ul>
+            <h3 class="fw-bold mt-4">Equipment</h3>
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto">

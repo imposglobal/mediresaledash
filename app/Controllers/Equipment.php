@@ -74,29 +74,31 @@ class Equipment extends BaseController
     }
     
 
-    public function view_all_equipments()
-    {
-        
-         // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
-         if(!session()->get('isLoggedIn'))
-            return redirect()->to('/');
-        $EquipmentModel = new EquipmentModel();
-        $data['equipment'] =  $EquipmentModel->findAll();
-        return view('equipments/view_all_equipments', $data);
-    }
-
-
-    //  public function view_all_equipments(): string
+    // public function view_all_equipments()
     // {
+        
+    //      // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+    //      if(!session()->get('isLoggedIn'))
+    //         return redirect()->to('/');
     //     $EquipmentModel = new EquipmentModel();
-        
-    //     $data = [
-    //         'equipment' => $EquipmentModel->paginate(3),
-    //         'pager' => $EquipmentModel->pager
-    //     ];
-        
+    //     $data['equipment'] =  $EquipmentModel->findAll();
     //     return view('equipments/view_all_equipments', $data);
     // }
+
+
+     public function view_all_equipments(): string
+    {
+        if(!session()->get('isLoggedIn'))
+        return redirect()->to('/');
+        $EquipmentModel = new EquipmentModel();
+        
+        $data = [
+            'equipment' => $EquipmentModel->paginate(3),
+            'pager' => $EquipmentModel->pager
+        ];
+        
+        return view('equipments/view_all_equipments', $data);
+    }
 
 
     public function view_equipments($id)

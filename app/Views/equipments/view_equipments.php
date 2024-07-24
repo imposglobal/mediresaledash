@@ -11,29 +11,26 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h3 class="fw-bold mb-1">View Equipment</h3>
+           
             <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
-                    <a href="#">
-                        <i class="icon-home"></i>
+                    <a href="<?php echo base_url('dashboard')?>">
+                      Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">View Equipment</a>
                 </li>
             </ul>
+            <h3 class="fw-bold mt-4">Equipment</h3>
         </div>
 
-        <div class="row">
+        <div class="row carouselbox">
   <?php if (!empty($viewequipment) && is_array($viewequipment)): ?>
     <?php foreach ($viewequipment as $item): ?>
       <div class="col-md-6">
@@ -41,11 +38,7 @@
         <div class="bootstrap-carousel">
           <div id="carouselExampleIndicators<?= $item['id'] ?>" class="carousel slide" data-bs-ride="carousel">
             <?php $images = explode(',', $item['equipment_image']); ?>
-            <!-- <ol class="carousel-indicators">
-              <?php foreach ($images as $index => $image): ?>
-                <li data-bs-target="#carouselExampleIndicators<?= $item['id'] ?>" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
-              <?php endforeach; ?>
-            </ol> -->
+           
             <div class="carousel-inner">
               <?php foreach ($images as $index => $image): ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
@@ -61,18 +54,20 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
+            <!-- <ol class="carousel-indicators">
+              <?php foreach ($images as $index => $image): ?>
+                <li data-bs-target="#carouselExampleIndicators<?= $item['id'] ?>" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
+              <?php endforeach; ?>
+            </ol> -->
           </div>
+         
         </div>
         <!-- carousel -->
       </div>
 
       <div class="col-md-6">
         <div class="card-body">
-          <div class="d-flex">
-            <div class="avatar">
-              <img src="<?= base_url('assets/img/logo-small.png'); ?>" alt="..." class="avatar-img rounded-circle" />
-            </div>
-          </div>
+        
           <div class="separator-solid"></div>
           <p class="card-category text-info mb-1">
             <a href="#">2024-12-24</a>
@@ -99,17 +94,7 @@
     <p>No property found</p>
   <?php endif; ?>
 </div>
-
-
-
-
-
-
-
-
-
-
-    </div>
+</div>
 </div>
 
 
