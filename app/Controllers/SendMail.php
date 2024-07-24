@@ -42,9 +42,9 @@ class SendMail extends BaseController
                 $message = '<div style="width: 600px; margin: 0 auto; background: #f5f5f5; padding: 20px; font-family: Arial, sans-serif;">';
                 $message .= '<p style="color: #333;">Dear ' . $name . '</p>';
                 $message .= '<p style="color: #333;">We have sent you this email in response to your request to reset your password on Mediresale.</p>';
-                $message .= '<p style="color: #333;">To reset your password, please follow the link below::</p>';
-                $message .= '<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">';
-                $message .= '<a href=" ' . $link . '" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">Reset Password</a>';
+                $message .= '<p style="color: #333;">To reset your password, please click the Reset Password button below::</p>';
+                $message .= '<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;  margin-left: -30px !important;">';
+                $message .= '<a href=" ' . $link . '" style="background-color: #007bff ; margin-left: -430px !important; color: #fff; text-decoration: none; padding: 10px 40px; border-radius: 5px; display: inline-block;">Reset Password</a>';
                 $message .= '</div>';
                 $message .= '<p style="color: #333;"></p>';
                 $message .= '<p style="color: #333;">Please ignore this email if you did not request a password change.</p>';
