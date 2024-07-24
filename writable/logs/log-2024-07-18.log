@@ -1,0 +1,396 @@
+CRITICAL - 2024-07-18 07:32:39 --> ErrorException: Undefined variable $products
+[Method: GET, Route: view_all_equipments]
+in APPPATH\Views\equipments\view_all_equipments.php on line 48.
+ 1 APPPATH\Views\equipments\view_all_equipments.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php', 48)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/view_all_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('equipments/view_all_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->view_all_equipments()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 08:19:22 --> ErrorException: Array to string conversion
+[Method: GET, Route: view_all_equipments]
+in APPPATH\Views\equipments\view_all_equipments.php on line 57.
+ 1 APPPATH\Views\equipments\view_all_equipments.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/view_all_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('equipments/view_all_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->view_all_equipments()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 08:48:55 --> ErrorException: Undefined property: App\Controllers\Home::$EquipmentModel
+[Method: GET, Route: equipments/delete_equipments/14]
+in APPPATH\Controllers\Home.php on line 86.
+ 1 APPPATH\Controllers\Home.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$EquipmentModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Home.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('14')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 08:50:29 --> ErrorException: Undefined property: App\Controllers\Home::$EquipmentModel
+[Method: GET, Route: equipments/delete_equipments/10]
+in APPPATH\Controllers\Home.php on line 86.
+ 1 APPPATH\Controllers\Home.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$EquipmentModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Home.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:28:54 --> ErrorException: Undefined property: App\Controllers\Home::$quipmentModel
+[Method: GET, Route: equipments/update_equipments/9]
+in APPPATH\Controllers\Home.php on line 107.
+ 1 APPPATH\Controllers\Home.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$quipmentModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Home.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('9')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:29:23 --> BadMethodCallException: Call to undefined method App\Models\EquipmentModel::get_equipment_by_id
+[Method: GET, Route: equipments/update_equipments/9]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Home.php(107): CodeIgniter\Model->__call('get_equipment_by_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('9')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:31:44 --> ErrorException: Undefined variable $result
+[Method: GET, Route: equipments/update_equipments/9]
+in APPPATH\Views\equipments\update_equipments.php on line 46.
+ 1 APPPATH\Views\equipments\update_equipments.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:31:50 --> ErrorException: Undefined variable $result
+[Method: GET, Route: equipments/update_equipments/12]
+in APPPATH\Views\equipments\update_equipments.php on line 46.
+ 1 APPPATH\Views\equipments\update_equipments.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:32:20 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: equipments/update_equipments/12]
+in APPPATH\Views\equipments\update_equipments.php on line 53.
+ 1 APPPATH\Views\equipments\update_equipments.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 53)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:33:13 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: equipments/update_equipments/9]
+in APPPATH\Views\equipments\update_equipments.php on line 53.
+ 1 APPPATH\Views\equipments\update_equipments.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 53)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:33:28 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/7]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('7')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:34:27 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/12]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:34:59 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/12]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:37:15 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/12]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:38:37 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/8]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:40:20 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/8]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:40:25 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/8]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:42:29 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/2]
+in APPPATH\Views\equipments\update_equipments.php on line 64.
+ 1 APPPATH\Views\equipments\update_equipments.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:42:57 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: equipments/update_equipments/8]
+in APPPATH\Views\equipments\update_equipments.php on line 58.
+ 1 APPPATH\Views\equipments\update_equipments.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:45:37 --> ErrorException: Undefined property: stdClass::$manufacture_year
+[Method: GET, Route: equipments/update_equipments/4]
+in APPPATH\Views\equipments\update_equipments.php on line 123.
+ 1 APPPATH\Views\equipments\update_equipments.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$manufacture_year', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 123)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:57:11 --> ErrorException: Undefined variable $id
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 122.
+ 1 APPPATH\Controllers\Home.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Home.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:58:31 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::edit_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 10:00:33 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::edit_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 10:00:43 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::edit_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 10:02:55 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::edit_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 10:04:22 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::edit_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: equipments/edit_equipments]
+in APPPATH\Controllers\Home.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 12:31:05 --> ErrorException: Undefined property: stdClass::$manufacture_year
+[Method: GET, Route: equipments/update_equipments/21]
+in APPPATH\Views\equipments\update_equipments.php on line 124.
+ 1 APPPATH\Views\equipments\update_equipments.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$manufacture_year', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 124)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('21')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 12:37:26 --> ErrorException: Undefined variable $editequipments
+[Method: GET, Route: view_all_equipments]
+in APPPATH\Views\equipments\view_all_equipments.php on line 70.
+ 1 APPPATH\Views\equipments\view_all_equipments.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editequipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php', 70)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/view_all_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(78): view('equipments/view_all_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->view_all_equipments()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 12:37:27 --> ErrorException: Undefined variable $editequipments
+[Method: GET, Route: view_all_equipments]
+in APPPATH\Views\equipments\view_all_equipments.php on line 70.
+ 1 APPPATH\Views\equipments\view_all_equipments.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editequipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php', 70)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\view_all_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/view_all_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(78): view('equipments/view_all_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->view_all_equipments()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 13:25:06 --> ErrorException: preg_match(): Compilation failed: unmatched closing parenthesis at offset 29
+[Method: GET, Route: equipments/update_equipments/18]
+in SYSTEMPATH\Router\Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): Compilation failed: unmatched closing parenthesis at offset 29', 'C:\\xampp\\htdocs\\mediresaleold\\system\\Router\\Router.php', 432)
+ 2 SYSTEMPATH\Router\Router.php(432): preg_match('#^equipments/update_equipments)$#u', 'equipments/update_equipments/18', [])
+ 3 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('equipments/update_equipments/18')
+ 4 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('equipments/update_equipments/18')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 13:26:02 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::update_equipments(), 0 passed in C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: equipments/update_equipments]
+in APPPATH\Controllers\Home.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 13:49:23 --> ErrorException: Undefined variable $editequipments
+[Method: GET, Route: update_equipments/20]
+in APPPATH\Views\equipments\update_equipments.php on line 40.
+ 1 APPPATH\Views\equipments\update_equipments.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editequipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 40)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(114): view('equipments/update_equipments')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('20')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

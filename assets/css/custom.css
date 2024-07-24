@@ -1,0 +1,245 @@
+body {
+    background: #fff !important;
+    font-family: "Urbanist", sans-serif !important;
+}
+
+.alert, .brand, .btn-simple, .h1, .h2, .h3, .h4, .h5, .h6, .navbar, .td-name, a, body, button.close, h1, h2, h3, h4, h5, h6, p, td {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Urbanist", sans-serif !important;
+}
+.main-header {
+    background:  #fff !important;
+}
+
+.navbar .navbar-nav .topbar-user .profile-pic {
+    color: #000 !important;
+}
+
+.logo-header[data-background-color=dark] {
+    background: #fff !important;
+}
+
+.sidebar .sidebar-wrapper, .sidebar[data-background-color=white] .sidebar-wrapper {
+background: #fff;
+}
+
+.sidebar[data-background-color=dark] .nav>.nav-item.active a:focus p, .sidebar[data-background-color=dark] .nav>.nav-item.active a:hover p, .sidebar[data-background-color=dark] .nav>.nav-item.active>a p {
+    color: #fff !important;
+}
+.sidebar
+{
+    box-shadow: none;
+    /* border-right: #fefefe dotted 1px; */
+}
+
+.nav .nav-item.active>a {
+    /* background: rgb(255 255 255 / 0%); */
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background: #56C6DD !important;
+}
+
+.sidebar .nav.nav-secondary>.nav-item.active a i, .sidebar[data-background-color=white] .nav.nav-secondary>.nav-item.active a i {
+    color: #f5f5f5 !important;
+}
+
+.sidebar[data-background-color=dark] .nav>.nav-item a {
+    color: #6B6B6B !important;
+}
+
+.sidebar .nav>.nav-item a p, .sidebar[data-background-color=white] .nav>.nav-item a p {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.sidebar .nav>.nav-item a i, .sidebar[data-background-color=white] .nav>.nav-item a i {
+    color: #6B6B6B;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.logo-small
+{
+    width: 80px !important;
+}
+
+
+.logosmall
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.card-secondary {
+    background: #213367 !important;
+}
+
+.sidebar .nav.nav-secondary>.nav-item.active a:before, .sidebar[data-background-color=white] .nav.nav-secondary>.nav-item.active a:before {
+    background: #fff !important;
+}
+
+.sidebar[data-background-color=dark] .nav .nav-item.submenu, .sidebar[data-background-color=dark] .nav .nav-item>a:focus, .sidebar[data-background-color=dark] .nav .nav-item>a:hover {
+    background: #f5f5f5;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    color: #000 !important;
+
+}
+
+.card .card-body, .card-light .card-body {
+    padding: 20px 20px;
+    
+}
+
+.card1
+{
+    background: #F58A65 !important;
+}
+
+.card2
+{
+    background: #FCD108 !important;
+}
+
+.card3
+{
+    background:#4664AF !important;
+}
+
+.card4
+{
+    background: #56C7DE !important;
+}
+
+.remove
+{
+    padding-top: 15px !important;
+}
+.avatar-title
+{
+    background-color: transparent;
+}
+
+.breadcrumbs
+{
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.main-panel .page-header
+{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.breadcrumbs li a {
+    color: #2a2f5b;
+    font-size: 16px !important;
+}
+
+.card-stats .icon-big i.fas {
+    font-size: 35px;
+}
+
+
+.card{
+    border-radius: 20px !important;
+   
+}
+
+.page-inner
+{
+    border-radius: 40px !important;
+    background-color: #F5F5F5 !important;
+}
+
+
+.main-panel>.container {
+   
+    margin-top: 90px;   
+    padding: 0  50px!important;
+}
+
+.footer {
+    border-top: none !important;
+   
+}
+
+
+.sidebar .nav, .sidebar[data-background-color=white] .nav {
+    margin-left: 20px !important;
+}
+
+.sidebar .nav .nav-section .text-section, .sidebar[data-background-color=white] .nav .nav-section .text-section {
+   
+    color: #000;
+}
+
+.btn-blue
+{
+    color: #fff;
+    background-color: #56C6DD;
+}
+.btn-blue:hover
+{
+    color: #000;
+    background-color: transparent;
+    border:2px solid #56C6DD
+}
+
+
+.card .card-action, .card-light .card-action {
+   border: none !important;
+   margin-bottom: 20px;
+}
+
+.btn-p
+{
+padding: 12.5px 10px !important;
+}
+
+
+.textgrey
+{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6; 
+}
+
+.fs16
+{
+    font-size: 16px;
+}
+
+.card-stats .card-title {
+ 
+    font-size: 30px !important;
+}
+
+.greybtn
+{
+    background-color: #dfdfdf !important;
+    border-radius: 10px;
+    color: #000;
+}
+
+.sidebar .nav.nav-secondary>.nav-item a:hover i, .sidebar .nav.nav-secondary>.nav-item a[data-toggle=collapse][aria-expanded=true] i, .sidebar[data-background-color=white] .nav.nav-secondary>.nav-item a:focus i, .sidebar[data-background-color=white] .nav.nav-secondary>.nav-item a:hover i, .sidebar[data-background-color=white] .nav.nav-secondary>.nav-item a[data-toggle=collapse][aria-expanded=true] i {
+    color: #000 !important;
+}
+
+.sidebar[data-background-color=dark] .nav>.nav-item a:hover {
+    color: #000 !important;
+}
+
+.logo-header[data-background-color] .btn-toggle, .logo-header[data-background-color] .more {
+    color: #000 !important;
+
+}

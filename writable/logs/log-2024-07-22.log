@@ -1,0 +1,382 @@
+CRITICAL - 2024-07-22 04:53:54 --> ErrorException: Undefined property: App\Controllers\Property::$propertyModel
+[Method: POST, Route: property/edit_property/10]
+in APPPATH\Controllers\Property.php on line 164.
+ 1 APPPATH\Controllers\Property.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->edit_property('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 05:16:04 --> ErrorException: Undefined property: App\Controllers\Property::$propertyModel
+[Method: POST, Route: property/edit_property/11]
+in APPPATH\Controllers\Property.php on line 165.
+ 1 APPPATH\Controllers\Property.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 165)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->edit_property('11')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 05:32:42 --> ErrorException: Undefined variable $equipment
+[Method: POST, Route: property/delete_property_image]
+in APPPATH\Controllers\Property.php on line 187.
+ 1 APPPATH\Controllers\Property.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipment', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property_image()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 05:40:37 --> ErrorException: Undefined variable $Model
+[Method: POST, Route: equipments/delete_equipment_image]
+in APPPATH\Controllers\Equipment.php on line 162.
+ 1 APPPATH\Controllers\Equipment.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Model', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Equipment.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->delete_equipment_image()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 05:54:49 --> ErrorException: Undefined variable $equipments
+[Method: GET, Route: view_all_property]
+in APPPATH\Views\property\view_all_property.php on line 59.
+ 1 APPPATH\Views\property\view_all_property.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_all_property.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_all_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/view_all_property', [], true)
+ 5 APPPATH\Controllers\Property.php(107): view('property/view_all_property', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->view_all_property()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 05:59:45 --> ErrorException: Undefined array key "title"
+[Method: GET, Route: view_property/12]
+in APPPATH\Views\property\view_property.php on line 69.
+ 1 APPPATH\Views\property\view_property.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_property.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/view_property', [], true)
+ 5 APPPATH\Controllers\Property.php(121): view('property/view_property', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->view_property('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:10:03 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: view_property/12]
+in APPPATH\Views\property\view_property.php on line 92.
+ 1 APPPATH\Views\property\view_property.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_property.php', 92)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/view_property', [], true)
+ 5 APPPATH\Controllers\Property.php(116): view('property/view_property', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->view_property('12')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:32:05 --> ErrorException: Undefined variable $PropertyModel
+[Method: GET, Route: view_equipments/2]
+in APPPATH\Controllers\Equipment.php on line 82.
+ 1 APPPATH\Controllers\Equipment.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Equipment.php', 82)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:32:26 --> ErrorException: Undefined variable $EquipmentModel
+[Method: GET, Route: view_equipments/2]
+in APPPATH\Controllers\Equipment.php on line 82.
+ 1 APPPATH\Controllers\Equipment.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $EquipmentModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Equipment.php', 82)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-22 06:32:39 --> mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 06:32:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+[Method: GET, Route: view_equipments/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:32:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:32:39 --> [Caused by] mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-22 06:34:03 --> mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 06:34:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+[Method: GET, Route: view_equipments/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:34:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:34:03 --> [Caused by] mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-22 06:37:48 --> mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 06:37:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+[Method: GET, Route: view_equipments/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:37:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:37:48 --> [Caused by] mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-22 06:37:53 --> mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 06:37:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+[Method: GET, Route: view_equipments/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:37:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 06:37:53 --> [Caused by] mysqli_sql_exception: Table 'mediresale.equipment' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `equipment`
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `equipment`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\EquipmentModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Equipment.php(82): App\Models\EquipmentModel->view_equipment_by_id('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipment->view_equipments('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipment))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

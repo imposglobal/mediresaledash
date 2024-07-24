@@ -1,0 +1,478 @@
+CRITICAL - 2024-07-19 05:37:45 --> ErrorException: Undefined variable $image
+[Method: GET, Route: update_equipments/20]
+in APPPATH\Views\equipments\update_equipments.php on line 141.
+ 1 APPPATH\Views\equipments\update_equipments.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 141)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('20')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 05:41:54 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: update_equipments/20]
+in APPPATH\Views\equipments\update_equipments.php on line 141.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 4 APPPATH\Controllers\Home.php(109): view('equipments/update_equipments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('20')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-19 06:30:52 --> mysqli_sql_exception: Unknown column 'equipement_image' in 'field list' in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `equipem...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `equipem...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `equipem...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `equipem...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\EquipmentModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Home.php(96): App\Models\EquipmentModel->equipment_delete('24')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('24')
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-19 06:30:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'equipement_image' in 'field list'
+[Method: GET, Route: equipments/delete_equipments/24]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\EquipmentModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(96): App\Models\EquipmentModel->equipment_delete('24')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('24')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 06:30:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'equipement_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = \'24\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\EquipmentModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(96): App\Models\EquipmentModel->equipment_delete('24')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('24')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 06:30:52 --> [Caused by] mysqli_sql_exception: Unknown column 'equipement_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `equipement_image`
+FROM `equipments`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\EquipmentModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(96): App\Models\EquipmentModel->equipment_delete('24')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('24')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 06:33:37 --> ErrorException: unlink(C:\xampp\htdocs\mediresaleold\assets/uploads/): Is a directory
+[Method: GET, Route: equipments/delete_equipments/24]
+in APPPATH\Models\EquipmentModel.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\mediresaleold\\assets/uploads/): Is a directory', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Models\\EquipmentModel.php', 41)
+ 2 APPPATH\Models\EquipmentModel.php(41): unlink('C:\\xampp\\htdocs\\mediresaleold\\assets/uploads/')
+ 3 APPPATH\Controllers\Home.php(96): App\Models\EquipmentModel->equipment_delete('24')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete_equipments('24')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:29:52 --> BadMethodCallException: Call to undefined method App\Models\EquipmentModel::get_equipment_images
+[Method: POST, Route: equipments/edit_equipments/28]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Home.php(157): CodeIgniter\Model->__call('get_equipment_images', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments('28')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:36:25 --> ErrorException: Attempt to read property "title" on string
+[Method: GET, Route: update_equipments/28]
+in APPPATH\Views\equipments\update_equipments.php on line 63.
+ 1 APPPATH\Views\equipments\update_equipments.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on string', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(107): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('28')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:36:36 --> ErrorException: Attempt to read property "title" on string
+[Method: GET, Route: update_equipments/28]
+in APPPATH\Views\equipments\update_equipments.php on line 63.
+ 1 APPPATH\Views\equipments\update_equipments.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on string', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\equipments\\update_equipments.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/update_equipments', [], true)
+ 5 APPPATH\Controllers\Home.php(107): view('equipments/update_equipments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->update_equipments('28')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:37:14 --> TypeError: explode(): Argument #2 ($string) must be of type string, stdClass given
+[Method: POST, Route: equipments/edit_equipments/28]
+in APPPATH\Controllers\Home.php on line 158.
+ 1 APPPATH\Controllers\Home.php(158): explode(',', Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->edit_equipments('28')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 11:46:24 --> Error: Class "App\Models\CommonModel" not found
+[Method: GET, Route: property]
+in APPPATH\Controllers\Property.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->property()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-19 11:47:53 --> mysqli_sql_exception: Table 'mediresale.states' doesn't exist in C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\mediresaleold\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\mediresaleold\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\mediresaleold\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mediresaleold\app\Models\CommonModel.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mediresaleold\app\Controllers\Property.php(14): App\Models\CommonModel->selectData('states')
+#6 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(933): App\Controllers\Property->property()
+#7 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+#8 C:\xampp\htdocs\mediresaleold\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\mediresaleold\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\mediresaleold\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\mediresaleold\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-19 11:47:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.states' doesn't exist
+[Method: GET, Route: property]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `states`', [], false)
+ 2 APPPATH\Models\CommonModel.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Property.php(14): App\Models\CommonModel->selectData('states')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->property()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 11:47:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'mediresale.states' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `states`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `states`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `states`', [], false)
+ 4 APPPATH\Models\CommonModel.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Property.php(14): App\Models\CommonModel->selectData('states')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->property()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 11:47:53 --> [Caused by] mysqli_sql_exception: Table 'mediresale.states' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `states`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `states`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `states`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `states`', [], false)
+ 5 APPPATH\Models\CommonModel.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Property.php(14): App\Models\CommonModel->selectData('states')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->property()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:04:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "equipments/view_all_property.php"
+[Method: GET, Route: view_all_property]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('equipments/view_all_property.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('equipments/view_all_property', [], true)
+ 3 APPPATH\Controllers\Property.php(100): view('equipments/view_all_property')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->view_all_property()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:11:23 --> ErrorException: Undefined variable $equipments
+[Method: GET, Route: view_all_property]
+in APPPATH\Views\property\view_all_property.php on line 59.
+ 1 APPPATH\Views\property\view_all_property.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_all_property.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\view_all_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/view_all_property', [], true)
+ 5 APPPATH\Controllers\Property.php(100): view('property/view_all_property', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->view_all_property()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:17:50 --> ErrorException: Undefined variable $PropertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:20:21 --> ErrorException: Undefined variable $propertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:20:59 --> ErrorException: Undefined variable $PropertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:21:43 --> ErrorException: Undefined variable $PropertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:23:38 --> ErrorException: Undefined property: App\Controllers\Property::$PropertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:24:40 --> ErrorException: Undefined property: App\Controllers\Property::$PropertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:27:22 --> ErrorException: Undefined property: App\Controllers\Property::$propertyModel
+[Method: GET, Route: property/delete_property/8]
+in APPPATH\Controllers\Property.php on line 105.
+ 1 APPPATH\Controllers\Property.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->delete_property('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:45:55 --> ErrorException: Undefined variable $states
+[Method: GET, Route: update_property/6]
+in APPPATH\Views\property\update_property.php on line 112.
+ 1 APPPATH\Views\property\update_property.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $states', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 112)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(120): view('property/update_property')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 12:47:12 --> ErrorException: Undefined variable $states
+[Method: GET, Route: update_property/6]
+in APPPATH\Views\property\update_property.php on line 112.
+ 1 APPPATH\Views\property\update_property.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $states', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 112)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(120): view('property/update_property')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:04:39 --> ErrorException: Undefined variable $editequipments
+[Method: GET, Route: update_property/6]
+in APPPATH\Views\property\update_property.php on line 28.
+ 1 APPPATH\Views\property\update_property.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editequipments', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(120): view('property/update_property')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:05:06 --> ErrorException: Undefined variable $editproperty
+[Method: GET, Route: update_property/6]
+in APPPATH\Views\property\update_property.php on line 28.
+ 1 APPPATH\Views\property\update_property.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editproperty', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(120): view('property/update_property')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:05:07 --> ErrorException: Undefined variable $editproperty
+[Method: GET, Route: update_property/6]
+in APPPATH\Views\property\update_property.php on line 28.
+ 1 APPPATH\Views\property\update_property.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editproperty', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(120): view('property/update_property')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:05:29 --> ErrorException: Undefined property: App\Controllers\Property::$PropertyModel
+[Method: GET, Route: update_property/6]
+in APPPATH\Controllers\Property.php on line 119.
+ 1 APPPATH\Controllers\Property.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:05:50 --> ErrorException: Undefined property: App\Controllers\Property::$PropertyModel
+[Method: GET, Route: update_property/6]
+in APPPATH\Controllers\Property.php on line 120.
+ 1 APPPATH\Controllers\Property.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$PropertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:08:24 --> BadMethodCallException: Call to undefined method App\Models\PropertyModel::get_property_by_id
+[Method: GET, Route: update_property/6]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Property.php(120): CodeIgniter\Model->__call('get_property_by_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:35:36 --> ErrorException: Undefined variable $editeproperty
+[Method: GET, Route: update_property/9]
+in APPPATH\Views\property\update_property.php on line 219.
+ 1 APPPATH\Views\property\update_property.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editeproperty', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php', 219)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\mediresaleold\\app\\Views\\property\\update_property.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('property/update_property', [], true)
+ 5 APPPATH\Controllers\Property.php(121): view('property/update_property', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->update_property('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:36:12 --> ErrorException: Undefined property: App\Controllers\Property::$equipmentModel
+[Method: POST, Route: property/edit_property/9]
+in APPPATH\Controllers\Property.php on line 164.
+ 1 APPPATH\Controllers\Property.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$equipmentModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->edit_property('9')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:47:24 --> ErrorException: Undefined array key "property_image"
+[Method: POST, Route: property/add_property]
+in APPPATH\Controllers\Property.php on line 56.
+ 1 APPPATH\Controllers\Property.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "property_image"', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->add_property()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:52:11 --> ErrorException: Undefined property: App\Controllers\Property::$propertyModel
+[Method: POST, Route: property/edit_property/10]
+in APPPATH\Controllers\Property.php on line 160.
+ 1 APPPATH\Controllers\Property.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->edit_property('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 13:52:27 --> ErrorException: Undefined property: App\Controllers\Property::$propertyModel
+[Method: POST, Route: property/edit_property/10]
+in APPPATH\Controllers\Property.php on line 160.
+ 1 APPPATH\Controllers\Property.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Property::$propertyModel', 'C:\\xampp\\htdocs\\mediresaleold\\app\\Controllers\\Property.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Property->edit_property('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Property))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
