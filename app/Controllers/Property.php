@@ -19,6 +19,10 @@ class Property extends BaseController
 
     public function property()
     {
+         //  // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+         if(!session()->get('isLoggedIn'))
+            return redirect()->to('/');
+
         $CommonModel = new CommonModel();
         $states = $CommonModel->selectData("states");
         // echo '<pre>';
@@ -199,6 +203,12 @@ class Property extends BaseController
 
 public function view_all_property(): string
 {
+
+     //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+     if(!session()->get('isLoggedIn'))
+         return redirect()->to('/');
+
+         
     $PropertyModel = new PropertyModel();
     $data['properties'] =  $PropertyModel->findAll();
     return view('property/view_all_property', $data);
