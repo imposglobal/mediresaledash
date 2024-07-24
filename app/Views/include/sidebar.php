@@ -27,11 +27,18 @@
         </div>
         <div class="sidebar-wrapper scrollbar scrollbar-inner">
           <div class="sidebar-content">
-            <div class="logosmall">
+            <!-- <div class="logosmall">
             <img src="<?= base_url('assets/img/logo-small.png'); ?>" class="logo-small">
             </div>
-            
-            <ul class="nav nav-secondary">
+             -->
+            <ul class="nav nav-secondary pt-4">
+            <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                  <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Home</h4>
+              </li>
+           
               <li class="nav-item active">
                 <a href="<?php echo base_url('dashboard')?>">
                   <i class="fas fa-home"></i>
@@ -40,6 +47,7 @@
                 </a>
                 
               </li>
+              <hr class="text-dark mt-4 mb-4">
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
@@ -62,7 +70,7 @@
                  
                 </a>
               </li>
-             
+              <hr class="text-dark mt-4 mb-4">
               <!-- property -->
 
 
@@ -90,9 +98,9 @@
                 </a>
               </li>
 
-
+              <hr class="text-dark mt-4 mb-4">
                <!-- settings -->
-              <li class="nav-section">
+              <!-- <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -106,7 +114,7 @@
                  
                 </a>
               </li>
-             
+              <hr class="text-dark mt-4 mb-4"> -->
 
 
 
