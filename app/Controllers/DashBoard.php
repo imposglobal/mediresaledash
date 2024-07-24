@@ -9,6 +9,11 @@ class DashBoard extends BaseController
     /****************************************** Dashboard Function ************************************************/
     public function dashboard()
     {
+        //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+        if(!session()->get('isLoggedIn'))
+            return redirect()->to('/');
+
+
         $EquipmentModel = new EquipmentModel();
         $PropertyModel = new PropertyModel();
 

@@ -18,8 +18,14 @@ class Equipment extends BaseController
 
    
 
-    public function equipments(): string
+    public function equipments()
     {
+
+        
+        //  // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+          if(!session()->get('isLoggedIn'))
+            return redirect()->to('/');
+
         return view('equipments/add_equipments');
     }
 
@@ -68,8 +74,12 @@ class Equipment extends BaseController
     }
     
 
-    public function view_all_equipments(): string
+    public function view_all_equipments()
     {
+        
+         // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+         if(!session()->get('isLoggedIn'))
+            return redirect()->to('/');
         $EquipmentModel = new EquipmentModel();
         $data['equipment'] =  $EquipmentModel->findAll();
         return view('equipments/view_all_equipments', $data);
@@ -89,7 +99,7 @@ class Equipment extends BaseController
     // }
 
 
-    public function view_equipments($id): string
+    public function view_equipments($id)
     {
         $EquipmentModel = new EquipmentModel();
         $data['viewequipment'] = $EquipmentModel->view_equipment_by_id($id);
