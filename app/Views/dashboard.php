@@ -7,13 +7,8 @@
           <div class="page-inner">
             <div
               class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
-            >
-            
-              
+            >             
             </div>
-
-
-
             <div class="row">
               <div class="col-sm-6 col-md-3">
                 <div class="card card-stats card-primary card-round skew-shadow card1">
@@ -103,14 +98,15 @@
                 <div class="card card-round">
                   <div class="card-header">
                     <div class="row">
-                      <div class="col-lg-6">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                      
                       <div class="card-head-row card-tools-still-right">
                       <div class="card-title">Leads</div>
                       
                     </div>
                       </div>
-                      <div class="col-lg-6 text-end">
-                      <a href="#" class="btn greybtn">View Leads</a>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-end">
+                      <a href="#" class="btn greybtn leads">View Leads</a>
                       </div>
                     </div>
                     
