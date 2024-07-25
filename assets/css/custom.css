@@ -316,3 +316,47 @@ padding: 12.5px 10px !important;
 {
   color: #000 !important;
 }
+
+.avatar-sm {
+    width: 2.1rem !important;
+    height: 2.1rem !important;
+}
+.profile-pic span {
+    font-size: 20px !important;
+    color: #6B6B6B !important;
+}
+
+
+
+
+/* responsive design */
+
+@media screen and (min-width: 576px)
+{
+    .logoutbtn
+    {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 576px)
+{
+    .logoutbtn
+    {
+        display: block !important;
+    }
+
+    .main-panel>.container {
+      
+        padding: 0 15px !important;
+    }
+    .leads
+    {
+        padding: 5px 10px !important;
+    }
+    .reshidden
+    {
+        display: none !important;
+    }
+}
