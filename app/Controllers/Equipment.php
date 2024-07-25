@@ -86,7 +86,7 @@ class Equipment extends BaseController
     // }
 
 
-     public function view_all_equipments(): string
+     public function view_all_equipments()
     {
         if(!session()->get('isLoggedIn'))
         return redirect()->to('/');

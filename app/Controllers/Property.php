@@ -136,7 +136,7 @@ class Property extends BaseController
 // }
 
 
-public function view_all_property(): string
+public function view_all_property()
 {
     if(!session()->get('isLoggedIn'))
     return redirect()->to('/');
