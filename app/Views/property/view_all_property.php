@@ -99,7 +99,7 @@
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
-                                  class="btn mt-1 btn-link btn-danger btn-p"
+                                  class="btn btn-link btn-danger btn-p btn-remove"
                                   data-original-title="Remove"
                                   
                                 >
