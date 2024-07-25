@@ -148,23 +148,20 @@
                             </div>
                             <!--price----->
 
-                            
-
-                             <!-- Description-->
-                             <div class="col-lg-12 mt-5">
-                             <label for="description" class="labelclass">Description</label>
-                             <textarea id="editor" name="description" class="greybg"></textarea>
-                            </div>
-                            <!--Description-->
                           </div>
 
-
-
+                             <!-- TinyMCE Editor -->
+                             <div class="col-lg-12 mt-5">
+                             <label for="description" class="labelclass">Description</label>
+                             <textarea id="editor"  name="description"  class="tinymce-editor">            
+                            </textarea>
+                            </div>
+                            <!-- End TinyMCE Editor -->
 
 
                         </div>
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
+                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
                         </div>
                     </form>
                 </div>
@@ -178,16 +175,15 @@
 <!-- Include CKEditor 5 -->
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
 
-<!-- Initialize CKEditor 5 -->
+
+<!-- tiny mce editor -->
+<script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
 <script>
-  $(document).ready(function() {
-    ClassicEditor
-      .create(document.querySelector('#editor'))
-      .catch(error => {
-        console.error(error);
-      });
-  });
+tinymce.init({
+  selector: 'textarea'
+});
 </script>
+<!-- tiny mce editor -->
 
 
 <script>
@@ -275,7 +271,7 @@ document.getElementById('property_image').addEventListener('change', function(ev
                                  // Clear the form fields
                             $('#propertyForm')[0].reset();
                                 //redirect  the page
-                                window.location.href = 'http://localhost/mediresale/view_all_property';
+                                window.location.href = 'http://localhost/mediresaledash/view_all_property';
                             }
                         });
                     } else {

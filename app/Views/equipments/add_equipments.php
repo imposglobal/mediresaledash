@@ -34,18 +34,14 @@
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
-                        <i class="icon-home"></i>
+                        Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Add Equipment</a>
                 </li>
@@ -102,7 +98,7 @@
                             <!--Price -->
 
                              <!-- Description-->
-                             <div class="col-lg-12 mt-5">
+                             <!-- <div class="col-lg-12 mt-5">
                              <label for="description" class="labelclass">Description</label>
                              <div class="document-editor">
                                         <div class="document-editor__toolbar"></div>
@@ -110,11 +106,21 @@
                                             <div id="editor" class="document-editor__editable greybg"></div>
                                         </div>
                                     </div>
-                                    <textarea id="description" name="description" class="d-none"></textarea>
+                               <textarea id="description" name="description" class="d-none"></textarea>
 
-                             <!-- <textarea id="editor" name="description" class="greybg"></textarea> -->
-                            </div>
+                            </div> -->
+
                             <!--Description-->
+
+                              <!-- TinyMCE Editor -->
+                              <div class="col-lg-12 mt-5">
+                             <label for="description" class="labelclass">Description</label>
+                             <textarea id="description"  name="description"  class="tinymce-editor">            
+                            </textarea>
+                            </div>
+                            <!-- End TinyMCE Editor -->
+
+
                           </div>
                         </div>
                         <div class="card-action text-end">
@@ -147,8 +153,18 @@
 </script> -->
 
 
-<!-- Initialize CKEditor 5 with additional plugins -->
+<!-- tiny mce editor -->
+<script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
 <script>
+tinymce.init({
+  selector: 'textarea'
+});
+</script>
+<!-- tiny mce editor -->
+
+
+<!-- Initialize CKEditor 5 with additional plugins -->
+<!-- <script>
 $(document).ready(function() {
     DecoupledEditor
         .create(document.querySelector('#editor'))
@@ -165,7 +181,7 @@ $(document).ready(function() {
             console.error(error);
         });
 });
-</script>
+</script> -->
 
 
 <script>
@@ -246,7 +262,7 @@ document.getElementById('equipment_image').addEventListener('change', function(e
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 // Redirect the page
-                                window.location.href = 'http://localhost/mediresale/view_all_equipments';
+                                window.location.href = 'http://localhost/mediresaledash/view_all_equipments';
                             }
                         });
                     } else {
