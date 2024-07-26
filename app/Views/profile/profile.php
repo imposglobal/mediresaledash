@@ -47,48 +47,46 @@
                     <div class="card-header">
                         <div class="card-title">Update Profile</div>
                     </div>
-                    <form id="propertyForm" method="POST" enctype="multipart/form-data">
+                    <form id="profileForm" method="POST" enctype="multipart/form-data">
                         <div class="card-body">
                          
-                           
-                          <div class="row mt-4">
-                             <!-- name -->
-                            <div class="col-lg-6">
-                            <label for="title" class="labelclass">Name</label>
-                            <input type="text" class="form-control greybg" name="name" placeholder="" />
+                        <?php if (!empty($success)): ?>
+                            <p style="color: green;"><?= esc($success) ?></p>
+                        <?php endif; ?>   
+
+                            <div class="row mt-4">
+                                <!-- name -->
+                                <div class="col-lg-6">
+                                    <label for="name" class="labelclass">First Name</label>
+                                    <input type="text" class="form-control greybg" name="name" value="<?= esc($user['name']) ?>" placeholder="" />
+                                </div>
+                                <!-- lname -->
+                                <div class="col-lg-6">
+                                    <label for="lname" class="labelclass">Last Name</label>
+                                    <input type="text" class="form-control greybg" name="lname" value="<?= esc($user['lname']) ?>" placeholder="" />
+                                </div>
                             </div>
-                        </div>
-                            <!-- name -->
+                            
 
-                           
-
-
-                          <div class="row mt-4">
-                            <!-- Email -->
-                            <div class="col-lg-6">
-                            <label for="address" class="labelclass">Email</label>
-                            <input type="text" class="form-control greybg" name="address" placeholder="">
-                            </div>  
-                              <!-- Email -->                       
-                          </div>
-                         
-                        
-
-                          
-
-                         <div class="row mt-4">
-                             <!-- Password-->
-                            <div class="col-lg-6">
-                                <label for="price" class="labelclass">Password</label>
-                                <input type="text" class="form-control greybg" name="price" placeholder="">
+                            <div class="row mt-4">
+                                 <!-- email -->
+                                <div class="col-lg-6">
+                                    <label for="email" class="labelclass">Email</label>
+                                    <input type="text" class="form-control greybg" name="email" value="<?= esc($user['email']) ?>" placeholder="">
+                                 </div> 
+                                 <!-- Password-->
+                                <div class="col-lg-6">
+                                    <label for="password" class="labelclass">Password</label>
+                                    <input type="text" class="form-control greybg" name="password" value="<?= esc($user['password']) ?>" placeholder="">
+                                 </div>
+                                <!--Password----->
                             </div>
-                            <!--Password----->
-                        </div>
-
                           </div>
                         </div>
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Profile</button>
+                        <input type="hidden"  name="id" id="id" class="form-control" value="<?= esc($user['id']) ?>">  
+
+                            <button  class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Profile</button>
                         </div>
                     </form>
                 </div>
@@ -98,38 +96,25 @@
 </div>
 
 <!-- Include jQuery if not already included -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-<!-- Include CKEditor 5 -->
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script> -->
-
-
-<!-- tiny mce editor -->
-<!-- <script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
-<script>
-tinymce.init({
-  selector: 'textarea'
-});
-</script> -->
-<!-- tiny mce editor -->
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- update profile -->
 <script>
     $(document).ready(function() {
-        $('#propertyForm').on('submit', function(e) {
+        $('#profileForm').on('submit', function(e) {
             e.preventDefault();
 
             var formData = new FormData(this);
 
             $.ajax({
-                url: '<?php echo base_url('property/add_property') ?>',
+                url: '<?php echo base_url('/update_profile') ?>',
                 type: 'POST',
                 data: formData,
                 processData: false,
                 contentType: false,
                 success: function(response) {
+                    console.log(response)
                     if (response.status === 'success') {
                         Swal.fire({
                             icon: 'success',
@@ -139,9 +124,9 @@ tinymce.init({
                             if (result.isConfirmed) {
 
                                  // Clear the form fields
-                            $('#propertyForm')[0].reset();
+                            $('#profileForm')[0].reset();
                                 //redirect  the page
-                                window.location.href = 'http://localhost/mediresaledash/view_all_property';
+                                window.location.href = 'http://localhost/mediresaledash/profile';
                             }
                         });
                     } else {

@@ -55,7 +55,11 @@ $routes->post('/property/edit_property/(:num)', 'Property::edit_property/$1');
 $routes->post('/property/delete_property_image', 'Property::delete_property_image');
 
 //profile
-$routes->get('/profile', 'Profile::profile');
+// $routes->get('/profile', 'Profile::profile');
+$routes->get('/profile', 'Profile::profile_show');
+$routes->post('/update_profile', 'Profile::update_profile');
+
+
 
 
 
