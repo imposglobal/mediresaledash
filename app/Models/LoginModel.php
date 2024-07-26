@@ -7,7 +7,8 @@ class LoginModel extends Model{
     protected $table = 'registration';
     protected $primarykey = 'id';
     protected $allowedFields = [
-        'name',       
+        'name',
+        'lname',       
         'email', 
         'password',
         'created_at'
