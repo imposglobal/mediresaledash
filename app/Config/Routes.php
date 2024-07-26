@@ -25,7 +25,6 @@ $routes->get('reset_password/(:num)', 'ResetPassword::reset_password/$1');
 // Update password functionality route
 $routes->post('update_password', 'ResetPassword::update_password');
 
-
 // dashboard
 $routes->get('dashboard', 'Dashboard::dashboard');
 
@@ -49,13 +48,14 @@ $routes->POST('/property/add_property', 'Property::add_property');
 $routes->POST('cities', 'Property::cities');
 // $routes->get('/view_all_property', 'Property::view_all_property');
 $routes->match(['get', 'post'], '/view_all_property', 'Property::view_all_property');
-
 $routes->get('/view_property/(:num)', 'Property::view_property/$1');
 $routes->get('/property/delete_property/(:num)', 'Property::delete_property/$1');
 $routes->get('/update_property/(:num)', 'Property::update_property/$1');
 $routes->post('/property/edit_property/(:num)', 'Property::edit_property/$1');
 $routes->post('/property/delete_property_image', 'Property::delete_property_image');
 
+//profile
+$routes->get('/profile', 'Profile::profile');
 
 
 
