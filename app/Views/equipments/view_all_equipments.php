@@ -33,8 +33,23 @@
                       <h4 class="card-title">Equipment List</h4>
                      
                     </div>
+                     <!-- Search Form -->
+                        <form method="POST" action="<?= base_url('view_all_equipments') ?>">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" name="search" class="form-control" placeholder="Search here..." value="">
+                                </div>
+                               
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End of Search Form -->
                   </div>
                   <div class="card-body">
+
+                 
                   
                     <div class="table-responsive">
                       <table
