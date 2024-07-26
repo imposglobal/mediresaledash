@@ -142,6 +142,7 @@ class Equipment extends BaseController
 
     public function update_equipments($id) {
         $data['editequipments'] = $this->equipmentModel->get_equipment_by_id($id);
+        
         return view('equipments/update_equipments', $data);
     }
 

@@ -138,7 +138,6 @@
 <!-- Include CKEditor 5 -->
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script> -->
 
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/decoupled-document/ckeditor.js"></script>
 
 
 <!-- Initialize CKEditor 5 -->

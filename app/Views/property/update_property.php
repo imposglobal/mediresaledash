@@ -93,15 +93,11 @@
                             <!-- address -->
                             <div class="col-lg-12">
                             <label for="address" class="labelclass">Adderess</label>
-                            <textarea class="form-control greybg" name="address" rows="4" cols="50"><?= htmlspecialchars($editproperty->address); ?></textarea>
+                            <input type="text"  class="form-control greybg" name="address" value="<?= htmlspecialchars($editproperty->address); ?>" rows="4" cols="50"></input>
                             </div>  
                               <!-- adderess -->                       
                           </div>
                         
-
-                         
-
-
                           <div class="row mt-5">
                             <!--zipcode-->
                             <div class="col-lg-4">
@@ -151,22 +147,25 @@
                             
 
                              <!-- Description-->
+                             <!-- <div class="col-lg-12 mt-5">
+                             <label for="description" class="labelclass">Description</label>
+                             <textarea id="editor" name="description" class="greybg"></textarea>
+                            </div> -->
+                            <!--Description-->
+
+                             <!-- TinyMCE Editor -->
                              <div class="col-lg-12 mt-5">
                              <label for="description" class="labelclass">Description</label>
-                             <textarea id="editor" name="description" class="greybg"><?= htmlspecialchars($editproperty->description); ?></textarea>
+                             <textarea id="description"  name="description"  class="tinymce-editor"><?= htmlspecialchars($editproperty->description); ?></textarea>
                             </div>
-                            <!--Description-->
+                            <!-- End TinyMCE Editor -->
+
                           </div>
 
-
-
-
-
-                          
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->id); ?>">
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
+                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
                         </div>
                     </form>
                     <?php endif; ?>
@@ -179,10 +178,10 @@
 <!-- Include jQuery if not already included -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Include CKEditor 5 -->
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script> -->
 
 <!-- Initialize CKEditor 5 -->
-<script>
+<!-- <script>
   $(document).ready(function() {
     ClassicEditor
       .create(document.querySelector('#editor'))
@@ -190,7 +189,16 @@
         console.error(error);
       });
   });
+</script> -->
+
+<!-- tiny mce editor -->
+<script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
+<script>
+tinymce.init({
+  selector: 'textarea'
+});
 </script>
+<!-- tiny mce editor -->
 
 
 <script>
