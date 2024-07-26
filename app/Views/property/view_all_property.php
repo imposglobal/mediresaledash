@@ -8,7 +8,7 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header">
-              <h3 class="fw-bold">View Equipment</h3>
+            <h3 class="fw-bold">View Property</h3>
               <ul class="breadcrumbs">
                 <li class="nav-home">
                   <a href="#">
