@@ -7,13 +7,7 @@
       
         <div class="container">
           <div class="page-inner">
-<<<<<<< HEAD
             <div class="page-header">         
-=======
-            <div class="page-header">
-
-            <h3 class="fw-bold">View Property</h3>
->>>>>>> origin/krushna
               <ul class="breadcrumbs">
                 <li class="nav-home">
                   <a href="#">
