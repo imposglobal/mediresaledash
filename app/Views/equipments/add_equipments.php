@@ -1,7 +1,7 @@
 <?= $this->extend('layout/layout') ?>
 <?= $this->section('content') ?>
 <style>
-    .greybg
+.greybg
 {
     background-color: #f5f5f5 !important;
     border:none;
@@ -15,17 +15,6 @@
     font-size:16px !important;
     margin-bottom:10px !important;
 }
-
-.document-editor__toolbar {
-        border: 1px solid #ccc;
-        border-bottom: none;
-        padding: 5px;
-    }
-
-    .document-editor__editable-container {
-        border: 1px solid #ccc;
-    }
-
 </style>
 <div class="container">
     <div class="page-inner">
@@ -47,7 +36,14 @@
                 </li>
             </ul>
 
-            <h3 class="fw-bold mt-4">Equipment</h3>
+
+            <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Equipment</h3></div>
+                <div class="col-lg-4 text-end">
+                <button class="btn btn-blue mt-4 addbtndesk" id="add_equipment"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
+                </div>
+            </div>
+
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -65,7 +61,7 @@
                             </div>
                              <!-- image -->
                              <!-- title -->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="title" placeholder="Enter title" />
                             </div>
@@ -76,7 +72,7 @@
                               <!-- preview -->
                           </div>
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--Serial Number  -->
                             <div class="col-lg-4">
                             <label for="serial_number" class="labelclass">Serial Number</label>
@@ -84,36 +80,23 @@
                             </div>
                              <!-- Serial Number -->
                              <!-- manifacture year -->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="manifacture_year" class="labelclass">Manufacture Year</label>
                             <input type="text" class="form-control greybg" name="manifacture_year" placeholder="Year" />
                             </div>
                             <!-- manifacture year -->
 
                               <!-- Price-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" placeholder="Price" />
                             </div>
                             <!--Price -->
 
-                             <!-- Description-->
-                             <!-- <div class="col-lg-12 mt-5">
-                             <label for="description" class="labelclass">Description</label>
-                             <div class="document-editor">
-                                        <div class="document-editor__toolbar"></div>
-                                        <div class="document-editor__editable-container">
-                                            <div id="editor" class="document-editor__editable greybg"></div>
-                                        </div>
-                                    </div>
-                               <textarea id="description" name="description" class="d-none"></textarea>
-
-                            </div> -->
-
-                            <!--Description-->
+                             
 
                               <!-- TinyMCE Editor -->
-                              <div class="col-lg-12 mt-5">
+                              <div class="col-lg-12 inputmargintop">
                              <label for="description" class="labelclass">Description</label>
                              <textarea id="description"  name="description"  class="tinymce-editor">            
                             </textarea>
@@ -124,7 +107,7 @@
                           </div>
                         </div>
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
+                            <button class="btn btn-blue addbtnres" id="add_equipment"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
                         </div>
                     </form>
                 </div>
@@ -136,21 +119,6 @@
 <!-- Include jQuery if not already included -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Include CKEditor 5 -->
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script> -->
-
-
-
-<!-- Initialize CKEditor 5 -->
-<!-- <script>
-  $(document).ready(function() {
-    ClassicEditor
-      .create(document.querySelector('#editor'))
-      .catch(error => {
-        console.error(error);
-      });
-  });
-</script> -->
-
 
 <!-- tiny mce editor -->
 <script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
@@ -162,26 +130,8 @@ tinymce.init({
 <!-- tiny mce editor -->
 
 
-<!-- Initialize CKEditor 5 with additional plugins -->
-<!-- <script>
-$(document).ready(function() {
-    DecoupledEditor
-        .create(document.querySelector('#editor'))
-        .then(editor => {
-            const toolbarContainer = document.querySelector('.document-editor__toolbar');
-            toolbarContainer.appendChild(editor.ui.view.toolbar.element);
 
-            // Update hidden textarea on editor change
-            editor.model.document.on('change:data', () => {
-                document.querySelector('#description').value = editor.getData();
-            });
-        })
-        .catch(error => {
-            console.error(error);
-        });
-});
-</script> -->
-
+<!-- preview image -->
 
 <script>
 document.getElementById('equipment_image').addEventListener('change', function(event) {
@@ -239,12 +189,21 @@ document.getElementById('equipment_image').addEventListener('change', function(e
 });
 </script>
 
+
+<!-- ajax add equipment -->
+
+
 <script>
     $(document).ready(function() {
-        $('#equipmentForm').on('submit', function(e) {
+        $('#add_equipment').on('click', function(e) {
             e.preventDefault();
 
-            var formData = new FormData(this);
+            // Update TinyMCE editor content
+            tinymce.triggerSave();
+
+            // Collect form data
+            var form = $('#equipmentForm')[0];
+            var formData = new FormData(form);
 
             $.ajax({
                 url: '<?php echo base_url('equipments/add_equipments') ?>',

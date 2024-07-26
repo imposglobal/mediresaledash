@@ -20,26 +20,29 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h3 class="fw-bold">Add Equipment</h3>
+            <h3 class="fw-bold">Add Property</h3>
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
-                        <i class="icon-home"></i>
+                    Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Add Property</a>
                 </li>
             </ul>
+
+            <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Property</h3></div>
+                <div class="col-lg-4 text-end">
+                <button class="btn btn-blue mt-4 addbtndesk" id="add_property"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -57,7 +60,7 @@
                             </div>
                              <!-- image -->
                              <!-- title -->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="name" placeholder="Enter title" />
                             </div>
@@ -69,7 +72,7 @@
                           </div>
 
 
-                          <div class="row mt-4">
+                          <div class="row addressmargintop">
                             <!-- address -->
                             <div class="col-lg-12">
                             <label for="address" class="labelclass">Adderess</label>
@@ -79,7 +82,7 @@
                           </div>
                         
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--state  -->
                             <div class="col-lg-6">
                             <label for="state" class="labelclass">Select State</label>
@@ -92,7 +95,7 @@
                             </div>
                              <!-- state -->
                              <!-- city-->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="city" class="labelclass">Select City</label>
                             <select name="city" id="cityId" class="form-control greybg">
                             <option value="">Select City</option>
@@ -102,7 +105,7 @@
                           </div>
 
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--zipcode-->
                             <div class="col-lg-4">
                             <label for="zipcode" class="labelclass">Zip Code</label>
@@ -110,14 +113,14 @@
                             </div>
                              <!-- zipcode-->
                              <!-- total area-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="area" class="labelclass">Total Area</label>
                             <input type="text" class="form-control greybg" name="total_area" placeholder="Total Area">
                             </div>
                             <!--total area -->
 
                               <!--Built Year-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="Built-year" class="labelclass">Built Year</label>
                             <input type="text" class="form-control greybg" name="built_year" placeholder="Built Year">
                             </div>
@@ -129,7 +132,7 @@
 
 
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--parking-->
                             <div class="col-lg-6">
                             <label for="parking" class="labelclass">Parking</label>
@@ -142,7 +145,7 @@
                             </div>
                              <!-- parking-->
                              <!-- price-->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" placeholder="Price">
                             </div>
@@ -151,7 +154,7 @@
                           </div>
 
                              <!-- TinyMCE Editor -->
-                             <div class="col-lg-12 mt-5">
+                             <div class="col-lg-12 inputmargintop">
                              <label for="description" class="labelclass">Description</label>
                              <textarea id="editor"  name="description"  class="tinymce-editor">            
                             </textarea>
@@ -161,7 +164,7 @@
 
                         </div>
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
+                            <button class="btn btn-blue addbtnres"  id="add_property"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
                         </div>
                     </form>
                 </div>
@@ -185,7 +188,6 @@ tinymce.init({
 </script>
 <!-- tiny mce editor -->
 
-
 <script>
 document.getElementById('property_image').addEventListener('change', function(event) {
     var input = event.target;
@@ -208,14 +210,14 @@ document.getElementById('property_image').addEventListener('change', function(ev
                     var img = document.createElement('img');
                     img.src = e.target.result;
                     img.className = 'img-thumbnail';
-                    img.style.maxWidth = '150px';
+                    img.style.maxWidth = '180px';
                     img.style.margin = '10px';
 
                     var deleteIcon = document.createElement('span');
-                    deleteIcon.className = 'position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger';
+                    deleteIcon.className = 'position-absolute top-20 bottom-20 translate-middle badge rounded-pill bg-danger';
                     deleteIcon.style.cursor = 'pointer';
-                    deleteIcon.style.right = '0px';
-                    deleteIcon.style.top = '5px';
+                    deleteIcon.style.right = '30px';
+                    deleteIcon.style.top = '15px';
                     deleteIcon.innerHTML = '<i class="fa fa-times"></i>';
 
                     deleteIcon.onclick = function() {
@@ -248,10 +250,17 @@ document.getElementById('property_image').addEventListener('change', function(ev
 <!-- add equipments -->
 <script>
     $(document).ready(function() {
-        $('#propertyForm').on('submit', function(e) {
+        $('#add_property').on('click', function(e) {
             e.preventDefault();
 
-            var formData = new FormData(this);
+            // var formData = new FormData(this);
+
+             // Update TinyMCE editor content
+             tinymce.triggerSave();
+
+            // Collect form data
+            var form = $('#propertyForm')[0];
+            var formData = new FormData(form);
 
             $.ajax({
                 url: '<?php echo base_url('property/add_property') ?>',

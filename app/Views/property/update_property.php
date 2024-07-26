@@ -20,26 +20,31 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h3 class="fw-bold">Update Property</h3>
+            
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
-                        <i class="icon-home"></i>
+                    Home
                     </a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Dashboard</a>
                 </li>
-                <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                     <a href="#">Update Property</a>
                 </li>
             </ul>
+
+            <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Property</h3></div>
+                <div class="col-lg-4 text-end">
+                <button class="btn btn-blue mt-4 addbtndesk" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
+                </div>
+            </div>
+
+           
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -60,7 +65,7 @@
                                         ?>
 
                                            <?php foreach ($images as $index => $propertyimage): ?>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 col-4">
                                               
                                                 <img class="d-block w-100" src="<?= base_url('../assets/uploads/property/' . $propertyimage) ?>">
                                                 <a onclick="deleteImage('<?= $propertyimage;?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
@@ -71,13 +76,13 @@
                                 </div>
                            
                             <!-- image -->
-                            <div class="col-lg-6 mt-4">
+                            <div class="col-lg-6 inputmargintop">
                             <label for="image" class="labelclass">Image</label>
                             <input type="file" accept="image/*,.pdf" class="form-control greybg" name="property_image[]" id="property_image" multiple />
                             </div>
                              <!-- image -->
                              <!-- title -->
-                            <div class="col-lg-6 mt-4">
+                            <div class="col-lg-6 inputmargintop">
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="name" value="<?= htmlspecialchars($editproperty->name); ?>" />
                             </div>
@@ -89,7 +94,7 @@
                           </div>
 
 
-                          <div class="row mt-4">
+                          <div class="row inputmargintop">
                             <!-- address -->
                             <div class="col-lg-12">
                             <label for="address" class="labelclass">Adderess</label>
@@ -98,7 +103,7 @@
                               <!-- adderess -->                       
                           </div>
                         
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--zipcode-->
                             <div class="col-lg-4">
                             <label for="zipcode" class="labelclass">Zip Code</label>
@@ -106,14 +111,14 @@
                             </div>
                              <!-- zipcode-->
                              <!-- total area-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="area" class="labelclass">Total Area</label>
                             <input type="text" class="form-control greybg" name="total_area"  value="<?= htmlspecialchars($editproperty->total_area); ?>" placeholder="Total Area">
                             </div>
                             <!--total area -->
 
                               <!--Built Year-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="Built-year" class="labelclass">Built Year</label>
                             <input type="text" class="form-control greybg" name="built_year" value="<?= htmlspecialchars($editproperty->built_year); ?>" placeholder="Built Year">
                             </div>
@@ -125,7 +130,7 @@
 
 
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--parking-->
                             <div class="col-lg-6">
                             <label for="parking" class="labelclass">Parking</label>
@@ -138,23 +143,16 @@
                             </div>
                              <!-- parking-->
                              <!-- price-->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editproperty->price); ?>" placeholder="Price">
                             </div>
                             <!--price----->
 
-                            
 
-                             <!-- Description-->
-                             <!-- <div class="col-lg-12 mt-5">
-                             <label for="description" class="labelclass">Description</label>
-                             <textarea id="editor" name="description" class="greybg"></textarea>
-                            </div> -->
-                            <!--Description-->
 
                              <!-- TinyMCE Editor -->
-                             <div class="col-lg-12 mt-5">
+                             <div class="col-lg-12 inputmargintop">
                              <label for="description" class="labelclass">Description</label>
                              <textarea id="description"  name="description"  class="tinymce-editor"><?= htmlspecialchars($editproperty->description); ?></textarea>
                             </div>
@@ -165,7 +163,7 @@
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->id); ?>">
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
+                            <button class="btn btn-blue addbtnres" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
                         </div>
                     </form>
                     <?php endif; ?>
@@ -203,10 +201,17 @@ tinymce.init({
 
 <script>
     $(document).ready(function() {
-        $('#PropertyUpdateForm').on('submit', function(e) {
+        $('#update_property').on('click', function(e) {
             e.preventDefault();
             
-            var formData = new FormData(this);
+            // var formData = new FormData(this);
+
+             // Update TinyMCE editor content
+             tinymce.triggerSave();
+
+            // Collect form data
+            var form = $('#PropertyUpdateForm')[0];
+            var formData = new FormData(form);
 
             $.ajax({
                 url: '<?php echo base_url('property/edit_property/' . $editproperty->id); ?>',
@@ -222,7 +227,7 @@ tinymce.init({
                             text: response.message,
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                window.location.href = 'http://localhost/mediresale/view_all_property';
+                                window.location.href = 'http://localhost/mediresaledash/view_all_property';
                             }
                         });
                     } else {

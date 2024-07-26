@@ -122,7 +122,7 @@
                             <th scope="col">Date</th>
                             <th scope="col">Title</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Zip-code</th>
+                            <th scope="col">Year</th>
                             <th scope="col">Serial-Number</th>
                           </tr>
                         </thead>
@@ -132,67 +132,67 @@
                               
                              1
                             </th>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>$250.00</td>
-                            <td>$250.00</td>
+                            <td>2014-07-15</td>
+                            <td>Testing data1</td>
+                            <td>25000</td>
+                            <td>2024</td>
                             <td>
-                            43463265
+                            EQ43463265
                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">
-                             
-                             2
-                            </th>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>$250.00</td>
-                            <td>$250.00</td>
-                            <td>
-                            43463265
-                            </td>
+                          <th scope="row">
+                              
+                              2
+                             </th>
+                             <td>2014-07-16</td>
+                             <td>Testing data2</td>
+                             <td>20000</td>
+                             <td>2024</td>
+                             <td>
+                             EQ43463265
+                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">
-                             
-                             3
-                            </th>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>$250.00</td>
-                            <td>$250.00</td>
-                            <td>
-                            43463265
-                            </td>
+                          <th scope="row">
+                              
+                              3
+                             </th>
+                             <td>2014-07-17</td>
+                             <td>Testing data3</td>
+                             <td>21000</td>
+                             <td>2024</td>
+                             <td>
+                             EQ43463265
+                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">
-                             4
-                             
-                            </th>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>$250.00</td>
-                            <td>$250.00</td>
-                            <td>
-                            43463265
-                            </td>
+                          <th scope="row">
+                              
+                              4
+                             </th>
+                             <td>2014-07-18</td>
+                             <td>Testing data4</td>
+                             <td>15000</td>
+                             <td>2024</td>
+                             <td>
+                             EQ43463265
+                             </td>
                           </tr>
                           <tr>
                          
                           <tr>
-                            <th scope="row">
-                             
-                          4
-                            </th>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>Mar 19, 2020, 2.45pm</td>
-                            <td>$250.00</td>
-                            <td>$250.00</td>
-                            <td>
-                              43463265
-                            </td>
+                          <th scope="row">
+                              
+                              5
+                             </th>
+                             <td>2014-07-20</td>
+                             <td>Testing data5</td>
+                             <td>25000</td>
+                             <td>2024</td>
+                             <td>
+                             EQ43463265
+                             </td>
                           </tr>
                          
                         </tbody>

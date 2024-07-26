@@ -36,7 +36,12 @@
                     <a href="#">Update Equipment</a>
                 </li>
             </ul>
-            <h3 class="fw-bold mt-4">Equipment</h3>
+            <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Equipment</h3></div>
+                <div class="col-lg-4 text-end">
+                <button class="btn btn-blue mt-4 addbtndesk" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -57,7 +62,7 @@
                                         ?>
 
                                         <?php foreach ($images as $index => $equipmentimage): ?>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 col-4">
                                               
                                                 <img class="d-block w-100" src="<?= base_url('/assets/uploads/equipments/' . $equipmentimage) ?>">
                                              <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
@@ -68,13 +73,13 @@
                                 </div>
                            
                             <!-- image -->
-                            <div class="col-lg-6 mt-4">
+                            <div class="col-lg-6 inputmargintop">
                             <label for="image" class="labelclass">Image</label>
                             <input type="file" accept="image/*,.pdf" class="form-control greybg" name="equipment_image[]" id="equipment_image" multiple />
                             </div>
                              <!-- image -->
                              <!-- title -->
-                            <div class="col-lg-6 mt-4">
+                            <div class="col-lg-6 inputmargintop">
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="title" value="<?= htmlspecialchars($editequipments->title);?>" />
                             </div>
@@ -85,7 +90,7 @@
                               <!-- preview -->
                           </div>
 
-                          <div class="row mt-5">
+                          <div class="row inputmargintop">
                             <!--Serial Number  -->
                             <div class="col-lg-4">
                             <label for="serial_number" class="labelclass">Serial Number</label>
@@ -93,14 +98,14 @@
                             </div>
                              <!-- Serial Number -->
                              <!-- manifacture year -->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="manifacture_year" class="labelclass">Manufacture Year</label>
                             <input type="text" class="form-control greybg" name="manifacture_year" value="<?= htmlspecialchars($editequipments->manifacture_year); ?>"/>
                             </div>
                             <!-- manifacture year -->
 
                               <!-- Price-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editequipments->price); ?>"/>
                             </div>
@@ -108,20 +113,18 @@
 
                           
                              <!-- TinyMCE Editor -->
-                             <div class="col-lg-12 mt-5">
+                             <div class="col-lg-12 inputmargintop">
                              <label for="description" class="labelclass">Description</label>
-                             <textarea id="description"  name="description"  class="tinymce-editor">            
+                             <textarea id="description"  name="description"  class="tinymce-editor">
+                             <?= htmlspecialchars($editequipments->description); ?>     
                             </textarea>
                             </div>
                             <!-- End TinyMCE Editor -->
-
-
-
                           </div>
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editequipments->id); ?>">
                         <div class="card-action text-end">
-                            <button class="btn btn-blue"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
+                            <button class="btn btn-blue addbtnres" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
                         </div>
                     </form>
                     <?php endif; ?>
@@ -152,10 +155,17 @@ tinymce.init({
 <!-- Form Submission Handling -->
 <script>
     $(document).ready(function() {
-        $('#updateequipmentForm').on('submit', function(e) {
+        $('#update_equipment').on('click', function(e) {
             e.preventDefault();
             
-            var formData = new FormData(this);
+            // var formData = new FormData(this);
+
+             // Update TinyMCE editor content
+             tinymce.triggerSave();
+
+            // Collect form data
+            var form = $('#updateequipmentForm')[0];
+            var formData = new FormData(form);
 
             $.ajax({
                 url: '<?php echo base_url('equipments/edit_equipments/' . $editequipments->id); ?>',

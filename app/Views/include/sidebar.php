@@ -168,8 +168,8 @@
               </li>
               <hr class="text-dark mt-4 mb-4"> -->
 
-              </li>
-              <li class="nav-section">
+           
+              <!-- <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -183,7 +183,7 @@
                  
                 </a>
               </li>
-              <hr class="text-dark mt-4 mb-4">
+              <hr class="text-dark mt-4 mb-4"> -->
               <!-- property -->
 
 

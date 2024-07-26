@@ -264,7 +264,7 @@ padding: 12.5px 10px !important;
 {
     background-color: #fff;
     padding: 30px !important;
-    border-radius: 15px !important;
+    border-radius: 20px !important;
     margin: 20px !important;
 
 }
@@ -279,6 +279,13 @@ padding: 12.5px 10px !important;
 }
 
 /* pagination */
+
+
+.pagination>li>a {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
 
 .pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span, .pagination>li>a, .pagination>li>span {
     border-radius: 50% !important;
@@ -302,8 +309,8 @@ padding: 12.5px 10px !important;
     background-color: rgba(86,198,221,0.5) !important;
     color: white !important; /* Ensures text is visible on the background */
     border-radius: 50% !important;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .pagination .active a:hover, .pagination .active span:hover {
@@ -350,6 +357,15 @@ padding: 12.5px 10px !important;
     
 }
 
+.inputmargintop
+{
+    margin-top: 40px;
+}
+.addressmargintop
+{
+    margin-top: 20px;
+}
+
 
 
 
@@ -360,6 +376,10 @@ padding: 12.5px 10px !important;
     .logoutbtn
     {
         display: none !important;
+    }
+    .addbtnres
+    {
+     display: none !important;
     }
 }
 
@@ -383,4 +403,27 @@ padding: 12.5px 10px !important;
     {
         display: none !important;
     }
+    .addbtndesk
+    {
+        display: none !important;
+    }
+    .res_mt
+    {
+        margin-top: 25px;
+    }
+
+    .addressmargintop
+{
+    margin-top: 10px;
+}
+
+.inputmargintop
+{
+    margin-top: 25px;
+}
+
+.carouselbox {
+    padding: 30px 0px !important;
+    margin: 5px !important;
+}
 }
