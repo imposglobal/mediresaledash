@@ -8,7 +8,11 @@
         <div class="container">
           <div class="page-inner">
             <div class="page-header">
-              <h3 class="fw-bold">View Equipment</h3>
+
+            
+
+
+            <h3 class="fw-bold">View Property</h3>
               <ul class="breadcrumbs">
                 <li class="nav-home">
                   <a href="#">
@@ -25,7 +29,7 @@
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="#">View Equipment</a>
+                  <a href="#">View Property</a>
                 </li>
               </ul>
             </div>
@@ -35,8 +39,22 @@
                   <div class="card-header">
                     <div class="d-flex align-items-center">
                       <h4 class="card-title">Property List</h4>
-                     
                     </div>
+
+                        <!-- Search Form -->
+                        <form method="POST" action="<?= base_url('view_all_property') ?>">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" name="search" class="form-control" placeholder="Search here..." value="">
+                                </div>
+                               
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End of Search Form -->
+
                   </div>
                   <div class="card-body">
                    

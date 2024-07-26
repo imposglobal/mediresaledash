@@ -136,16 +136,39 @@ class Property extends BaseController
 // }
 
 
-public function view_all_property(): string
+public function view_all_property()
 {
     if(!session()->get('isLoggedIn'))
     return redirect()->to('/');
     $PropertyModel = new PropertyModel();
     
-    $data = [
+    // $data = [
+    //     'properties' => $PropertyModel->paginate(3),
+    //     'pager' => $PropertyModel->pager
+    // ];
+
+     // Get the search parameter
+     $search = $this->request->getVar('search');
+
+     // Apply filters if search parameter is present
+     if ($search) {
+         $PropertyModel->like('id', $search)
+                        ->orLike('name', $search)
+                        ->orLike('state', $search)
+                        ->orLike('city', $search)
+                        ->orLike('zipcode', $search)
+                        ->orLike('address', $search)
+                        ->orLike('built_year', $search)
+                        ->orLike('total_area', $search)
+                        ->orLike('price', $search)
+                        ->orLike('parking', $search);
+     }
+ 
+     $data = [
         'properties' => $PropertyModel->paginate(3),
-        'pager' => $PropertyModel->pager
-    ];
+        'pager' => $PropertyModel->pager,
+         'search' => $search
+     ];
     
     return view('property/view_all_property', $data);
 }

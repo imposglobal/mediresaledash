@@ -86,18 +86,32 @@ class Equipment extends BaseController
     // }
 
 
-     public function view_all_equipments(): string
+     public function view_all_equipments()
     {
         if(!session()->get('isLoggedIn'))
         return redirect()->to('/');
         $EquipmentModel = new EquipmentModel();
+
+          // Get the search parameter
+    $search = $this->request->getVar('search');
+
+    // Apply filters if search parameter is present
+    if ($search) {
+        $EquipmentModel->like('id', $search)
+                       ->orLike('title', $search)
+                       ->orLike('serial_number', $search)
+                       ->orLike('price', $search)
+                       ->orLike('description', $search);
+    }
+
+    $data = [
+        'equipment' => $EquipmentModel->paginate(3),
+        'pager' => $EquipmentModel->pager,
+        'search' => $search
+    ];
         
-        $data = [
-            'equipment' => $EquipmentModel->paginate(3),
-            'pager' => $EquipmentModel->pager
-        ];
-        
-        return view('equipments/view_all_equipments', $data);
+       return view('equipments/view_all_equipments', $data);
+
     }
 
 
