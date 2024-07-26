@@ -2,6 +2,7 @@
 <?= $this->extend('layout/layout') ?>
 <!-- Define the content section -->
 <?= $this->section('content') ?>
+
       
         <div class="container">
           <div class="page-inner">
@@ -23,7 +24,22 @@
                 </li>
               </ul>
 
-            <h3 class="fw-bold mt-4">Equipment</h3>
+
+            <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Equipment</h3></div>
+                <div class="col-lg-4 text-end">
+                <div class="search-container mt-4">
+                <form action="<?= base_url('view_all_equipments') ?>">
+                <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search..">
+                <button class="btn btn-outline-secondary" type="submit">
+                <i class="fa fa-search"></i>
+                </button>
+                </div>
+               </form>
+            </div>
+            </div>
+            </div>
             </div>
             <div class="row">
               <div class="col-md-12">
@@ -34,7 +50,7 @@
                      
                     </div>
                      <!-- Search Form -->
-                        <form method="POST" action="<?= base_url('view_all_equipments') ?>">
+                        <!-- <form method="POST" action="<?= base_url('view_all_equipments') ?>">
                             <div class="row">
                                 <div class="col-md-4">
                                     <input type="text" name="search" class="form-control" placeholder="Search here..." value="">
@@ -44,7 +60,7 @@
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                         <!-- End of Search Form -->
                   </div>
                   <div class="card-body">

@@ -7,31 +7,40 @@
       
         <div class="container">
           <div class="page-inner">
-            <div class="page-header">
-
-            
-
-
-            <h3 class="fw-bold">View Property</h3>
+            <div class="page-header">         
               <ul class="breadcrumbs">
                 <li class="nav-home">
                   <a href="#">
-                    <i class="icon-home"></i>
+                  Home
                   </a>
                 </li>
-                <li class="separator">
-                  <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                   <a href="#">Dashboard</a>
                 </li>
-                <li class="separator">
-                  <i class="icon-arrow-right"></i>
-                </li>
+                <span class="fs18">|</span>
                 <li class="nav-item">
                   <a href="#">View Property</a>
                 </li>
               </ul>
+
+              <div class="row">
+                <div class="col-lg-8"> <h3 class="fw-bold mt-4">Property</h3></div>
+                <div class="col-lg-4 text-end">
+                <div class="search-container mt-4">
+                <form action="<?= base_url('view_all_property') ?>">
+                <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search..">
+                <button class="btn btn-outline-secondary" type="submit">
+                <i class="fa fa-search"></i>
+                </button>
+                </div>
+               </form>
+            </div>
+            </div>
+            </div>
+
+                 <!-- <h3 class="fw-bold">View Property</h3> -->
             </div>
             <div class="row">
               <div class="col-md-12">
@@ -42,7 +51,7 @@
                     </div>
 
                         <!-- Search Form -->
-                        <form method="POST" action="<?= base_url('view_all_property') ?>">
+                        <!-- <form method="POST" action="<?= base_url('view_all_property') ?>">
                             <div class="row">
                                 <div class="col-md-4">
                                     <input type="text" name="search" class="form-control" placeholder="Search here..." value="">
@@ -52,7 +61,7 @@
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                         <!-- End of Search Form -->
 
                   </div>

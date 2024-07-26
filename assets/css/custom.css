@@ -327,6 +327,30 @@ padding: 12.5px 10px !important;
 }
 
 
+/* searchbar */
+
+.search-container .input-group {
+    border-radius: 25px !important;
+    overflow: hidden !important;
+}
+.search-container .form-control {
+    border-top-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    border:none !important;
+}
+.search-container .btn {
+    border-top-right-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+    border:none !important;
+    background: #fff !important;
+    
+}
+.search-container .btn:hover {
+  color:#000 !important;
+    
+}
+
+
 
 
 /* responsive design */

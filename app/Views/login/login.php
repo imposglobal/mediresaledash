@@ -16,42 +16,28 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/plugins.min.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/kaiadmin.min.css'); ?>">
 
+
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
     <style>
-        .imgblock {
-            padding: 0;
-            margin: 0;
-        }
+        /* login page css */
+.imgblock {
+    padding: 0;
+    margin: 0;
+}
+.inputclass
+{
+    background-color:#f5f5f5 !important;
+    color: #7D7D7D !important;
+    border: 1px solid #56C6DD !important;
+    height: 50px !important;
+    border-radius: 12px;
+    width:400px;
+   
+}
 
-        .formblock {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .form-control {
-            width: 100%;
-        }
-
-        .loginheading {
-            font-size: 30px;
-            font-weight: 700;
-            color: #000;
-        }
-
-        .formclass {
-         
-            background-color:#f5f5f5 !important;
-            color: #7D7D7D !important;
-            border: 1px solid #56C6DD !important;
-            height: 50px !important;
-            border-radius: 12px;
-            width: 400px;
-        }
-
-        .btn-blue {
+.btn-blue {
     color: #fff;
     background-color: #56C6DD;
     font-size:18px;
@@ -66,56 +52,55 @@
 
 }
 
-.grey-text
-{
-  color: #7D7D7D;
+.loginheading {
+            font-size: 30px;
+            font-weight: 700;
+            color: #000;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        .logoimg
+        {
+            width: 300px;
+        }
+
+
+@media only screen and (max-width: 600px) {
+    .inputclass
+    {
+        width: 300px;
+  }
+
+  .logoimg
+        {
+            width: 180px;
+            padding-top:70px;
+        }
+
+        .loginheading 
+        {
+            padding:0px;
+            font-size: 20px;
+
+        }
 }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .col-lg-7 {
-                display: none;
-            }
-            .col-lg-5 {
-                height: auto;
-                padding: 20px;
-            }
-            .imgblock img {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .loginheading {
-                font-size: 24px;
-            }
-            .mb-5 {
-                margin-bottom: 1.5rem !important;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .loginheading {
-                font-size: 20px;
-            }
-            .mb-5 {
-                margin-bottom: 1rem !important;
-            }
-        }
     </style>
 </head>
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-7 imgblock">
-            <img src="<?= base_url('assets/img/loginimg.png'); ?>" class="img-fluid">
-        </div>
-        <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
-            <img src="<?= base_url('assets/img/logo.png'); ?>" width="320" class="mb-4">
-            <h1 class="mb-4 pt-5 loginheading">LOG IN</h1>
-             <!-- flash message code -->
-             <?php if (session()->has('msg')): ?>
+        <div class="row full-height">
+            <div class="col-lg-7 imgblock">
+                <img src="<?= base_url('assets/img/loginimg.png'); ?>" class="img-fluid" alt="Login Image">
+            </div>
+            <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center">
+           <div>
+           <img src="<?= base_url('assets/img/logo.png'); ?>" class="mb-4 logoimg">
+           <h1 class="mb-4 loginheading">LOG IN</h1>
+           </div>
+           
+            <?php if (session()->has('msg')): ?>
              <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <?= session()->get('msg') ?>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -123,33 +108,31 @@
                 </button>
                 </div>
             <?php endif; ?>
-            <!-- flash message code end-->
+            
             <form action="<?php echo base_url('/login/check') ?>" method="POST">
                 <div class="mb-5">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control formclass" id="" required>
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control inputclass" id="" required>
                 </div>
                 <div class="mb-2">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password"  class="form-control formclass" id="" required>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password"  class="form-control inputclass" id="" required>
                 </div>
                 <div class="mb-5 text-end">
                 <a href="<?php echo base_url('/forgot_password') ?>" class="text-danger">Forgot Password?</a>
                 </div>
-              
-
                 <div class="mb-5 text-center">
                 <button type="submit" class="btn btn-blue">Submit</button>
                 </div>
                
             </form>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/js/core/jquery-3.7.1.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/core/popper.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/core/bootstrap.min.js'); ?>"></script>
 
 <!-- Kaiadmin JS -->
 <script src="<?= base_url('assets/js/kaiadmin.min.js'); ?>"></script>
