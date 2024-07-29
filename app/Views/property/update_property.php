@@ -16,6 +16,10 @@
     margin-bottom:10px !important;
 }
 
+.tox .tox-edit-area__iframe {
+    background-color: #f5f5f5 !important;
+}
+
 </style>
 <div class="container">
     <div class="page-inner">

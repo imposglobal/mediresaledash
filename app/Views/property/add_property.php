@@ -16,6 +16,10 @@
     margin-bottom:10px !important;
 }
 
+.tox .tox-edit-area__iframe {
+    background-color: #f5f5f5 !important;
+}
+
 </style>
 <div class="container">
     <div class="page-inner">
@@ -77,6 +81,7 @@
                             <div class="col-lg-12">
                             <label for="address" class="labelclass">Adderess</label>
                             <input type="text" class="form-control greybg" name="address" placeholder="Address">
+                            
                             </div>  
                               <!-- adderess -->                       
                           </div>
