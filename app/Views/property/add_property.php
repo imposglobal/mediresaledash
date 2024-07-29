@@ -267,6 +267,23 @@ document.getElementById('property_image').addEventListener('change', function(ev
             var form = $('#propertyForm')[0];
             var formData = new FormData(form);
 
+             // Check if all required fields are filled
+             var allFieldsFilled = true;
+            formData.forEach(function(value, key) {
+                if (!value) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            if (!allFieldsFilled) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'All fields are required.',
+                });
+                return; // Stop further execution
+            }
+
             $.ajax({
                 url: '<?php echo base_url('property/add_property') ?>',
                 type: 'POST',
