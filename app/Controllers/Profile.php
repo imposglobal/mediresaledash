@@ -9,7 +9,6 @@ use App\Models\CommonModel;
 class Profile extends BaseController
 {
 
-   
 
     /*****************************  ******************************/
   public function profile_show()
