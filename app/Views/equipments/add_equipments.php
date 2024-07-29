@@ -49,7 +49,7 @@
 
         </div>
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">Add Equipment</div>
@@ -109,9 +109,9 @@
 
                           </div>
                         </div>
-                        <div class="card-action text-center">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="add_equipment"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>

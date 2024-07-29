@@ -168,9 +168,9 @@
 
 
                         </div>
-                        <div class="card-action text-center">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres"  id="add_property"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>

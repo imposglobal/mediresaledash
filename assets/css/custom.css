@@ -381,7 +381,7 @@ padding: 12.5px 10px !important;
 
 /* responsive design */
 
-@media screen and (min-width: 576px)
+@media screen and (min-width: 768px)
 {
     .logoutbtn
     {
@@ -394,7 +394,7 @@ padding: 12.5px 10px !important;
 }
 
 
-@media screen and (max-width: 576px)
+@media screen and (max-width: 768px)
 {
     .logoutbtn
     {
@@ -413,10 +413,7 @@ padding: 12.5px 10px !important;
     {
         display: none !important;
     }
-    .addbtndesk
-    {
-        display: none !important;
-    }
+   
     .res_mt
     {
         margin-top: 25px;
@@ -441,5 +438,10 @@ padding: 12.5px 10px !important;
 {
     margin-left: 0px;
     margin-right: 0px;
+}
+
+.topbar_open .logo-header 
+{
+ border-bottom: none !important;
 }
 }
