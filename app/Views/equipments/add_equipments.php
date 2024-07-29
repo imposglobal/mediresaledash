@@ -25,17 +25,17 @@
             
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                         Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Add Equipment</a>
+                    <a href="">Add Equipment</a>
                 </li>
             </ul>
 
@@ -109,7 +109,7 @@
 
                           </div>
                         </div>
-                        <div class="card-action text-end">
+                        <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="add_equipment"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
                         </div>
                     </form>

@@ -367,7 +367,13 @@ padding: 12.5px 10px !important;
 }
 
 .scrollbar-inner>.scroll-element.scroll-y {
-    right: -10px !important;
+    display: none !important;
+}
+
+.profilem
+{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -423,11 +429,17 @@ padding: 12.5px 10px !important;
 
 .inputmargintop
 {
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
 
 .carouselbox {
     padding: 30px 0px !important;
     margin: 5px !important;
+}
+
+.profilem
+{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 }

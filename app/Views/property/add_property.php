@@ -27,13 +27,13 @@
             <h3 class="fw-bold">Add Property</h3>
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                     Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
@@ -168,7 +168,7 @@
 
 
                         </div>
-                        <div class="card-action text-end">
+                        <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres"  id="add_property"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
                         </div>
                     </form>

@@ -49,14 +49,6 @@ class Property extends BaseController
     }
 
 
-
-
-    
- 
-
-
-
-
     public function add_property()
     {
         $PropertyModel = new PropertyModel();
@@ -135,6 +127,7 @@ class Property extends BaseController
 //     return view('property/view_all_property', $data);
 // }
 
+//*******************view all property*********************************
 
 public function view_all_property()
 {
@@ -168,7 +161,7 @@ public function view_all_property()
     return view('property/view_all_property', $data);
 }
 
-
+//*******************view property by id*********************************
 
     public function view_property($id): string
     {
@@ -176,6 +169,8 @@ public function view_all_property()
         $data['viewproperty'] = $PropertyModel->view_property_by_id($id);
         return view('property/view_property', $data);
     }
+
+//**********************delete property***********************************
 
     public function delete_property($id) 
     {
@@ -188,6 +183,8 @@ public function view_all_property()
             echo json_encode(["status" => "error", "message" => "Failed to delete property record."]);
         }
     }
+
+    //*******************delete image in update property form**********************
 
     public function delete_property_image()
    {
@@ -222,7 +219,7 @@ public function view_all_property()
 
 
 
-//new code for update property 
+//****************************update propert****************************
 
 public function update_property($id) 
 {
@@ -314,14 +311,5 @@ public function edit_property($id)
             return $this->response->setJSON(['status' => 'error', 'message' => 'Error updating property']);
         }
     }
-
-
-
-
-
-
-   
-    
-
     
 }

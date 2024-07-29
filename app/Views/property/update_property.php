@@ -27,24 +27,24 @@
             
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                     Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Update Property</a>
+                    <a href="">Update Property</a>
                 </li>
             </ul>
 
             <div class="row">
                 <div class="col-lg-8"> <h3 class="fw-bold mt-4">Property</h3></div>
                 <div class="col-lg-4 text-end">
-                <button class="btn btn-blue mt-4 addbtndesk" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
+                <button class="btn btn-blue mt-4" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
                 </div>
             </div>
 
@@ -193,9 +193,9 @@
 
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->id); ?>">
-                        <div class="card-action text-end">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
-                        </div>
+                        </div> -->
                     </form>
                     <?php endif; ?>
                 </div>

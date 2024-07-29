@@ -16,21 +16,14 @@ class Equipment extends BaseController
     }
 
 
-   
-
     public function equipments()
-    {
-
-        
+    {  
         //  // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
           if(!session()->get('isLoggedIn'))
             return redirect()->to('/');
 
         return view('equipments/add_equipments');
     }
-
-
-    
 
     public function add_equipments()
     {
@@ -73,6 +66,8 @@ class Equipment extends BaseController
     return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment added successfully']);
     }
     
+//***********************view equipment code***********************************
+
 
     // public function view_all_equipments()
     // {
@@ -103,7 +98,7 @@ class Equipment extends BaseController
                        ->orLike('price', $search)
                        ->orLike('description', $search);
     }
-
+//  pagination
     $data = [
         'equipment' => $EquipmentModel->paginate(3),
         'pager' => $EquipmentModel->pager,
@@ -114,6 +109,8 @@ class Equipment extends BaseController
 
     }
 
+
+    //************************view equipment by id*************************************8
 
     public function view_equipments($id)
     {
@@ -128,7 +125,7 @@ class Equipment extends BaseController
 
 
    
-
+//*****************************delete equipment*******************************
 
     public function delete_equipments($id) {
         $result = $this->equipmentModel->equipment_delete($id);
@@ -139,6 +136,8 @@ class Equipment extends BaseController
         }
     }
     
+//*****************************update equipment*******************************
+
 
     public function update_equipments($id) {
         $data['editequipments'] = $this->equipmentModel->get_equipment_by_id($id);
@@ -193,7 +192,7 @@ class Equipment extends BaseController
     }
     
 
-
+//*************delete equipment image in update_equipment form**************************
 
 
     public function delete_equipment_image()

@@ -67,7 +67,7 @@
                             <th>Id</th>
                             <th>Date</th>
                             <th>Title</th>
-                            <th>Total Area</th>
+                            <th>Serial Number</th>
                             <th>Price</th>
                             <th>Action</th>
                           </tr>
