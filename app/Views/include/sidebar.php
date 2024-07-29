@@ -152,43 +152,21 @@
 
               <hr class="text-dark mt-4 mb-4">
                <!-- settings -->
-              <!-- <li class="nav-section">
+              <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
                 </span>
                 <h4 class="text-section">Setting</h4>
               </li>
-
               <li class="nav-item">
-                <a href="">
+                <a href="<?php echo base_url('profile')?>">
                   <i class="fas fa-user"></i>
                   <p>Profile</p>
                  
                 </a>
               </li>
-              <hr class="text-dark mt-4 mb-4"> -->
-
-           
-              <!-- <li class="nav-section">
-                <span class="sidebar-mini-icon">
-                  <i class="fa fa-ellipsis-h"></i>
-                </span>
-                <h4 class="text-section">Profile</h4>
-              </li>
-
-              <li class="nav-item">
-                <a href="<?php echo base_url('profile')?>">
-                  <i class="fas fa-solid fa-user"></i>
-                  <p>Profile</p>
-                 
-                </a>
-              </li>
-              <hr class="text-dark mt-4 mb-4"> -->
+              <hr class="text-dark mt-4 mb-4">   
               <!-- property -->
-
-
-
-
             </ul>
           </div>
         </div>

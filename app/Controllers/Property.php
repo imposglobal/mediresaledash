@@ -142,11 +142,6 @@ public function view_all_property()
     return redirect()->to('/');
     $PropertyModel = new PropertyModel();
     
-    // $data = [
-    //     'properties' => $PropertyModel->paginate(3),
-    //     'pager' => $PropertyModel->pager
-    // ];
-
      // Get the search parameter
      $search = $this->request->getVar('search');
 
@@ -194,20 +189,89 @@ public function view_all_property()
         }
     }
 
+    public function delete_property_image()
+   {
+    $imageName = $this->request->getPost('image_name');
 
-    public function update_property($id) 
-    {
-        $PropertyModel = new PropertyModel();
-        $data['editproperty'] = $PropertyModel->get_property_by_id($id);
-        return view('property/update_property', $data);
+    $propertyModel = new PropertyModel();
+    $property = $propertyModel->where('property_image LIKE', "%$imageName%")->first();
+
+    if ($property) {
+        $images = explode(',', $property['property_image']);
+        $updatedImages = array_diff($images, [$imageName]);
+        $newImageString = implode(',', $updatedImages);
+
+        $propertyModel->update($property['id'], ['property_image' => $newImageString]);
+
+        // Correct the path to the image file
+        $filePath = FCPATH . 'assets/uploads/property/' . $imageName;
+        if (file_exists($filePath)) {
+            if (unlink($filePath)) {
+                return $this->response->setStatusCode(200)->setBody('success');
+            } else {
+                return $this->response->setStatusCode(500)->setBody('file_delete_failed');
+            }
+        } else {
+            return $this->response->setStatusCode(404)->setBody('file_not_found');
+        }
+    } else {
+        return $this->response->setStatusCode(404)->setBody('not_found');
     }
+}
 
 
-    public function edit_property($id)
+
+
+//new code for update property 
+
+public function update_property($id) 
+{
+    $propertyModel = new PropertyModel();
+    $commonModel = new CommonModel();
+    
+    // Fetch states data
+    $states = $commonModel->selectData("states");
+    
+    // Fetch property data by ID
+    $editProperty = $propertyModel->get_property_by_id($id);
+    
+    // Prepare data array
+    $data = [
+        'states' => $states,
+        'editproperty' => $editProperty
+    ];
+    
+    // Return the view with data
+    return view('property/update_property', $data);
+}
+
+public function edit_property($id)
     {
+
+        $StateModel = new StateModel();
+        $CityModel = new CityModel();
+    
+        $stateId = $this->request->getPost('state');
+        $cityId = $this->request->getPost('city');
+    
+        // Fetch state name
+        $state = $StateModel->where('id', $stateId)->first();
+        $stateName = $state['name'] ?? 'state not found.';
+    
+        // Fetch city name
+        $city = $CityModel->select('cities.city as city_name')
+                          ->join('states', 'cities.state_id = states.id')
+                          ->where('cities.id', $cityId)
+                          ->first();
+        $cityName = $city['city_name'] ?? 'City not found.';
+
+
         $data = [
             'name' => $this->request->getPost('name'),
             'description' => $this->request->getPost('description'),
+            'address' => $this->request->getPost('address'),
+            'state' => $stateName,
+            'city' => $cityName,
             'address' => $this->request->getPost('address'),
             'built_year' => $this->request->getPost('built_year'),
             'total_area' => $this->request->getPost('total_area'),
@@ -251,40 +315,10 @@ public function view_all_property()
         }
     }
 
-    public function delete_property_image()
-{
-    $imageName = $this->request->getPost('image_name');
-
-    $propertyModel = new PropertyModel();
-    $property = $propertyModel->where('property_image LIKE', "%$imageName%")->first();
-
-    if ($property) {
-        $images = explode(',', $property['property_image']);
-        $updatedImages = array_diff($images, [$imageName]);
-        $newImageString = implode(',', $updatedImages);
-
-        $propertyModel->update($property['id'], ['property_image' => $newImageString]);
-
-        // Correct the path to the image file
-        $filePath = FCPATH . 'assets/uploads/property/' . $imageName;
-        if (file_exists($filePath)) {
-            if (unlink($filePath)) {
-                return $this->response->setStatusCode(200)->setBody('success');
-            } else {
-                return $this->response->setStatusCode(500)->setBody('file_delete_failed');
-            }
-        } else {
-            return $this->response->setStatusCode(404)->setBody('file_not_found');
-        }
-    } else {
-        return $this->response->setStatusCode(404)->setBody('not_found');
-    }
-}
 
 
 
 
-    
 
    
     

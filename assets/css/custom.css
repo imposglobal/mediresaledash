@@ -366,7 +366,9 @@ padding: 12.5px 10px !important;
     margin-top: 20px;
 }
 
-
+.scrollbar-inner>.scroll-element.scroll-y {
+    right: -10px !important;
+}
 
 
 

@@ -106,6 +106,33 @@
                             </div>  
                               <!-- adderess -->                       
                           </div>
+
+
+                          <div class="row inputmargintop">
+                            <!--state  -->
+                            <div class="col-lg-6">
+                            <label for="state" class="labelclass">Select State</label>
+                            <select name="state" id="state" class="form-control greybg" onchange="fetchCityData(this.value)">
+                           
+                             <option selected disabled="true"><?= htmlspecialchars($editproperty->state); ?></option>
+                            <?php foreach ($states as $state) { ?>
+                            
+                            <option value="<?php echo $state->id ?>"><?php echo $state->name ?></option>
+                             <?php }?>
+                            </select>
+                            </div>
+                             <!-- state -->
+                             <!-- city-->
+                            <div class="col-lg-6 res_mt">
+                            <label for="city" class="labelclass">Select City</label>
+                          
+                            <select name="city" id="cityId" class="form-control greybg">
+                            <option selected disabled="true"><?= htmlspecialchars($editproperty->city); ?></option>
+                    
+                            </select>
+                            </div>
+                            <!-- city-->
+                          </div>
                         
                           <div class="row inputmargintop">
                             <!--zipcode-->
@@ -306,6 +333,26 @@ tinymce.init({
         });
     }
 </script>
+
+<!-- scritp for sate and city data  -->
+<script>
+            function fetchCityData(statesId){
+                $.ajax({
+                    url: "<?php echo site_url("cities") ?> ",
+                    method: "POST",
+                    data: {
+                        statesId:statesId
+                    },
+                    success: function(result){
+                    let data = JSON.parse(result);
+
+                    document.querySelector("#cityId").innerHTML = data;
+                        console.log(result);
+                    }
+                });
+            }
+        </script>
+<!-- scritp for sate and city data  -->
        
 
 <?= $this->endSection() ?>
