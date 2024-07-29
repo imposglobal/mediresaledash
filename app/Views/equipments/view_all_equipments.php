@@ -148,7 +148,9 @@
             </div>
           </div>
         </div>
-        <script>
+
+    <!-- ajax code to delete equipment -->
+    <script>
     function confirmEquipmentDelete(id) {
         Swal.fire({
             title: 'Are you sure to delete this property?',
@@ -197,6 +199,7 @@
         });
     }
 </script>
+
 
 
         <?= $this->endSection() ?>  
