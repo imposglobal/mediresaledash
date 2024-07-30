@@ -62,6 +62,19 @@ $routes->post('/update_profile', 'Profile::update_profile');
 
 // API to get equipments
 $routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
+$routes->get('/equipments/equipments_type/view', 'EquipmentAPI_Cotroller::getEquipmentByEquipmentType_API'); // http://localhost/mediresaledash/equipments/equipments_type/view
+$routes->get('/equipments/brand/view', 'EquipmentAPI_Cotroller::getEquipmentByBrand_API'); // http://localhost/mediresaledash/equipments/brand/view
+$routes->get('/equipments/condition/view', 'EquipmentAPI_Cotroller::getEquipmentByCondition_API'); // http://localhost/mediresaledash/equipments/condition/view
+$routes->get('/equipments/warranty/view', 'EquipmentAPI_Cotroller::getEquipmentByWarranty_API'); // http://localhost/mediresaledash/equipments/warranty/view
+$routes->get('/equipments/availability/view', 'EquipmentAPI_Cotroller::getEquipmentByAvailability_API'); // http://localhost/mediresaledash/equipments/availability/view
+$routes->get('/equipments/year/view', 'EquipmentAPI_Cotroller::getEquipmentByAge_API'); // http://localhost/mediresaledash/equipments/year/view
+$routes->get('/equipments/price/view', 'EquipmentAPI_Cotroller::getEquipmentByPrice_API'); // http://localhost/mediresaledash/equipments/price/view
+$routes->get('/equipments/city-zipcode/view', 'EquipmentAPI_Cotroller::getEquipmentByCityOrZipcode'); // http://localhost/mediresaledash/equipments/city-zipcode/view
+
+
+// combine API for equipment listing page
+
+$routes->get('/equipments/filter/view', 'EquipmentAPI_Controller::getFiltered');// http://localhost/mediresaledash/equipments/filter/view
 
 
 // API to get Property 
