@@ -8,15 +8,21 @@ class PropertyModel extends Model{
     protected $primarykey = 'id';
     protected $allowedFields = [
         'name',       
-        'description', 
+        'description',
+        'property_type',
+        'transaction_type', 
         'state',
         'city',
         'zipcode',
         'address',
         'built_year',
+        'possession',
         'total_area',
         'price',
         'parking',
+        'pharmacy',
+        'laboratory',
+        'cafeteria',
         'property_image',
         'created_at'
 

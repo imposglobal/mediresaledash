@@ -95,14 +95,20 @@ class Property extends BaseController
         $data = [
             'name' => $this->request->getPost('name'),
             'description' => $this->request->getPost('description'),
+            'property_type' => $this->request->getPost('property_type'),
+            'transaction_type' => $this->request->getPost('transaction_type'),
             'state' => $stateName,
             'city' => $cityName,
             'zipcode' => $this->request->getPost('zipcode'),
             'address' => $this->request->getPost('address'),
             'built_year' => $this->request->getPost('built_year'),
+            'possession' => $this->request->getPost('possession'),
             'total_area' => $this->request->getPost('total_area'),
             'price' => $this->request->getPost('price'),
             'parking' => $this->request->getPost('parking'),
+            'pharmacy' => $this->request->getPost('pharmacy'),
+            'laboratory' => $this->request->getPost('parking'),
+            'cafeteria' => $this->request->getPost('cafeteria'),
             'property_image' => $imageNamesString
             
         ];
