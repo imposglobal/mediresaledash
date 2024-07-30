@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-lg-8"> <h3 class="fw-bold mt-4">Equipment</h3></div>
                 <div class="col-lg-4 text-end">
-                <button class="btn btn-blue mt-4 addbtndesk" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
+                <button class="btn btn-blue mt-4" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
                 </div>
             </div>
         </div>
@@ -126,9 +126,9 @@
                           </div>
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editequipments->id); ?>">
-                        <div class="card-action text-end">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
-                        </div>
+                        </div> -->
                     </form>
                     <?php endif; ?>
                 </div>

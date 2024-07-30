@@ -23,7 +23,7 @@
             <h3 class="fw-bold">Update Profile</h3>
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                         <i class="icon-home"></i>
                     </a>
                 </li>
@@ -31,7 +31,7 @@
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <li class="separator">
                     <i class="icon-arrow-right"></i>
@@ -54,28 +54,28 @@
                             <p style="color: green;"><?= esc($success) ?></p>
                         <?php endif; ?>   
 
-                            <div class="row mt-4">
+                            <div class="row profilem my-2">
                                 <!-- name -->
                                 <div class="col-lg-6">
                                     <label for="name" class="labelclass">First Name</label>
                                     <input type="text" class="form-control greybg" name="name" value="<?= esc($user['name']) ?>" placeholder="" />
                                 </div>
                                 <!-- lname -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 res_mt">
                                     <label for="lname" class="labelclass">Last Name</label>
                                     <input type="text" class="form-control greybg" name="lname" value="<?= esc($user['lname']) ?>" placeholder="" />
                                 </div>
                             </div>
                             
 
-                            <div class="row mt-4">
+                            <div class="row inputmargintop profilem my-5">
                                  <!-- email -->
                                 <div class="col-lg-6">
                                     <label for="email" class="labelclass">Email</label>
                                     <input type="text" class="form-control greybg" name="email" value="<?= esc($user['email']) ?>" placeholder="">
                                  </div> 
                                  <!-- Password-->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 res_mt">
                                     <label for="password" class="labelclass">Password</label>
                                     <input type="text" class="form-control greybg" name="password" value="<?= esc($user['password']) ?>" placeholder="">
                                  </div>

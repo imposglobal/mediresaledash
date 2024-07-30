@@ -22,7 +22,8 @@ class EquipmentModel extends Model{
 
   
     
-    public function equipment_delete($id) {
+    public function equipment_delete($id) 
+    {
         return $this->db->table($this->table)->where('id', $id)->delete();
     }
 
@@ -37,17 +38,23 @@ class EquipmentModel extends Model{
     //         $this->db->table($this->table)->where('id', $id)->delete();
     
     //         // Remove the image file from the uploads folder
-    //         $filePath = FCPATH . 'assets/uploads/' . $image->equipment_image;
+    //         $filePath = FCPATH . 'assets/uploads/equipments/' . $image->equipment_image;
     //         if (file_exists($filePath)) {
-    //             unlink($filePath);
-    //             return true; // File deleted and record deleted
+    //             if (unlink($filePath)) {
+    //                 return $this->response->setJSON(['status' => 'success', 'message' => 'Record and image deleted successfully.']);
+    //             } else {
+    //                 return $this->response->setJSON(['status' => 'error', 'message' => 'Record deleted but failed to delete the image.']);
+    //             }
     //         } else {
-    //             return false; // File not found but record deleted
+    //             return $this->response->setJSON(['status' => 'error', 'message' => 'Record deleted but image file not found.']);
     //         }
     //     } else {
-    //         return false; // Record not found
+    //         return $this->response->setJSON(['status' => 'error', 'message' => 'Record not found.']);
     //     }
     // }
+    
+
+   
     
     public function view_equipment_by_id($id) 
     {

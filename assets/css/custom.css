@@ -366,14 +366,22 @@ padding: 12.5px 10px !important;
     margin-top: 20px;
 }
 
+.scrollbar-inner>.scroll-element.scroll-y {
+    display: none !important;
+}
 
+.profilem
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 
 
 
 /* responsive design */
 
-@media screen and (min-width: 576px)
+@media screen and (min-width: 768px)
 {
     .logoutbtn
     {
@@ -386,7 +394,7 @@ padding: 12.5px 10px !important;
 }
 
 
-@media screen and (max-width: 576px)
+@media screen and (max-width: 768px)
 {
     .logoutbtn
     {
@@ -405,10 +413,7 @@ padding: 12.5px 10px !important;
     {
         display: none !important;
     }
-    .addbtndesk
-    {
-        display: none !important;
-    }
+   
     .res_mt
     {
         margin-top: 25px;
@@ -421,11 +426,22 @@ padding: 12.5px 10px !important;
 
 .inputmargintop
 {
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
 
 .carouselbox {
     padding: 30px 0px !important;
     margin: 5px !important;
+}
+
+.profilem
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.topbar_open .logo-header 
+{
+ border-bottom: none !important;
 }
 }

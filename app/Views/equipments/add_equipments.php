@@ -25,17 +25,17 @@
             
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                         Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Add Equipment</a>
+                    <a href="">Add Equipment</a>
                 </li>
             </ul>
 
@@ -49,7 +49,7 @@
 
         </div>
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">Add Equipment</div>
@@ -109,9 +109,9 @@
 
                           </div>
                         </div>
-                        <div class="card-action text-end">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="add_equipment"><i class="fa fa-plus color-info me-2"></i>Add Equipment</button>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
@@ -207,6 +207,23 @@ document.getElementById('equipment_image').addEventListener('change', function(e
             // Collect form data
             var form = $('#equipmentForm')[0];
             var formData = new FormData(form);
+
+            // Check if all required fields are filled
+            var allFieldsFilled = true;
+            formData.forEach(function(value, key) {
+                if (!value) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            if (!allFieldsFilled) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'All fields are required.',
+                });
+                return; // Stop further execution
+            }
 
             $.ajax({
                 url: '<?php echo base_url('equipments/add_equipments') ?>',

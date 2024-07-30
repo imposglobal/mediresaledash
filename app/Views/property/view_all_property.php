@@ -10,13 +10,13 @@
             <div class="page-header">         
               <ul class="breadcrumbs">
                 <li class="nav-home">
-                  <a href="#">
+                  <a href="<?php echo base_url('dashboard')?>">
                   Home
                   </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                  <a href="#">Dashboard</a>
+                  <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">

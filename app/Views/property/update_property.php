@@ -27,24 +27,24 @@
             
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                     Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Update Property</a>
+                    <a href="">Update Property</a>
                 </li>
             </ul>
 
             <div class="row">
                 <div class="col-lg-8"> <h3 class="fw-bold mt-4">Property</h3></div>
                 <div class="col-lg-4 text-end">
-                <button class="btn btn-blue mt-4 addbtndesk" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
+                <button class="btn btn-blue mt-4" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
                 </div>
             </div>
 
@@ -106,6 +106,33 @@
                             </div>  
                               <!-- adderess -->                       
                           </div>
+
+
+                          <div class="row inputmargintop">
+                            <!--state  -->
+                            <div class="col-lg-6">
+                            <label for="state" class="labelclass">Select State</label>
+                            <select name="state" id="state" class="form-control greybg" onchange="fetchCityData(this.value)">
+                           
+                             <option selected disabled="true"><?= htmlspecialchars($editproperty->state); ?></option>
+                            <?php foreach ($states as $state) { ?>
+                            
+                            <option value="<?php echo $state->id ?>"><?php echo $state->name ?></option>
+                             <?php }?>
+                            </select>
+                            </div>
+                             <!-- state -->
+                             <!-- city-->
+                            <div class="col-lg-6 res_mt">
+                            <label for="city" class="labelclass">Select City</label>
+                          
+                            <select name="city" id="cityId" class="form-control greybg">
+                            <option selected disabled="true"><?= htmlspecialchars($editproperty->city); ?></option>
+                    
+                            </select>
+                            </div>
+                            <!-- city-->
+                          </div>
                         
                           <div class="row inputmargintop">
                             <!--zipcode-->
@@ -166,9 +193,9 @@
 
                         </div>
                         <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->id); ?>">
-                        <div class="card-action text-end">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
-                        </div>
+                        </div> -->
                     </form>
                     <?php endif; ?>
                 </div>
@@ -306,6 +333,26 @@ tinymce.init({
         });
     }
 </script>
+
+<!-- scritp for sate and city data  -->
+<script>
+            function fetchCityData(statesId){
+                $.ajax({
+                    url: "<?php echo site_url("cities") ?> ",
+                    method: "POST",
+                    data: {
+                        statesId:statesId
+                    },
+                    success: function(result){
+                    let data = JSON.parse(result);
+
+                    document.querySelector("#cityId").innerHTML = data;
+                        console.log(result);
+                    }
+                });
+            }
+        </script>
+<!-- scritp for sate and city data  -->
        
 
 <?= $this->endSection() ?>

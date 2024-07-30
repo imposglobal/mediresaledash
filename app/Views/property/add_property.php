@@ -27,13 +27,13 @@
             <h3 class="fw-bold">Add Property</h3>
             <ul class="breadcrumbs">
                 <li class="nav-home">
-                    <a href="#">
+                    <a href="<?php echo base_url('dashboard')?>">
                     Home
                     </a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <span class="fs18">|</span>
                 <li class="nav-item">
@@ -74,6 +74,69 @@
                             <div id="imagePreview" class="row mt-3"></div>
                               <!-- preview -->
                           </div>
+
+                          <div class="row inputmargintop">
+
+                            <!-- property type -->
+                            <div class="col-lg-6 res_mt">
+                            <label for="property_type" class="labelclass">Property_type</label>
+                            <select name="property_type" class="form-control greybg">
+                            <option selected disabled="true">select type</option>
+                            <option value="clinics">Clinics</option>
+                            <option value="hospitals">Hospitals</option>
+                            <option value="diagnostic-centers">Diagnostic Centers</option>
+                            <option value="nursing-homes">Nursing Homes</option>
+                           
+                            </select>
+                            </div>
+                            <!-- property type -->
+
+                            <!--transaction type-->
+                            <div class="col-lg-6">
+                            <label for="transaction_type" class="labelclass">Transaction Type</label>
+                            <select name="transaction_type" class="form-control greybg">
+                            <option selected disabled="true">Select</option>
+                            <option value="Buy">Buy</option>
+                            <option value="Rent">Rent</option>
+                            </select>
+                            </div>
+                            <!--transaction type-->
+                            
+
+                          </div>
+
+
+                         
+                          <div class="row inputmargintop">
+                             <!-- price-->
+                             <div class="col-lg-4 res_mt">
+                            <label for="price" class="labelclass">Price</label>
+                            <input type="text" class="form-control greybg" name="price" placeholder="Price">
+                            </div>
+                            <!--price----->
+<!-- Built Year -->
+<div class="col-lg-4 res_mt">
+<label for="Built-year" class="labelclass">Built Year</label>
+<input type="text" class="form-control greybg" name="built_year" placeholder="Built Year">
+</div>
+<!-- Built Year -->
+
+<!--Possession Year-->
+<div class="col-lg-4">
+<label for="possession" class="labelclass">Possession</label>
+                            <select name="possession" class="form-control greybg">
+                            <option selected disabled="true">select year</option>
+                            <option value="ready-to-move">Ready to move</option>
+                            <option value="in-one-year">In 1 Year</option>
+                            <option value="in-two-year">In 2 Year</option>
+                            <option value="in-three-year">In 3 Year</option>
+                           
+                            </select>
+</div>
+<!--Possession Year-->
+
+
+</div>
 
 
                           <div class="row addressmargintop">
@@ -124,12 +187,16 @@
                             </div>
                             <!--total area -->
 
-                              <!--Built Year-->
+                            <!--parking-->
                             <div class="col-lg-4 res_mt">
-                            <label for="Built-year" class="labelclass">Built Year</label>
-                            <input type="text" class="form-control greybg" name="built_year" placeholder="Built Year">
+                            <label for="parking" class="labelclass">Parking</label>
+                            <select name="parking" class="form-control greybg">
+                            <option value="" disabled="true">Select</option>
+                            <option value="Available">Available</option>
+                            <option value="Not Available">Not Available</option>
+                            </select>
                             </div>
-                            <!--Built Year -->
+                              <!--parking-->
 
                            
                           </div>
@@ -137,26 +204,44 @@
 
 
 
-                          <div class="row inputmargintop">
-                            <!--parking-->
-                            <div class="col-lg-6">
-                            <label for="parking" class="labelclass">Parking</label>
-                            <select name="parking" class="form-control greybg">
-                            <option value="" disabled="true">Select City</option>
+                            <div class="row inputmargintop">
+                            <!--On site Pharmecy-->
+                            <div class="col-lg-4">
+                            <label for="pharmacy" class="labelclass">On site pharmacy</label>
+                            <select name="pharmacy" class="form-control greybg">
+                            <option value="" disabled="true">Select</option>
                             <option value="Available">Available</option>
                             <option value="Not Available">Not Available</option>
                             </select>
-                          
                             </div>
-                             <!-- parking-->
-                             <!-- price-->
-                            <div class="col-lg-6 res_mt">
-                            <label for="price" class="labelclass">Price</label>
-                            <input type="text" class="form-control greybg" name="price" placeholder="Price">
+                            <!--On site Pharmecy-->
+
+                            <!--Laboratory Services-->
+                            <div class="col-lg-4 res_mt">
+                            <label for="laboratory" class="labelclass">Laboratory</label>
+                            <select name="laboratory" class="form-control greybg">
+                            <option value="" disabled="true">Select</option>
+                            <option value="Available">Available</option>
+                            <option value="Not Available">Not Available</option>
+                            </select>
                             </div>
-                            <!--price----->
+                            <!--Laboratory Services-->
+
+                            <!--Cafeteria-->
+                            <div class="col-lg-4 res_mt">
+                            <label for="cafeteria" class="labelclass">Cafeteria</label>
+                            <select name="cafeteria" class="form-control greybg">
+                            <option value="" disabled="true">Select</option>
+                            <option value="Available">Available</option>
+                            <option value="Not Available">Not Available</option>
+                            </select>
+                            </div>
+                            <!--Cafeteria-->
+                            
 
                           </div>
+
+
 
                              <!-- TinyMCE Editor -->
                              <div class="col-lg-12 inputmargintop">
@@ -168,9 +253,9 @@
 
 
                         </div>
-                        <div class="card-action text-end">
+                        <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres"  id="add_property"><i class="fa fa-plus color-info me-2"></i>Add Property</button>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
@@ -266,6 +351,23 @@ document.getElementById('property_image').addEventListener('change', function(ev
             // Collect form data
             var form = $('#propertyForm')[0];
             var formData = new FormData(form);
+
+             // Check if all required fields are filled
+             var allFieldsFilled = true;
+            formData.forEach(function(value, key) {
+                if (!value) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            if (!allFieldsFilled) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'All fields are required.',
+                });
+                return; // Stop further execution
+            }
 
             $.ajax({
                 url: '<?php echo base_url('property/add_property') ?>',
