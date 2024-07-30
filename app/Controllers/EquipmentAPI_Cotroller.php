@@ -188,18 +188,40 @@ public function getEquipmentByCityOrZipcode()
 //**************************code for multiple filter together*********************************
 
 
+public function getEquipmentByFilters()
+{
+    $equipmentModel = new EquipmentModel();
+    $equipmentType = 'imaging-equipment'; 
+    $cityOrZipcode = 'Gandhinagar'; 
 
 
+    $builder = $equipmentModel->builder();
 
+    if (!empty($cityOrZipcode)) {
+        if (is_numeric($cityOrZipcode)) {
+            $builder->where('zipcode', $cityOrZipcode);
+        } else {
+            $builder->where('city', $cityOrZipcode);
+        }
+    }
 
+    if (!empty($equipmentType)) {
+        $builder->where('equipment_type', $equipmentType);
+    }
 
+    $query = $builder->get();
+    $equipments = $query->getResultArray();
 
-        
+    if (empty($equipments)) {
+        return $this->response->setJSON([
+            'message' => 'No equipment found for the provided filters.'
+        ])->setStatusCode(404);
+    }
 
-        
-        
-   
-    
-
+    return $this->response->setJSON([
+        'status' => 'success',
+        'data' => $equipments
+    ]);
+}
 
 }

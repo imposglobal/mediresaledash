@@ -71,7 +71,7 @@ class Equipment extends BaseController
             $imageNamesString = null; // No valid images uploaded, set to null
         }
 
-        $StateModel = new StateModel();
+    $StateModel = new StateModel();
     $CityModel = new CityModel();
 
     $stateId = $this->request->getPost('state');
@@ -188,20 +188,58 @@ class Equipment extends BaseController
 
 
     public function update_equipments($id) {
-        $data['editequipments'] = $this->equipmentModel->get_equipment_by_id($id);
-        
+
+
+        $EquipmentModel = new EquipmentModel();
+        $commonModel = new CommonModel();
+        // Fetch states data
+        $states = $commonModel->selectData("states");
+
+        $editequipments = $EquipmentModel->get_equipment_by_id($id);
+
+         // Prepare data array
+        $data = [
+        'states' => $states,
+        'editequipments' => $editequipments
+        ];
         return view('equipments/update_equipments', $data);
     }
 
 
 
     public function edit_equipments($id) {
+
+        $StateModel = new StateModel();
+        $CityModel = new CityModel();
+    
+        $stateId = $this->request->getPost('state');
+        $cityId = $this->request->getPost('city');
+    
+        // Fetch state name
+        $state = $StateModel->where('id', $stateId)->first();
+        $stateName = $state['name'] ?? 'state not found.';
+    
+        // Fetch city name
+        $city = $CityModel->select('cities.city as city_name')
+                          ->join('states', 'cities.state_id = states.id')
+                          ->where('cities.id', $cityId)
+                          ->first();
+        $cityName = $city['city_name'] ?? 'City not found.';
+
         $data = [
             'title' => $this->request->getPost('title'),
+            'equipment_type' => $this->request->getPost('equipment_type'),
+            'brand' => $this->request->getPost('brand'),
+            'equipment_condition' => $this->request->getPost('equipment_condition'),
+            'warranty' => $this->request->getPost('warranty'),
+            'availability' => $this->request->getPost('availability'),
             'serial_number' => $this->request->getPost('serial_number'),
             'price' => $this->request->getPost('price'),
             'manifacture_year' => $this->request->getPost('manifacture_year'),
-            'description' => $this->request->getPost('description')
+            'state' => $stateName,
+            'city' => $cityName,
+            'zipcode' => $this->request->getPost('zipcode'),
+            'description' => $this->request->getPost('description'),
         ];
     
         // Handle file upload
