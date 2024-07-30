@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 
 class LoginModel extends Model{
-    protected $table = 'registration';
+    protected $table = 'user';
     protected $primarykey = 'id';
     protected $allowedFields = [
         'name',

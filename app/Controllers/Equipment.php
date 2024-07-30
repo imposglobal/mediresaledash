@@ -22,7 +22,7 @@ class Equipment extends BaseController
     {
 
         
-        //  // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
+         //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
           if(!session()->get('isLoggedIn'))
             return redirect()->to('/');
 
@@ -225,16 +225,5 @@ class Equipment extends BaseController
             return $this->response->setStatusCode(404)->setBody('not_found');
         }
     }
-
-
-
-
-
-    
-
-
-   
-    
-
 
 }

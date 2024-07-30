@@ -60,6 +60,21 @@ $routes->get('/profile', 'Profile::profile_show');
 $routes->post('/update_profile', 'Profile::update_profile');
 
 
+// Restfull API routes to integrate with wordpress 
+// $routes->group('api', ['namespace' => 'App\Controllers\API'], function($routes) {
+//     $routes->get('equipments', 'Equipment::equipment_api');
+//     $routes->get('property', 'PropertyController::index');
+// });
+
+// API to get equipments
+$routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
+
+// API to get Property
+$routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); //http://localhost/mediresaledash/property/view
+
+$routes->get('/property_price_range/view', 'PropertyAPI_Cotroller::GetPropertiesByPriceRange_API'); //http://localhost/mediresaledash/property_price_range/view
+
+
 
 
 
