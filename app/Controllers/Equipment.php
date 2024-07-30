@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 use App\Models\EquipmentModel;
+use App\Models\CommonModel;
+use App\Models\StateModel;
+use App\Models\CityModel;
 
 
 
@@ -17,20 +20,33 @@ class Equipment extends BaseController
 
 
     public function equipments()
-<<<<<<< HEAD
-    {  
-        //  // //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
-=======
-    {
-
-        
+    { 
          //when unkonmwn user try to access any url path, then it should redirect to login page i.e without login no one can access any page directly
->>>>>>> origin/krushna
           if(!session()->get('isLoggedIn'))
             return redirect()->to('/');
 
-        return view('equipments/add_equipments');
+            $CommonModel = new CommonModel();
+            $states = $CommonModel->selectData("states");
+            $data['states'] = $states;
+
+        return view('equipments/add_equipments' , $data);
     }
+
+    public function cities()
+    {
+       $stateId= $this->request->getPost("statesId");
+       
+       $CommonModel = new CommonModel();
+       $citydata = $CommonModel->selectData("cities", array("state_id" => $stateId));
+       
+       $output =  "";
+       foreach ($citydata as $city) {
+
+             $output .= "<option value='$city->id'>$city->city</option>";
+       }
+       echo json_encode($output);
+    }
+
 
     public function add_equipments()
     {
@@ -54,13 +70,38 @@ class Equipment extends BaseController
         } else {
             $imageNamesString = null; // No valid images uploaded, set to null
         }
+
+        $StateModel = new StateModel();
+    $CityModel = new CityModel();
+
+    $stateId = $this->request->getPost('state');
+    $cityId = $this->request->getPost('city');
+
+    // Fetch state name
+    $state = $StateModel->where('id', $stateId)->first();
+    $stateName = $state['name'] ?? 'state not found.';
+
+    // Fetch city name
+    $city = $CityModel->select('cities.city as city_name')
+                      ->join('states', 'cities.state_id = states.id')
+                      ->where('cities.id', $cityId)
+                      ->first();
+    $cityName = $city['city_name'] ?? 'City not found.';
     
         // Get data from the form and map it to the database fields
         $data = [
             'title' => $this->request->getPost('title'),
+            'equipment_type' => $this->request->getPost('equipment_type'),
+            'brand' => $this->request->getPost('brand'),
+            'equipment_condition' => $this->request->getPost('equipment_condition'),
+            'warranty' => $this->request->getPost('warranty'),
+            'availability' => $this->request->getPost('availability'),
             'serial_number' => $this->request->getPost('serial_number'),
             'price' => $this->request->getPost('price'),
             'manifacture_year' => $this->request->getPost('manifacture_year'),
+            'state' => $stateName,
+            'city' => $cityName,
+            'zipcode' => $this->request->getPost('zipcode'),
             'description' => $this->request->getPost('description'),
             'equipment_image' => $imageNamesString
         ];

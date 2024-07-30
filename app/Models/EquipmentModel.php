@@ -9,10 +9,18 @@ class EquipmentModel extends Model{
     protected $table = 'equipments';
     protected $primarykey = 'id';
     protected $allowedFields = [
-        'title',       
+        'title',
+        'equipment_type',      
+        'brand',
+        'equipment_condition',
+        'warranty',
+        'availability',
         'serial_number', 
         'price',
         'manifacture_year',
+        'state',
+        'city',
+        'zipcode',
         'description',
         'equipment_image',
         'created_at'
