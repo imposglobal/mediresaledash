@@ -60,28 +60,27 @@ $routes->get('/profile', 'Profile::profile_show');
 $routes->post('/update_profile', 'Profile::update_profile');
 
 
-// Restfull API routes to integrate with wordpress 
-// $routes->group('api', ['namespace' => 'App\Controllers\API'], function($routes) {
-//     $routes->get('equipments', 'Equipment::equipment_api');
-//     $routes->get('property', 'PropertyController::index');
-// });
-
 // API to get equipments
 $routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
 
 
-// API to get Property
+// API to get Property 
 $routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); //http://localhost/mediresaledash/property/view
 
-$routes->get('/property_price_range/view', 'PropertyAPI_Cotroller::GetPropertiesByPriceRange_API'); //http://localhost/mediresaledash/property_price_range/view
+$routes->get('/property_by_price_range/view', 'PropertyAPI_Cotroller::GetPropertiesByPriceRange_API'); //http://localhost/mediresaledash/property_price_range/view
 
-$routes->get('/property_built_year/view', 'PropertyAPI_Cotroller::getPropertiesByBuiltYear_API'); //http://localhost/mediresaledash/property_built_year/view
+$routes->get('/property_by_built_year/view', 'PropertyAPI_Cotroller::getPropertiesByBuiltYear_API'); //http://localhost/mediresaledash/property_built_year/view
 
 $routes->get('/property_by_property_type/view', 'PropertyAPI_Cotroller::getPropertiesByPropertyType_API'); //http://localhost/mediresaledash/property_by_property_type/view
 
-$routes->get('/property_by_transaction_type/view', 'PropertyAPI_Cotroller::getPropertiesByTransactionType_API'); //http://localhost/mediresaledash/property_by_property_type/view
+$routes->get('/property_by_transaction_type/view', 'PropertyAPI_Cotroller::getPropertiesByTransactionType_API'); //http://localhost/mediresaledash/property_by_transaction_type/view
 
+$routes->get('/property_by_city_or_zipcode/view', 'PropertyAPI_Cotroller::getPropertiesByCityOrZipcode'); //http://localhost/mediresaledash/property_by_city_or_zipcode/view
 
+$routes->get('/property_by_amenities/view', 'PropertyAPI_Cotroller::getPropertiesByAmenities'); //http://localhost/mediresaledash/property_by_amenities/view
 
+$routes->get('/property_by_age_of_property/view', 'PropertyAPI_Cotroller::getEquipmentByAgeOfProperty_API'); //http://localhost/mediresaledash/property_by_age_of_property/view
 
+$routes->get('/property_by_monthly_rent/view', 'PropertyAPI_Cotroller::getEquipmentByMonthlyRent_API'); //http://localhost/mediresaledash/property_monthly_rent/view
 
+$routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertiesByPossesion_API'); //http://localhost/mediresaledash/property_by_possesion/view
