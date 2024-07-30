@@ -74,6 +74,11 @@ $routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); /
 
 $routes->get('/property_price_range/view', 'PropertyAPI_Cotroller::GetPropertiesByPriceRange_API'); //http://localhost/mediresaledash/property_price_range/view
 
+$routes->get('/property_built_year/view', 'PropertyAPI_Cotroller::getPropertiesByBuiltYear_API'); //http://localhost/mediresaledash/property_built_year/view
+
+$routes->get('/property_by_property_type/view', 'PropertyAPI_Cotroller::getPropertiesByPropertyType_API'); //http://localhost/mediresaledash/property_by_property_type/view
+
+$routes->get('/property_by_transaction_type/view', 'PropertyAPI_Cotroller::getPropertiesByTransactionType_API'); //http://localhost/mediresaledash/property_by_property_type/view
 
 
 
