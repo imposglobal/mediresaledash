@@ -69,6 +69,7 @@ $routes->post('/update_profile', 'Profile::update_profile');
 // API to get equipments
 $routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
 
+
 // API to get Property
 $routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); //http://localhost/mediresaledash/property/view
 
