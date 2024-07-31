@@ -97,6 +97,58 @@
                               <!-- preview -->
                           </div>
 
+                          
+                          <div class="row inputmargintop">
+                            <!--property_type-->
+                            <div class="col-lg-6">
+                            <label for="parking" class="labelclass">Property type</label>
+                            <select name="property_type" class="form-control greybg">
+                            <option  value="<?= htmlspecialchars($editproperty->property_type); ?>"><?= htmlspecialchars($editproperty->property_type); ?></option>
+                            <option value="Hospital">Hospital</option>
+                            <option value="Clinics">Clinics</option>
+                            <option value="Diagnostic Centers">Diagnostic Centers </option Centers>
+                            <option value="Nursing Homes">Nursing Homes </option Centers>
+
+                        </select>
+                          
+                            </div>
+                            
+                             <!-- transaction_type-->
+                            <div class="col-lg-6 res_mt">
+                            <label for="price" class="labelclass">Transaction Type</label>
+                            <select name="transaction_type" class="form-control greybg">
+                            <option  value="<?= htmlspecialchars($editproperty->transaction_type); ?>"><?= htmlspecialchars($editproperty->transaction_type); ?></option>
+                            <option value="Rent">Rent</option>
+                            <option value="Buy">Buy</option>
+
+                        </select>                            
+                        </div>
+
+                            <!-- price-->
+                            <div class="row inputmargintop">
+                                <div class="col-lg-4 res_mt">
+                                    <label for="price" class="labelclass">Price</label>
+                                    <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editproperty->price); ?>" placeholder="Price">
+                                </div>
+
+                            <!--Built Year-->
+                                <div class="col-lg-4 res_mt">
+                                    <label for="Built-year" class="labelclass">Built Year</label>
+                                    <input type="text" class="form-control greybg" name="built_year" value="<?= htmlspecialchars($editproperty->built_year); ?>" placeholder="Built Year">
+                                </div>
+                            <!--Built Year -->
+                            <div class="col-lg-4 res_mt">
+                                    <label for="Built-year" class="labelclass">Possesion</label>
+                                    <select name="possession" class="form-control greybg">
+                                        <option  value="<?= htmlspecialchars($editproperty->possession); ?>"><?= htmlspecialchars($editproperty->possession); ?></option>
+                                        <option value="Ready to move">Ready to move</option>
+                                        <option value="In One Year">In One Year</option>
+                                        <option value="In 2 year">In 2 year</option>
+                                        <option value="In 3 year">In 3 year</option>
+                                    </select> 
+                                </div>
+                           </div>
+                            <!--Possesion----->
 
                           <div class="row inputmargintop">
                             <!-- address -->
@@ -148,37 +200,62 @@
                             </div>
                             <!--total area -->
 
-                              <!--Built Year-->
-                            <div class="col-lg-4 res_mt">
-                            <label for="Built-year" class="labelclass">Built Year</label>
-                            <input type="text" class="form-control greybg" name="built_year" value="<?= htmlspecialchars($editproperty->built_year); ?>" placeholder="Built Year">
+                              
+                            <!--parking-->
+                            <div class="col-lg-4">
+                                <label for="parking" class="labelclass">Parking</label>
+                                <select name="parking" class="form-control greybg">
+                                <option  value="<?= htmlspecialchars($editproperty->parking); ?>"><?= htmlspecialchars($editproperty->parking); ?></option>
+                                <option value="Available">Available</option>
+                                <option value="Not Available">Not Available</option>
+                                </select>
                             </div>
-                            <!--Built Year -->
+                           
+                          </div>
 
+
+                          <div class="row inputmargintop">
+                            <!--pharmacy-->
+                            <div class="col-lg-4">
+                            <label for="zipcode" class="labelclass">On Site Pharmacy</label>
+                            <select name="pharmacy" class="form-control greybg">
+                                <option  value="<?= htmlspecialchars($editproperty->pharmacy); ?>"><?= htmlspecialchars($editproperty->pharmacy); ?></option>
+                                <option value="Available">Available</option>
+                                <option value="Not Available">Not Available</option>
+                                </select>
+                        </div>
+                             <!-- pharmacy-->
+                             <!-- laboratory -->
+                            <div class="col-lg-4 res_mt">
+                            <label for="area" class="labelclass">Laboratory</label>
+                            <select name="laboratory" class="form-control greybg">
+                                <option  value="<?= htmlspecialchars($editproperty->laboratory); ?>"><?= htmlspecialchars($editproperty->laboratory); ?></option>
+                                <option value="Available">Available</option>
+                                <option value="Not Available">Not Available</option>
+                                </select>
+                        </div>
+                            <!-- laboratory -->
+
+                              
+                            <!--cafeteria-->
+                            <div class="col-lg-4">
+                                <label for="parking" class="labelclass">Cafeteria</label>
+                                <select name="cafeteria" class="form-control greybg">
+                                <option  value="<?= htmlspecialchars($editproperty->cafeteria); ?>"><?= htmlspecialchars($editproperty->cafeteria); ?></option>
+                                <option value="Available">Available</option>
+                                <option value="Not Available">Not Available</option>
+                                </select>
+                            </div>
                            
                           </div>
 
 
 
 
-                          <div class="row inputmargintop">
-                            <!--parking-->
-                            <div class="col-lg-6">
-                            <label for="parking" class="labelclass">Parking</label>
-                            <select name="parking" class="form-control greybg">
-                            <option  value="<?= htmlspecialchars($editproperty->parking); ?>"><?= htmlspecialchars($editproperty->parking); ?></option>
-                            <option value="Available">Available</option>
-                            <option value="Not Available">Not Available</option>
-                            </select>
                           
-                            </div>
+
                              <!-- parking-->
-                             <!-- price-->
-                            <div class="col-lg-6 res_mt">
-                            <label for="price" class="labelclass">Price</label>
-                            <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editproperty->price); ?>" placeholder="Price">
-                            </div>
-                            <!--price----->
+                             
 
 
 

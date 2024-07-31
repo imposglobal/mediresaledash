@@ -280,6 +280,13 @@ public function edit_property($id)
             'total_area' => $this->request->getPost('total_area'),
             'zipcode' => $this->request->getPost('zipcode'),
             'price' => $this->request->getPost('price'),
+            'property_type' => $this->request->getPost('property_type'),
+            'transaction_type' => $this->request->getPost('transaction_type'),
+            'possession' => $this->request->getPost('possession'),
+            'parking' => $this->request->getPost('parking'),
+            'pharmacy' => $this->request->getPost('pharmacy'),
+            'laboratory' => $this->request->getPost('laboratory'),
+            'cafeteria' => $this->request->getPost('cafeteria'),
             'parking' => $this->request->getPost('parking')
         ];
     
