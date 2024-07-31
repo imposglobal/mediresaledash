@@ -32,6 +32,19 @@
         <div class="row carouselbox">
   <?php if (!empty($viewproperty) && is_array($viewproperty)): ?>
     <?php foreach ($viewproperty as $item): ?>
+
+      <div class="col-md-12 mb30">
+      <div class="card-body">
+      <div class="separator-solid"></div>
+      
+          <h3 class="card-title maintitle">
+            <a href="#"><?= esc($item['name']) ?> </a>
+          </h3>
+          <p class="card-text">
+          <?= esc(strip_tags($item['description'])) ?>
+          </p>
+      </div>
+      </div>
       <div class="col-md-6">
         <!-- carousel -->
         <div class="bootstrap-carousel">
@@ -64,51 +77,59 @@
 
       <div class="col-md-6">
         <div class="card-body">
-         
-          <div class="separator-solid"></div>
-          <p class="card-category text-info mb-1">
-            <a href="#">2024-12-24</a>
+
+        <div class="row">
+            <div class="col-lg-12 mb-3">
+            <h3 class="card-title maintitle mt20">
+            Address
+            </h3>
+
+            <p class="card-text">
+          <?= esc(strip_tags($item['address'])) ?>
           </p>
-          <h3 class="card-title">
-            <a href="#"><?= esc($item['name']) ?> </a>
-          </h3>
-         
-        
-         
-          <p class="card-text mt-3 mb-4">
-          <?= esc(strip_tags($item['description'])) ?>
-          </p>
+            </div>
+          
+            
+           </div>
       
+          <div class="row">
+           
+            <div class="col-lg-12">
+            <span class="textdarkgrey">Property Type</span> - <span class="ms-2 fs16"><?= esc($item['property_type']) ?></span>
+            </div>
+            <div class="col-lg-12"><span class="textdarkgrey">Built Year</span> - <span class="ms-2 fs16"><?= esc($item['built_year']) ?></div>
+            <div class="col-lg-12">
+            <span class="textdarkgrey">Possession Year</span> - <span class="ms-2 fs16"><?= esc($item['possession']) ?></span>
+            </div>
+            <div class="col-lg-6">
+            <span class="textdarkgrey">State</span> - <span class="ms-2 fs16"><?= esc($item['state']) ?></span>
+            </div>
+            <div class="col-lg-6"><span class="textdarkgrey">City</span> - <span class="ms-2 fs16"><?= esc($item['city']) ?></div>   
+            <div class="col-lg-6">
+            <span class="textdarkgrey">Zip-Code</span> - <span class="ms-2 fs16"><?= esc($item['zipcode']) ?></span>
+            </div>
+            <div class="col-lg-6"><span class="textdarkgrey">Total Area</span> - <span class="ms-2 fs16"><?= esc($item['total_area']) ?></div>
+          
+            <div class="col-lg-6"><span class="textdarkgrey">Transaction Type</span> - <span class="ms-2 fs16"><?= esc($item['transaction_type']) ?></div>
+            <div class="col-lg-6">
+            <span class="textdarkgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></span>
+            </div>
+
+         
+          </div>
 
           <div class="row">
-            <div class="col-lg-6">
-            <span class="textgrey">State</span> - <span class="ms-2 fs16"><?= esc($item['state']) ?></span>
+            <div class="col-lg-12 mb-2">
+            <h3 class="card-title maintitle mt-3">
+            Ameneties
+            </h3>
             </div>
-            <div class="col-lg-6"><span class="textgrey">City</span> - <span class="ms-2 fs16"><?= esc($item['city']) ?></div>   
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-            <span class="textgrey">Zip-Code</span> - <span class="ms-2 fs16"><?= esc($item['zipcode']) ?></span>
-            </div>
-            <div class="col-lg-6"><span class="textgrey">Total Area</span> - <span class="ms-2 fs16"><?= esc($item['total_area']) ?></div>
-            
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-            <span class="textgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></span>
-            </div>
-            <div class="col-lg-6"><span class="textgrey">Built Year</span> - <span class="ms-2 fs16"><?= esc($item['built_year']) ?></div>
-            
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-            <span class="textgrey">Parking</span> - <span class="ms-2 fs16"><?= esc($item['parking']) ?></span>
-            </div>
-            
-            
-          </div>
+            <div class="col-lg-6"><span class="textdarkgrey">Parking</span> - <span class="ms-2 fs16"><?= esc($item['parking']) ?></div>
+            <div class="col-lg-6"><span class="textdarkgrey">Pharmacy</span> - <span class="ms-2 fs16"><?= esc($item['pharmacy']) ?></div>
+            <div class="col-lg-6"><span class="textdarkgrey">Laboratory</span> - <span class="ms-2 fs16"><?= esc($item['laboratory']) ?></div>
+            <div class="col-lg-6"><span class="textdarkgrey">Cafeteria</span> - <span class="ms-2 fs16"><?= esc($item['cafeteria']) ?></div>
+           </div>
+         
 
          
 
