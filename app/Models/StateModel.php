@@ -12,5 +12,9 @@ class StateModel extends Model{
     
     ];
 
+    public function getStates() {
+        return $this->db->table($this->table)->get()->getResultArray();
+    }
+
 }  
 ?>

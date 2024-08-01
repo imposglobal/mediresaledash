@@ -184,23 +184,28 @@
 
 
                             <div class="row inputmargintop">
-                            <!--state  -->
+                            
+                             <!--state  -->
                             <div class="col-lg-4">
                             <label for="state" class="labelclass">Select State</label>
-                            <select name="state" id="state" class="form-control greybg" onchange="fetchCityData(this.value)">
-                            <option value="<?= htmlspecialchars($editequipments->state); ?>"><?= htmlspecialchars($editequipments->state); ?></option>
-                            <?php foreach ($states as $state) { ?>
-                            <option value="<?php echo $state->id ?>"><?php echo $state->name ?></option>
-                             <?php }?>
-                            </select>
+                            <input list="statedata" name="state" id="state" class="form-control greybg" value="<?= htmlspecialchars($editequipments->state); ?>">
+                            <datalist id="statedata">
+                            <?php foreach ($states as $state): ?>
+                            <option value="<?php echo $state['name']; ?>"><?php echo $state['name']; ?></option>
+                            <?php endforeach; ?>
+                            </datalist>                        
                             </div>
                              <!-- state -->
+
                              <!-- city-->
                             <div class="col-lg-4 res_mt">
                             <label for="city" class="labelclass">Select City</label>
-                            <select name="city" id="cityId" class="form-control greybg">
-                            <option value="<?= htmlspecialchars($editequipments->city); ?>"><?= htmlspecialchars($editequipments->city); ?></option>
-                            </select>
+                            <input list="citydata" name="city" id="city" class="form-control greybg" value="<?= htmlspecialchars($editequipments->city); ?>">
+                            <datalist id="citydata">
+                            <?php foreach ($cities as $city): ?>
+                            <option value="<?php echo $city['city']; ?>"><?php echo $city['city']; ?></option>
+                            <?php endforeach; ?>
+                            </datalist>
                             </div>
                             <!-- city-->
 
@@ -356,23 +361,4 @@ tinymce.init({
     }
 </script>
 
-<!-- script for sate and city data  -->
-<script>
-            function fetchCityData(statesId){
-                $.ajax({
-                    url: "<?php echo site_url("cities") ?> ",
-                    method: "POST",
-                    data: {
-                        statesId:statesId
-                    },
-                    success: function(result){
-                    let data = JSON.parse(result);
-
-                    document.querySelector("#cityId").innerHTML = data;
-                        console.log(result);
-                    }
-                });
-            }
-        </script>
-<!-- scritp for sate and city data  -->
 <?= $this->endSection() ?>

@@ -10,10 +10,14 @@ class Property extends BaseController
 {
     
     protected $propertyModel;
+    protected $cityModel;
+    protected $stateModel;
 
     public function __construct()
     {
         $this->propertyModel = new PropertyModel();
+        $this->cityModel = new CityModel();
+        $this->stateModel = new StateModel();
     }
 
 
@@ -230,18 +234,17 @@ public function view_all_property()
 public function update_property($id) 
 {
     $propertyModel = new PropertyModel();
-    $commonModel = new CommonModel();
-    
-    // Fetch states data
-    $states = $commonModel->selectData("states");
-    
+
     // Fetch property data by ID
     $editProperty = $propertyModel->get_property_by_id($id);
+    $city  =  $this->cityModel->getCities();
+    $state  =  $this->stateModel->getStates();
     
     // Prepare data array
-    $data = [
-        'states' => $states,
-        'editproperty' => $editProperty
+    $data = [       
+        'editproperty' => $editProperty,
+        'states' => $state,
+        'cities' => $city    
     ];
     
     // Return the view with data
@@ -250,31 +253,12 @@ public function update_property($id)
 
 public function edit_property($id)
     {
-
-        $StateModel = new StateModel();
-        $CityModel = new CityModel();
-    
-        $stateId = $this->request->getPost('state');
-        $cityId = $this->request->getPost('city');
-    
-        // Fetch state name
-        $state = $StateModel->where('id', $stateId)->first();
-        $stateName = $state['name'] ?? 'state not found.';
-    
-        // Fetch city name
-        $city = $CityModel->select('cities.city as city_name')
-                          ->join('states', 'cities.state_id = states.id')
-                          ->where('cities.id', $cityId)
-                          ->first();
-        $cityName = $city['city_name'] ?? 'City not found.';
-
-
         $data = [
             'name' => $this->request->getPost('name'),
             'description' => $this->request->getPost('description'),
             'address' => $this->request->getPost('address'),
-            'state' => $stateName,
-            'city' => $cityName,
+            'state' => $this->request->getPost('state'),
+            'city' => $this->request->getPost('city'),
             'address' => $this->request->getPost('address'),
             'built_year' => $this->request->getPost('built_year'),
             'total_area' => $this->request->getPost('total_area'),

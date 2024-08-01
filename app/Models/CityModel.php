@@ -11,5 +11,10 @@ class CityModel extends Model{
         'state_id'
     ];
 
+
+    public function getCities() {
+        return $this->db->table($this->table)->get()->getResultArray();
+    }
+
 }  
 ?>

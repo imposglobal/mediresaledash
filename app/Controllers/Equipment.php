@@ -12,10 +12,13 @@ class Equipment extends BaseController
 {
 
     protected $equipmentModel;
+    protected $cityModel;
+    protected $stateModel;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->equipmentModel = new EquipmentModel();
+        $this->cityModel = new CityModel();
+        $this->stateModel = new StateModel();
     }
 
 
@@ -187,44 +190,42 @@ class Equipment extends BaseController
 //*****************************update equipment*******************************
 
 
-    public function update_equipments($id) {
+   public function update_equipments($id) {
+    $editequipments = $this->equipmentModel->get_equipment_by_id($id);
+    $city  =  $this->cityModel->getCities();
+    $state  =  $this->stateModel->getStates();
 
+    // Prepare data array
+    $data = [
+        'editequipments' => $editequipments,
+        'cities' => $city,
+        'states' => $state
+    ];
 
-        $EquipmentModel = new EquipmentModel();
-        $commonModel = new CommonModel();
-        // Fetch states data
-        $states = $commonModel->selectData("states");
-
-        $editequipments = $EquipmentModel->get_equipment_by_id($id);
-
-         // Prepare data array
-        $data = [
-        'states' => $states,
-        'editequipments' => $editequipments
-        ];
-        return view('equipments/update_equipments', $data);
+    return view('equipments/update_equipments', $data);
     }
+
 
 
 
     public function edit_equipments($id) {
 
-        $StateModel = new StateModel();
-        $CityModel = new CityModel();
+        // $StateModel = new StateModel();
+        // $CityModel = new CityModel();
     
-        $stateId = $this->request->getPost('state');
-        $cityId = $this->request->getPost('city');
+        // $stateId = $this->request->getPost('state');
+        // $cityId = $this->request->getPost('city');
     
-        // Fetch state name
-        $state = $StateModel->where('id', $stateId)->first();
-        $stateName = $state['name'] ?? 'state not found.';
+        // // Fetch state name
+        // $state = $StateModel->where('id', $stateId)->first();
+        // $stateName = $state['name'] ?? 'state not found.';
     
-        // Fetch city name
-        $city = $CityModel->select('cities.city as city_name')
-                          ->join('states', 'cities.state_id = states.id')
-                          ->where('cities.id', $cityId)
-                          ->first();
-        $cityName = $city['city_name'] ?? 'City not found.';
+        // // Fetch city name
+        // $city = $CityModel->select('cities.city as city_name')
+        //                   ->join('states', 'cities.state_id = states.id')
+        //                   ->where('cities.id', $cityId)
+        //                   ->first();
+        // $cityName = $city['city_name'] ?? 'City not found.';
 
         $data = [
             'title' => $this->request->getPost('title'),
@@ -236,8 +237,8 @@ class Equipment extends BaseController
             'serial_number' => $this->request->getPost('serial_number'),
             'price' => $this->request->getPost('price'),
             'manifacture_year' => $this->request->getPost('manifacture_year'),
-            'state' => $stateName,
-            'city' => $cityName,
+             'state' => $this->request->getPost('state'),
+            'city' => $this->request->getPost('city'),
             'zipcode' => $this->request->getPost('zipcode'),
             'description' => $this->request->getPost('description'),
         ];
