@@ -74,7 +74,7 @@ $routes->get('/equipments/city-zipcode/view', 'EquipmentAPI_Cotroller::getEquipm
 
 // combine API for equipment listing page
 
-$routes->get('/equipments/getfilter/view', 'EquipmentAPI_Cotroller::getEquipmentByFilters');
+$routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipmentsByFilter');
 
 // http://localhost/mediresaledash/equipments/getfilter/view
 

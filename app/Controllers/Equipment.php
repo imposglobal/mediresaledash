@@ -147,7 +147,6 @@ class Equipment extends BaseController
             }
         }
     
-<<<<<<< HEAD
         if (!empty($imageNames)) {
             $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
         } else {
@@ -170,27 +169,6 @@ class Equipment extends BaseController
                       ->where('cities.id', $cityId)
                       ->first();
     $cityName = $city['city_name'] ?? 'City not found.';
-=======
-        // Convert array of image paths to a comma-separated string
-        $imageNamesString = !empty($imagePaths) ? implode(',', $imagePaths) : null;
-    
-        $StateModel = new StateModel();
-        $CityModel = new CityModel();
-    
-        $stateId = $this->request->getPost('state');
-        $cityId = $this->request->getPost('city');
-    
-        // Fetch state name
-        $state = $StateModel->where('id', $stateId)->first();
-        $stateName = $state['name'] ?? 'State not found.';
-    
-        // Fetch city name
-        $city = $CityModel->select('cities.city as city_name')
-                          ->join('states', 'cities.state_id = states.id')
-                          ->where('cities.id', $cityId)
-                          ->first();
-        $cityName = $city['city_name'] ?? 'City not found.';
->>>>>>> origin/krushna
     
         // Get data from the form and map it to the database fields
         $data = [
