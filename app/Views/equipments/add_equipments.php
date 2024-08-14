@@ -59,14 +59,14 @@
                           <div class="row">
                             <!-- image -->
                             <div class="col-lg-6">
-                            <label for="image" class="labelclass">Image</label>
-                            <input type="file" accept="image/*,.pdf" class="form-control greybg" name="equipment_image[]" id="equipment_image" multiple />
+                                <label for="image" class="labelclass">Image</label>
+                                <input type="file" accept="image/*,.pdf" class="form-control greybg" name="equipment_image[]" id="equipment_image" multiple />
                             </div>
                              <!-- image -->
                              <!-- title -->
                             <div class="col-lg-6 res_mt">
-                            <label for="title" class="labelclass">Title</label>
-                            <input type="text" class="form-control greybg" name="title" placeholder="Enter title" />
+                                <label for="title" class="labelclass">Title</label>
+                                <input type="text" class="form-control greybg" name="title" placeholder="Enter title" />
                             </div>
                             <!-- title -->
 
