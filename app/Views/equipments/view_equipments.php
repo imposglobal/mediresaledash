@@ -29,10 +29,24 @@
             </ul>
             <h3 class="fw-bold mt-4">Equipment</h3>
         </div>
+        
 
         <div class="row carouselbox">
   <?php if (!empty($viewequipment) && is_array($viewequipment)): ?>
     <?php foreach ($viewequipment as $item): ?>
+
+      <div class="col-md-12 mb-5">
+      <div class="card-body">
+      <div class="separator-solid"></div>
+      
+          <h3 class="card-title maintitle">
+            <a href="#"><?= esc($item['title']) ?> </a>
+          </h3>
+          <p class="card-text mt-2">
+          <?= esc(strip_tags($item['description'])) ?>
+          </p>
+      </div>
+      </div>
       <div class="col-md-6">
         <!-- carousel -->
         <div class="bootstrap-carousel">
@@ -67,28 +81,38 @@
 
       <div class="col-md-6">
         <div class="card-body">
-        
-          <div class="separator-solid"></div>
-          <p class="card-category text-info mb-1">
-            <a href="#">2024-12-24</a>
-          </p>
-          <h3 class="card-title">
-            <a href="#"><?= esc($item['title']) ?> </a>
-          </h3>
-          <p class="card-text mt-2">
-          <?= esc(strip_tags($item['description'])) ?>
-          </p>
-          <div class="d-flex">
-            <div class="info-post">
-              <span class="textgrey">Serial Number</span> - <span class="ms-2 fs16"><?= esc($item['serial_number']) ?></span>
-              <br>
-              <span class="textgrey">Manufacture Year</span> - <span class="ms-2 fs16"><?= esc($item['manifacture_year']) ?></span>
-              <br>
-              <span class="textgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></span>
+            <div class="row">
+            <div class="col-lg-12 mb-3">
+            <h3 class="card-title maintitle mt-3">
+             <!-- Ameneties
+            </h3> -->
             </div>
-          </div>
+            <div class="col-lg-12"><span class="textdarkgrey">Equipment Type</span> - <span class="ms-2 fs16"><?= esc($item['equipment_type']) ?></div>
+            <div class="col-lg-12"><span class="textdarkgrey">Brand</span> - <span class="ms-2 fs16"><?= esc($item['brand']) ?></div>
+            <div class="col-lg-12"><span class="textdarkgrey">Equipment Condition	</span> - <span class="ms-2 fs16"><?= esc($item['equipment_condition']) ?></div>
+            <div class="col-lg-12"><span class="textdarkgrey">Warranty</span> - <span class="ms-2 fs16"><?= esc($item['warranty']) ?></div>
+            <div class="col-lg-12"><span class="textdarkgrey">Availability	</span> - <span class="ms-2 fs16"><?= esc($item['availability']) ?></div>
+           </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+            <span class="textdarkgrey">State</span> - <span class="ms-2 fs16"><?= esc($item['state']) ?></span>
+            </div>
+            <div class="col-lg-12"><span class="textdarkgrey">City</span> - <span class="ms-2 fs16"><?= esc($item['city']) ?></div>   
+            <div class="col-lg-12">
+            <span class="textdarkgrey">Zip-Code</span> - <span class="ms-2 fs16"><?= esc($item['zipcode']) ?></span>
+            </div>
+            <div class="col-lg-12"><span class="textdarkgrey">Price</span> - <span class="ms-2 fs16"><?= esc($item['price']) ?></div>
+            <div class="col-lg-12">
+            <span class="textdarkgrey">Serial Number</span> - <span class="ms-2 fs16"><?= esc($item['serial_number']) ?></span>
+            </div>
+            <div class="col-lg-12"><span class="textdarkgrey">Manufacture Year</span> - <span class="ms-2 fs16"><?= esc($item['manifacture_year']) ?></div>
+          </div>       
         </div>
       </div>
+
+
+    
     <?php endforeach; ?>
   <?php else: ?>
     <p>No property found</p>

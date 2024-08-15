@@ -376,6 +376,25 @@ padding: 12.5px 10px !important;
     margin-right: 20px;
 }
 
+.maintitle
+{
+    font-size: 25px !important;
+}
+
+.mb30
+{
+    margin-bottom: 25px !important;
+}
+
+.textdarkgrey
+{
+    color: #6B6B6B;
+    font-size: 16px; 
+    font-weight: 500;
+    line-height: 1.6;
+
+}
+
 
 
 
@@ -386,10 +405,6 @@ padding: 12.5px 10px !important;
     .logoutbtn
     {
         display: none !important;
-    }
-    .addbtnres
-    {
-     display: none !important;
     }
 }
 
@@ -443,5 +458,13 @@ padding: 12.5px 10px !important;
 .topbar_open .logo-header 
 {
  border-bottom: none !important;
+}
+.mb30
+{
+    margin-bottom: 20px !important;
+}
+.mt20
+{
+    margin-top: 20px !important;
 }
 }

@@ -12,10 +12,13 @@ class Equipment extends BaseController
 {
 
     protected $equipmentModel;
+    protected $cityModel;
+    protected $stateModel;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->equipmentModel = new EquipmentModel();
+        $this->cityModel = new CityModel();
+        $this->stateModel = new StateModel();
     }
 
 
@@ -115,86 +118,86 @@ class Equipment extends BaseController
     // }
 
 /***************************************  additional code by krushna to save iamge with its path in db *****************************/
-    public function add_equipments()
-    {
-        $EquipmentModel = new EquipmentModel();
-        
-        // Handle multiple file uploads
-        $images = $this->request->getFiles();
-        $validImages = [];
-        $imageNames = [];
-        
-        if (isset($images['equipment_image'])) {
-            foreach ($images['equipment_image'] as $file) {
-                if ($file->isValid() && !$file->hasMoved()) {
-                    $yearMonthFolder = date('Y') . '/' . date('m');
-                    // $uploadPath = WRITEPATH . '../assets/uploads/equipments/' . $yearMonthFolder . '/';
-                    $uploadPath = WRITEPATH . '../assets/uploads/equipments/';
+    
+    
+public function add_equipments()
+{
+    $EquipmentModel = new EquipmentModel();
+    
+    // Handle multiple file uploads
+    $images = $this->request->getFiles();
+    $validImages = [];
+    $imageNames = [];
+    
+    if (isset($images['equipment_image'])) {
+        foreach ($images['equipment_image'] as $file) {
+            if ($file->isValid() && !$file->hasMoved()) {
+                $yearMonthFolder = date('Y') . '/' . date('m');
+                // $uploadPath = WRITEPATH . '../assets/uploads/equipments/' . $yearMonthFolder . '/';
+                $uploadPath = WRITEPATH . '../assets/uploads/equipments/';
 
 
-                    // Ensure the directory exists
-                    if (!is_dir($uploadPath)) {
-                        mkdir($uploadPath, 0755, true);
-                    }
-    
-                    $newName = $file->getRandomName();
-                    $file->move($uploadPath, $newName);
-    
-                    $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName; // image will be saved with this path in db
-                    
+                // Ensure the directory exists
+                if (!is_dir($uploadPath)) {
+                    mkdir($uploadPath, 0755, true);
                 }
+
+                $newName = $file->getRandomName();
+                $file->move($uploadPath, $newName);
+
+                $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName; // image will be saved with this path in db
+                
             }
         }
-    
-        // Convert array of image paths to a comma-separated string
-        $imageNamesString = !empty($imagePaths) ? implode(',', $imagePaths) : null;
-    
-        $StateModel = new StateModel();
-        $CityModel = new CityModel();
-    
-        $stateId = $this->request->getPost('state');
-        $cityId = $this->request->getPost('city');
-    
-        // Fetch state name
-        $state = $StateModel->where('id', $stateId)->first();
-        $stateName = $state['name'] ?? 'State not found.';
-    
-        // Fetch city name
-        $city = $CityModel->select('cities.city as city_name')
-                          ->join('states', 'cities.state_id = states.id')
-                          ->where('cities.id', $cityId)
-                          ->first();
-        $cityName = $city['city_name'] ?? 'City not found.';
-    
-        // Get data from the form and map it to the database fields
-        $data = [
-            'title' => $this->request->getPost('title'),
-            'equipment_type' => $this->request->getPost('equipment_type'),
-            'brand' => $this->request->getPost('brand'),
-            'equipment_condition' => $this->request->getPost('equipment_condition'),
-            'warranty' => $this->request->getPost('warranty'),
-            'availability' => $this->request->getPost('availability'),
-            'serial_number' => $this->request->getPost('serial_number'),
-            'price' => $this->request->getPost('price'),
-            'manifacture_year' => $this->request->getPost('manifacture_year'),
-            'state' => $stateName,
-            'city' => $cityName,
-            'zipcode' => $this->request->getPost('zipcode'),
-            'description' => $this->request->getPost('description'),
-            'equipment_image' => $imageNamesString
-        ];
-    
-        // Save data to the database
-        if ($EquipmentModel->save($data)) {
-            // Return JSON response on success
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment added successfully']);
-        } else {
-            // Handle database save error
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to add equipment']);
-        }
     }
-    
-   
+
+    // Convert array of image paths to a comma-separated string
+    $imageNamesString = !empty($imagePaths) ? implode(',', $imagePaths) : null;
+
+    $StateModel = new StateModel();
+    $CityModel = new CityModel();
+
+    $stateId = $this->request->getPost('state');
+    $cityId = $this->request->getPost('city');
+
+    // Fetch state name
+    $state = $StateModel->where('id', $stateId)->first();
+    $stateName = $state['name'] ?? 'State not found.';
+
+    // Fetch city name
+    $city = $CityModel->select('cities.city as city_name')
+                      ->join('states', 'cities.state_id = states.id')
+                      ->where('cities.id', $cityId)
+                      ->first();
+    $cityName = $city['city_name'] ?? 'City not found.';
+
+    // Get data from the form and map it to the database fields
+    $data = [
+        'title' => $this->request->getPost('title'),
+        'equipment_type' => $this->request->getPost('equipment_type'),
+        'brand' => $this->request->getPost('brand'),
+        'equipment_condition' => $this->request->getPost('equipment_condition'),
+        'warranty' => $this->request->getPost('warranty'),
+        'availability' => $this->request->getPost('availability'),
+        'serial_number' => $this->request->getPost('serial_number'),
+        'price' => $this->request->getPost('price'),
+        'manifacture_year' => $this->request->getPost('manifacture_year'),
+        'state' => $stateName,
+        'city' => $cityName,
+        'zipcode' => $this->request->getPost('zipcode'),
+        'description' => $this->request->getPost('description'),
+        'equipment_image' => $imageNamesString
+    ];
+
+    // Save data to the database
+    if ($EquipmentModel->save($data)) {
+        // Return JSON response on success
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment added successfully']);
+    } else {
+        // Handle database save error
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to add equipment']);
+    }
+}
     
 
 
@@ -259,21 +262,57 @@ class Equipment extends BaseController
 //*****************************update equipment*******************************
 
 
-    public function update_equipments($id) {
-        $data['editequipments'] = $this->equipmentModel->get_equipment_by_id($id);
-        
-        return view('equipments/update_equipments', $data);
+   public function update_equipments($id) {
+    $editequipments = $this->equipmentModel->get_equipment_by_id($id);
+    $city  =  $this->cityModel->getCities();
+    $state  =  $this->stateModel->getStates();
+
+    // Prepare data array
+    $data = [
+        'editequipments' => $editequipments,
+        'cities' => $city,
+        'states' => $state
+    ];
+
+    return view('equipments/update_equipments', $data);
     }
 
 
 
+
     public function edit_equipments($id) {
+
+        // $StateModel = new StateModel();
+        // $CityModel = new CityModel();
+    
+        // $stateId = $this->request->getPost('state');
+        // $cityId = $this->request->getPost('city');
+    
+        // // Fetch state name
+        // $state = $StateModel->where('id', $stateId)->first();
+        // $stateName = $state['name'] ?? 'state not found.';
+    
+        // // Fetch city name
+        // $city = $CityModel->select('cities.city as city_name')
+        //                   ->join('states', 'cities.state_id = states.id')
+        //                   ->where('cities.id', $cityId)
+        //                   ->first();
+        // $cityName = $city['city_name'] ?? 'City not found.';
+
         $data = [
             'title' => $this->request->getPost('title'),
+            'equipment_type' => $this->request->getPost('equipment_type'),
+            'brand' => $this->request->getPost('brand'),
+            'equipment_condition' => $this->request->getPost('equipment_condition'),
+            'warranty' => $this->request->getPost('warranty'),
+            'availability' => $this->request->getPost('availability'),
             'serial_number' => $this->request->getPost('serial_number'),
             'price' => $this->request->getPost('price'),
             'manifacture_year' => $this->request->getPost('manifacture_year'),
-            'description' => $this->request->getPost('description')
+             'state' => $this->request->getPost('state'),
+            'city' => $this->request->getPost('city'),
+            'zipcode' => $this->request->getPost('zipcode'),
+            'description' => $this->request->getPost('description'),
         ];
     
         // Handle file upload

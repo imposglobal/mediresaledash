@@ -93,6 +93,37 @@
                               <!-- preview -->
                           </div>
 
+
+                          <div class="row inputmargintop">
+                            <!-- Equipmnet Type  -->
+                            <div class="col-lg-6">
+                            <label for="equipment_type" class="labelclass">Equipmnet Type</label>
+                            <select name="equipment_type" class="form-control greybg">
+                            <option value="<?= htmlspecialchars($editequipments->equipment_type); ?>"><?= htmlspecialchars($editequipments->equipment_type); ?></option>
+                            <option value="imaging-equipment">Imaging Equipment</option>
+                            <option value="surgical-instruments">Surgical Instruments</option>
+                            <option value="laboratory-equipment">Laboratory Equipment</option>
+                            <option value="patient-care-devices">Patient care Devices</option>                
+                            </select>
+                            </div>
+                             <!-- Equipment Type  -->
+                             <!-- brand -->
+                            <div class="col-lg-6 res_mt">
+                            <label for="brand" class="labelclass">Brand</label>
+                            <select name="brand" class="form-control greybg">
+                            <option value="<?= htmlspecialchars($editequipments->brand); ?>"><?= htmlspecialchars($editequipments->brand); ?></option>
+                            <option value="GE-Healthcare">GE Healthcare</option>
+                            <option value="Siemens">Siemens</option>
+                            <option value="Philips">Philips</option>
+                            <option value="Medtronic">Medtronic</option> 
+                            <option value="Johnson&Johnson">Johnson & Johnson</option>                
+                            <option value="Olympus">Olympus</option> 
+                            <option value="Other">Other</option> 
+                            </select>
+                            </div>
+                            <!-- brand -->
+                            </div>
+
                           <div class="row inputmargintop">
                             <!--Serial Number  -->
                             <div class="col-lg-4">
@@ -113,6 +144,78 @@
                             <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editequipments->price); ?>"/>
                             </div>
                             <!--Price -->
+
+                            <div class="row inputmargintop">
+                            <!-- Condition  -->
+                            <div class="col-lg-4">
+                            <label for="condition" class="labelclass">Condition</label>
+                            <select name="equipment_condition" class="form-control greybg">
+                            <option value="<?= htmlspecialchars($editequipments->equipment_condition); ?>"><?= htmlspecialchars($editequipments->equipment_condition); ?></option>
+                            <option value="new">New</option>
+                            <option value="refurbished">Refurbished</option>
+                            <option value="used">Used</option>                
+                            </select>
+                            </div>
+                             <!-- Condition -->
+                             <!-- Warranty -->
+                            <div class="col-lg-4 res_mt">
+                            <label for="Warranty" class="labelclass">Warranty</label>
+                            <select name="warranty" class="form-control greybg">
+                            <option value="<?= htmlspecialchars($editequipments->warranty); ?>"><?= htmlspecialchars($editequipments->warranty); ?></option>
+                            <option value="under-warranty">Under Warranty</option>
+                            <option value="warranty-period-remaining(1yr)">Warranty Period Remaining(1yr)</option>
+                            <option value="no-warranty">No Warranty</option>                        
+                            </select>
+                            </div>
+                            <!-- Warranty-->
+
+                            <!-- Availability -->
+                            <div class="col-lg-4 res_mt">
+                            <label for="Availability" class="labelclass">Availability</label>
+                            <select name="availability" class="form-control greybg">
+                            <option value="<?= htmlspecialchars($editequipments->availability); ?>"><?= htmlspecialchars($editequipments->availability); ?></option>
+                            <option value="in-stock">In Stock</option>
+                            <option value="pre-Oorder">Pre Order</option>
+                            <option value="out-of-stock">Out OF Stock</option>                        
+                            </select>
+                            </div>
+                            <!-- Availability-->
+                            </div>
+
+
+                            <div class="row inputmargintop">
+                            
+                             <!--state  -->
+                            <div class="col-lg-4">
+                            <label for="state" class="labelclass">Select State</label>
+                            <input list="statedata" name="state" id="state" class="form-control greybg" value="<?= htmlspecialchars($editequipments->state); ?>">
+                            <datalist id="statedata">
+                            <?php foreach ($states as $state): ?>
+                            <option value="<?php echo $state['name']; ?>"><?php echo $state['name']; ?></option>
+                            <?php endforeach; ?>
+                            </datalist>                        
+                            </div>
+                             <!-- state -->
+
+                             <!-- city-->
+                            <div class="col-lg-4 res_mt">
+                            <label for="city" class="labelclass">Select City</label>
+                            <input list="citydata" name="city" id="city" class="form-control greybg" value="<?= htmlspecialchars($editequipments->city); ?>">
+                            <datalist id="citydata">
+                            <?php foreach ($cities as $city): ?>
+                            <option value="<?php echo $city['city']; ?>"><?php echo $city['city']; ?></option>
+                            <?php endforeach; ?>
+                            </datalist>
+                            </div>
+                            <!-- city-->
+
+                             <!--zipcode-->
+                             <div class="col-lg-4 res_mt">
+                            <label for="zipcode" class="labelclass">Zip Code</label>
+                            <input type="text" class="form-control greybg" name="zipcode" placeholder="Zip Code" value="<?= htmlspecialchars($editequipments->zipcode); ?>">
+                            </div>
+                             <!-- zipcode-->
+                          </div>
 
                           
                              <!-- TinyMCE Editor -->
@@ -257,4 +360,5 @@ tinymce.init({
         });
     }
 </script>
+
 <?= $this->endSection() ?>
