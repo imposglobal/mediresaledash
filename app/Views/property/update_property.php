@@ -71,7 +71,7 @@
                                            <?php foreach ($images as $index => $propertyimage): ?>
                                             <div class="col-lg-3 col-4">
                                               
-                                                <img class="d-block w-100" src="<?= base_url('../assets/uploads/property/' . $propertyimage) ?>">
+                                                <img class="d-block w-100" src="<?=  $propertyimage ?>">
                                                 <a onclick="deleteImage('<?= $propertyimage;?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
                                                 
                                             </div>

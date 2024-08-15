@@ -58,19 +58,43 @@ class Property extends BaseController
          $validImages = [];
          $imageNames = [];
      
-         foreach ($images['property_image'] as $file) {
-             if ($file->isValid() && !$file->hasMoved()) {
-                 $newName = $file->getRandomName();
-                 $file->move(WRITEPATH . '../assets/uploads/property', $newName);
-                 $imageNames[] = $newName; // Store the new name of the file
-             }
-         }
+        //  foreach ($images['property_image'] as $file) {
+        //      if ($file->isValid() && !$file->hasMoved()) {
+        //          $newName = $file->getRandomName();
+        //          $file->move(WRITEPATH . '../assets/uploads/property', $newName);
+        //          $imageNames[] = $newName; // Store the new name of the file
+        //      }
+        //  }
      
-         if (!empty($imageNames)) {
-             $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
-         } else {
-             $imageNamesString = null; // No valid images uploaded, set to null
-         }
+        //  if (!empty($imageNames)) {
+        //      $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
+        //  } else {
+        //      $imageNamesString = null; // No valid images uploaded, set to null
+        //  }
+
+
+        if (isset($images['property_image'])) {
+            foreach ($images['property_image'] as $file) {
+                if ($file->isValid() && !$file->hasMoved()) {
+                    
+                    $uploadPath = WRITEPATH . '../assets/uploads/property/';
+                    
+                    // Ensure the directory exists
+                    if (!is_dir($uploadPath)) {
+                        mkdir($uploadPath, 0755, true);
+                    }
+    
+                    $newName = $file->getRandomName();
+                    $file->move($uploadPath, $newName);
+    
+                    $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName; // image will be saved with this path in db
+                    
+                }
+            }
+        }
+    
+        // Convert array of image paths to a comma-separated string
+        $imageNamesString = !empty($imagePaths) ? implode(',', $imagePaths) : null;
 
 
     $StateModel = new StateModel();
@@ -207,7 +231,7 @@ public function view_all_property()
         $propertyModel->update($property['id'], ['property_image' => $newImageString]);
 
         // Correct the path to the image file
-        $filePath = FCPATH . 'assets/uploads/property/' . $imageName;
+        $filePath = FCPATH . 'http://localhost/mediresaledash/assets/uploads/property/' . $imageName;
         if (file_exists($filePath)) {
             if (unlink($filePath)) {
                 return $this->response->setStatusCode(200)->setBody('success');
@@ -298,7 +322,8 @@ public function edit_property($id)
                 if ($file->isValid() && !$file->hasMoved()) {
                     $newName = $file->getRandomName();
                     $file->move(WRITEPATH . '../assets/uploads/property', $newName);
-                    $uploadedImages[] = $newName;
+                    $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName;
+
                 }
             }
     
