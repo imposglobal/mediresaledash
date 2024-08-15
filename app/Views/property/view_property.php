@@ -58,7 +58,7 @@
             <div class="carousel-inner">
               <?php foreach ($images as $index => $image): ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                  <img class="d-block w-100" src="<?= base_url('/assets/uploads/property/' . $image) ?>" alt="Slide <?= $index + 1 ?>">
+                  <img class="d-block w-100" src="<?= $image ?>" alt="Slide <?= $index + 1 ?>">
                 </div>
               <?php endforeach; ?>
             </div>
