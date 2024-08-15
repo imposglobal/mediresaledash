@@ -53,6 +53,7 @@ class Property extends BaseController
     }
 
 
+   
     public function add_property()
     {
         $PropertyModel = new PropertyModel();
@@ -148,7 +149,6 @@ class Property extends BaseController
        // Return JSON response
     return $this->response->setJSON(['status' => 'success', 'message' => 'Property added successfully']);
     }
-
 
 // public function view_all_property(): string
 // {
