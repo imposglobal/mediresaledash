@@ -78,7 +78,7 @@
 
                             <div class="row inputmargintop">
                             <!-- Equipmnet Type  -->
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                             <label for="equipment_type" class="labelclass">Equipmnet Type</label>
                             <select name="equipment_type" class="form-control greybg">
                             <option selected disabled="true">select type</option>
@@ -89,8 +89,18 @@
                             </select>
                             </div>
                              <!-- Equipment Type  -->
+                               <!--transaction type-->
+                            <div class="col-lg-4">
+                            <label for="transaction_type" class="labelclass">Transaction Type</label>
+                            <select name="transaction_type" class="form-control greybg">
+                            <option selected disabled="true">Select</option>
+                            <option value="Buy">Buy</option>
+                            <option value="Rent">Rent</option>
+                            </select>
+                            </div>
+                            <!--transaction type-->
                              <!-- brand -->
-                            <div class="col-lg-6 res_mt">
+                            <div class="col-lg-4 res_mt">
                             <label for="brand" class="labelclass">Brand</label>
                             <select name="brand" class="form-control greybg">
                             <option selected disabled="true">select brand</option>
