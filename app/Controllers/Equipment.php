@@ -175,6 +175,7 @@ public function add_equipments()
     $data = [
         'title' => $this->request->getPost('title'),
         'equipment_type' => $this->request->getPost('equipment_type'),
+        'transaction_type' => $this->request->getPost('transaction_type'),
         'brand' => $this->request->getPost('brand'),
         'equipment_condition' => $this->request->getPost('equipment_condition'),
         'warranty' => $this->request->getPost('warranty'),
@@ -302,6 +303,7 @@ public function add_equipments()
         $data = [
             'title' => $this->request->getPost('title'),
             'equipment_type' => $this->request->getPost('equipment_type'),
+            'transaction_type' => $this->request->getPost('transaction_type'),
             'brand' => $this->request->getPost('brand'),
             'equipment_condition' => $this->request->getPost('equipment_condition'),
             'warranty' => $this->request->getPost('warranty'),

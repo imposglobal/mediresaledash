@@ -11,6 +11,7 @@ class EquipmentModel extends Model{
     protected $allowedFields = [
         'title',
         'equipment_type',      
+        'transaction_type',      
         'brand',
         'equipment_condition',
         'warranty',
