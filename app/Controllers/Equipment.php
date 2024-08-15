@@ -131,8 +131,10 @@ class Equipment extends BaseController
             foreach ($images['equipment_image'] as $file) {
                 if ($file->isValid() && !$file->hasMoved()) {
                     $yearMonthFolder = date('Y') . '/' . date('m');
-                    $uploadPath = WRITEPATH . '../assets/uploads/equipments/' . $yearMonthFolder . '/';
-                    
+                    // $uploadPath = WRITEPATH . '../assets/uploads/equipments/' . $yearMonthFolder . '/';
+                    $uploadPath = WRITEPATH . '../assets/uploads/equipments/';
+
+
                     // Ensure the directory exists
                     if (!is_dir($uploadPath)) {
                         mkdir($uploadPath, 0755, true);
@@ -324,7 +326,8 @@ class Equipment extends BaseController
                 if ($file->isValid() && !$file->hasMoved()) {
                     $newName = $file->getRandomName();
                     $file->move(WRITEPATH . '../assets/uploads/equipments/', $newName);
-                    $uploadedImages[] = $newName;
+                    // $uploadedImages[] = $newName;
+                    $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName;
                 }
             }
     
@@ -370,7 +373,7 @@ class Equipment extends BaseController
             $equipmentModel->update($equipment['id'], ['equipment_image' => $newImageString]);
     
             // Correct the path to the image file
-            $filePath = FCPATH . 'assets/uploads/equipments/' . $imageName;
+            $filePath = FCPATH.'assets/uploads/equipments/' . $imageName;
             if (file_exists($filePath)) {
                 if (unlink($filePath)) {
                     return $this->response->setStatusCode(200)->setBody('success');

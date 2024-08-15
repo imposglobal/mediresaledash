@@ -67,7 +67,7 @@
                                         <?php foreach ($images as $index => $equipmentimage): ?>
                                             <div class="col-lg-3 col-4">
                                               
-                                                <img class="d-block w-100" src="<?= base_url('/assets/uploads/equipments/' . $equipmentimage) ?>">
+                                                <img class="d-block w-100" src="<?= $equipmentimage ?>">
                                              <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
                                                 
                                             </div>
