@@ -84,7 +84,7 @@
                             <option selected disabled="true">select type</option>
                             <option value="Diagnostic Equipment">Diagnostic Equipment</option>
                             <option value="Therapeutic Equipment">Therapeutic Equipment</option>
-                            <option value="Surgical Instruments">Surgical Instruments</option>
+                            <option value="Surgical Instrument">Surgical Instruments</option>
                             <option value="Patient Monitoring Equipment">Patient Monitoring Equipment</option>  
                             <option value="Life Support Equipment">Life Support Equipment</option>
                             <option value="Hospital Furniture">Hospital Furniture</option>
