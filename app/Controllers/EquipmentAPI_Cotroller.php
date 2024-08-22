@@ -245,24 +245,21 @@ public function getEquipmentByCityOrZipcode()
 //     $equipmentModel = new EquipmentModel();   
     
 //     // Get filter parameters from the request
-
 //     $equipment_type = $this->request->getVar('equipment_type');
-//     $transaction_type = $this->request->getVar('transaction_type');
+//     $transaction_types = $this->request->getVar('transaction_type');
 //     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
 //     $startprice = $this->request->getVar('start_price');
 //     $endprice = $this->request->getVar('end_price');
+//     $start_rent_price = $this->request->getVar('start_rent_price');
+//     $end_rent_price = $this->request->getVar('end_rent_price');
 //     $brand = $this->request->getVar('brand');
 //     $condition = $this->request->getVar('condition');
 //     $warranty = $this->request->getVar('warranty');
 //     $availability = $this->request->getVar('availability');
 //     $ageofequipment = $this->request->getVar('ageofequipment');
 
-//     // $transaction_type = "rent";
-//     // $startprice  = 400;
-//     // $endprice  = 1700;
-
-//      // Get the current year
-//      $currentYear = date('Y');
+//     // Get the current year
+//     $currentYear = date('Y');
 
 //     // Start building the query
 //     $builder = $equipmentModel->builder();
@@ -282,7 +279,6 @@ public function getEquipmentByCityOrZipcode()
 //             $builder->where('city', $CityOrZipcode);
 //         }
 //     }
-
 
 //     if (!empty($brand)) {
 //         if (is_array($brand)) {
@@ -308,7 +304,6 @@ public function getEquipmentByCityOrZipcode()
 //         }
 //     }
 
-
 //     if (!empty($availability)) {
 //         if (is_array($availability)) {
 //             $builder->whereIn('availability', $availability);
@@ -317,55 +312,87 @@ public function getEquipmentByCityOrZipcode()
 //         }
 //     }
 
-//     if (!empty($ageofequipment)) {
-//         switch ($ageofequipment) {
-//             case 'less-than-1-year':
+//    // Handling age of equipment filtering
+//    if (!empty($ageofequipment) && is_array($ageofequipment)) {
+//     $builder->groupStart(); // Start a group for OR conditions
+
+//     foreach ($ageofequipment as $age) {
+//         switch ($age) {
+//             case 'less than 1 year':
 //                 $year = $currentYear;
-//                 $builder->where('manifacture_year', $year);
+//                 $builder->orGroupStart()
+//                         ->where('manifacture_year', $year)
+//                         ->groupEnd();
 //                 break;
-//             case 'less-than-2-years':
+//             case 'less than 2 year':
 //                 $year = $currentYear - 1;
-//                 $builder->where('manifacture_year >=', $year);
+//                 $builder->orGroupStart()
+//                         ->where('manifacture_year >=', $year)
+//                         ->groupEnd();
 //                 break;
-//             case 'less-than-5-years':
+//             case 'less than 5 year':
 //                 $year = $currentYear - 4;
-//                 $builder->where('manifacture_year >=', $year);
+//                 $builder->orGroupStart()
+//                         ->where('manifacture_year >=', $year)
+//                         ->groupEnd();
 //                 break;
-//             case 'more-than-5-years':
+//             case 'more than 5 years':
 //                 $year = $currentYear - 5;
-//                 $builder->where('manifacture_year <', $year);
+//                 $builder->orGroupStart()
+//                         ->where('manifacture_year <', $year)
+//                         ->groupEnd();
 //                 break;
 //             default:
 //                 break;
 //         }
 //     }
 
-//     if (!empty($transaction_type)) {
-//         if ($transaction_type === 'buy') {
+//     $builder->groupEnd(); // End the group for OR conditions
+// }
 
-//             if (!empty($startprice) && !empty($endprice)) {      // this will chek the price range filter for 'buy'
-//                 $builder->where('transaction_type', 'buy')
+
+
+//     // Handling price and transaction type filtering
+//      // Handling transaction type filtering
+//      if (!empty($transaction_types)) {
+//         $builder->groupStart(); // Start a group for OR conditions
+
+//         if (in_array('Buy', $transaction_types)) {
+//             if (!empty($startprice) && !empty($endprice)) {
+//                 // Filter by price if both start and end prices are provided
+//                 $builder->orGroupStart()
+//                         ->where('transaction_type', 'Buy')
 //                         ->where('price >=', $startprice)
-//                         ->where('price <=', $endprice);
-//             }
-//         } elseif ($transaction_type === 'rent') {
-            
-//             if (!empty($startprice) && !empty($endprice)) { // this will chek the price range filter for 'buy'
-//                 $builder->where('transaction_type', 'rent')
-//                         ->where('price >=', $startprice)
-//                         ->where('price <=', $endprice);
+//                         ->where('price <=', $endprice)
+//                         ->groupEnd();
+//             } else {
+//                 // Filter by transaction type only if price fields are not provided
+//                 $builder->orWhere('transaction_type', 'Buy');
 //             }
 //         }
+
+//         if (in_array('Rent', $transaction_types)) {
+//             if (!empty($start_rent_price) && !empty($end_rent_price)) {
+//                 // Filter by rent price if both start and end rent prices are provided
+//                 $builder->orGroupStart()
+//                         ->where('transaction_type', 'Rent')
+//                         ->where('price >=', $start_rent_price)
+//                         ->where('price <=', $end_rent_price)
+//                         ->groupEnd();
+//             } else {
+//                 // Filter by transaction type only if price fields are not provided
+//                 $builder->orWhere('transaction_type', 'Rent');
+//             }
+//         }
+
+//         $builder->groupEnd(); // End the group for OR conditions
 //     }
-    
-    
 
 //     // Get the results
 //     $filteredEquipments = $builder->get()->getResultArray();
 
-
-//      // Prepare the response
-//      if (!empty($filteredEquipments)) {
+//     // Prepare the response
+//     if (!empty($filteredEquipments)) {
 //         $response = [
 //             'status' => 'success',
 //             'data' => $filteredEquipments
@@ -373,7 +400,7 @@ public function getEquipmentByCityOrZipcode()
 //     } else {
 //         $response = [
 //             'status' => 'error',
-//             'message' => 'No properties found.'
+//             'message' => 'No Equipments found.'
 //         ];
 //     }
 
@@ -382,47 +409,43 @@ public function getEquipmentByCityOrZipcode()
 // }
 
 
+// new code
 
-/********************************test api ****************************/
 public function getEquipmentsByFilter()
 {
     $equipmentModel = new EquipmentModel();   
-
+    
     // Get filter parameters from the request
-     $equipment_type = $this->request->getVar('equipment_type');
-    //$equipment_type = 'Diagnostic Equipment';
-
-    $transaction_type = $this->request->getVar('transaction_type');
+    $equipment_type = $this->request->getVar('equipment_type');
+    $transaction_types = $this->request->getVar('transaction_type');
     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
     $startprice = $this->request->getVar('start_price');
     $endprice = $this->request->getVar('end_price');
+    $start_rent_price = $this->request->getVar('start_rent_price');
+    $end_rent_price = $this->request->getVar('end_rent_price');
     $brand = $this->request->getVar('brand');
     $condition = $this->request->getVar('condition');
     $warranty = $this->request->getVar('warranty');
     $availability = $this->request->getVar('availability');
     $ageofequipment = $this->request->getVar('ageofequipment');
-    //$ageofequipment = 'less-than-1-year';
 
-    
-    $page = $this->request->getVar('page') ?? 1; // Default to page 1 if not provided
-    $perPage = $this->request->getVar('per_page') ?? 20; // Default to 5 items per page if not provided
-
-    // Validate pagination parameters
-    $page = (int)$page > 0 ? (int)$page : 1;
-    $perPage = (int)$perPage > 0 ? (int)$perPage : 20;
-
-    // Calculate offset
+    // Pagination parameters
+    $page = (int)($this->request->getVar('page') ?? 1);
+    $perPage = (int)($this->request->getVar('per_page') ?? 20);
     $offset = ($page - 1) * $perPage;
 
     // Get the current year
     $currentYear = date('Y');
 
-    // Start building the query
+    // Build the query for filtering
     $builder = $equipmentModel->builder();
 
-    // Apply filters 
     if (!empty($equipment_type)) {
-        $builder->whereIn('equipment_type', is_array($equipment_type) ? $equipment_type : [$equipment_type]);
+        if (is_array($equipment_type)) {
+            $builder->whereIn('equipment_type', $equipment_type);
+        } else {
+            $builder->where('equipment_type', $equipment_type);
+        }
     }
 
     if (!empty($CityOrZipcode)) {
@@ -434,67 +457,124 @@ public function getEquipmentsByFilter()
     }
 
     if (!empty($brand)) {
-        $builder->whereIn('brand', is_array($brand) ? $brand : [$brand]);
+        if (is_array($brand)) {
+            $builder->whereIn('brand', $brand);
+        } else {
+            $builder->where('brand', $brand);
+        }
     }
 
     if (!empty($condition)) {
-        $builder->whereIn('equipment_condition', is_array($condition) ? $condition : [$condition]);
+        if (is_array($condition)) {
+            $builder->whereIn('equipment_condition', $condition);
+        } else {
+            $builder->where('equipment_condition', $condition);
+        }
     }
 
     if (!empty($warranty)) {
-        $builder->whereIn('warranty', is_array($warranty) ? $warranty : [$warranty]);
+        if (is_array($warranty)) {
+            $builder->whereIn('warranty', $warranty);
+        } else {
+            $builder->where('warranty', $warranty);
+        }
     }
 
     if (!empty($availability)) {
-        $builder->whereIn('availability', is_array($availability) ? $availability : [$availability]);
-    }
-
-    if (!empty($ageofequipment)) {
-        switch ($ageofequipment) {
-            case 'less than 1 year':
-                $builder->where('manifacture_year', $currentYear);
-                break;
-            case 'less than 2 years':
-                $builder->where('manifacture_year >=', $currentYear - 1);
-                break;
-            case 'less than 5 years':
-                $builder->where('manifacture_year >=', $currentYear - 4);
-                break;
-            case 'more than 5 years':
-                $builder->where('manifacture_year <', $currentYear - 5);
-                break;
+        if (is_array($availability)) {
+            $builder->whereIn('availability', $availability);
+        } else {
+            $builder->where('availability', $availability);
         }
     }
 
-    if (!empty($transaction_type) && in_array($transaction_type, ['buy', 'rent'])) {
-        $builder->where('transaction_type', $transaction_type);
-        if (!empty($startprice) && !empty($endprice)) {
-            $builder->where('price >=', $startprice)
-                    ->where('price <=', $endprice);
+    // Handling age of equipment filtering
+    if (!empty($ageofequipment) && is_array($ageofequipment)) {
+        $builder->groupStart(); // Start a group for OR conditions
+
+        foreach ($ageofequipment as $age) {
+            switch ($age) {
+                case 'less than 1 year':
+                    $year = $currentYear;
+                    $builder->orGroupStart()
+                            ->where('manifacture_year', $year)
+                            ->groupEnd();
+                    break;
+                case 'less than 2 year':
+                    $year = $currentYear - 1;
+                    $builder->orGroupStart()
+                            ->where('manifacture_year >=', $year)
+                            ->groupEnd();
+                    break;
+                case 'less than 5 year':
+                    $year = $currentYear - 4;
+                    $builder->orGroupStart()
+                            ->where('manifacture_year >=', $year)
+                            ->groupEnd();
+                    break;
+                case 'more than 5 years':
+                    $year = $currentYear - 5;
+                    $builder->orGroupStart()
+                            ->where('manifacture_year <', $year)
+                            ->groupEnd();
+                    break;
+                default:
+                    break;
+            }
         }
+
+        $builder->groupEnd(); // End the group for OR conditions
     }
+
+    // Handling transaction type filtering
+    if (!empty($transaction_types)) {
+        $builder->groupStart(); // Start a group for OR conditions
+
+        if (in_array('Buy', $transaction_types)) {
+            if (!empty($startprice) && !empty($endprice)) {
+                // Filter by price if both start and end prices are provided
+                $builder->orGroupStart()
+                        ->where('transaction_type', 'Buy')
+                        ->where('price >=', $startprice)
+                        ->where('price <=', $endprice)
+                        ->groupEnd();
+            } else {
+                // Filter by transaction type only if price fields are not provided
+                $builder->orWhere('transaction_type', 'Buy');
+            }
+        }
+
+        if (in_array('Rent', $transaction_types)) {
+            if (!empty($start_rent_price) && !empty($end_rent_price)) {
+                // Filter by rent price if both start and end rent prices are provided
+                $builder->orGroupStart()
+                        ->where('transaction_type', 'Rent')
+                        ->where('price >=', $start_rent_price)
+                        ->where('price <=', $end_rent_price)
+                        ->groupEnd();
+            } else {
+                // Filter by transaction type only if price fields are not provided
+                $builder->orWhere('transaction_type', 'Rent');
+            }
+        }
+
+        $builder->groupEnd(); // End the group for OR conditions
+    }
+
+    // Clone the builder to get the total count of filtered items
+    $countBuilder = clone $builder;
+    $totalItems = $countBuilder->countAllResults(false);
 
     // Apply pagination
     $builder->limit($perPage, $offset);
 
-    // Get the results
-    try {
-        $filteredEquipments = $builder->get()->getResultArray();
-        
-        // Get total count of items matching the filters
-        $totalItems = $builder->countAllResults(false); // Pass false to avoid applying the limit to the count query
-    } catch (\Exception $e) {
-        // Log the error and return a server error response
-        log_message('error', 'Error fetching equipment: ' . $e->getMessage());
-        return $this->response->setStatusCode(500)->setJSON([
-            'status' => 'error',
-            'message' => 'Internal server error.'
-        ]);
-    }
+    // Get the filtered results
+    $filteredEquipments = $builder->get()->getResultArray();
 
-    // Prepare the response with pagination metadata
+    // Calculate total pages
     $totalPages = ceil($totalItems / $perPage);
 
+    // Prepare the response with pagination metadata
     $response = [
         'status' => 'success',
         'data' => $filteredEquipments,
@@ -505,9 +585,137 @@ public function getEquipmentsByFilter()
             'per_page' => $perPage
         ]
     ];
-    
-    return $this->response->setStatusCode(200)->setJSON($response);
+
+    // Return the results as JSON
+    return $this->response->setJSON($response);
 }
+
+
+
+
+/********************************test api ****************************/
+// public function getEquipmentsByFilter()
+// {
+//     $equipmentModel = new EquipmentModel();   
+
+//     // Get filter parameters from the request
+//      $equipment_type = $this->request->getVar('equipment_type');
+//     $transaction_type = $this->request->getVar('transaction_type');
+//     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
+//     $startprice = $this->request->getVar('start_price');
+//     $endprice = $this->request->getVar('end_price');
+//     $brand = $this->request->getVar('brand');
+//     $condition = $this->request->getVar('condition');
+//     $warranty = $this->request->getVar('warranty');
+//     $availability = $this->request->getVar('availability');
+//     $ageofequipment = $this->request->getVar('ageofequipment');
+//     //$ageofequipment = 'less-than-1-year';
+
+    
+//     $page = $this->request->getVar('page') ?? 1; // Default to page 1 if not provided
+//     $perPage = $this->request->getVar('per_page') ?? 20; // Default to 5 items per page if not provided
+
+//     // Validate pagination parameters
+//     $page = (int)$page > 0 ? (int)$page : 1;
+//     $perPage = (int)$perPage > 0 ? (int)$perPage : 20;
+
+//     // Calculate offset
+//     $offset = ($page - 1) * $perPage;
+
+//     // Get the current year
+//     $currentYear = date('Y');
+
+//     // Start building the query
+//     $builder = $equipmentModel->builder();
+
+//     // Apply filters 
+//     if (!empty($equipment_type)) {
+//         $builder->whereIn('equipment_type', is_array($equipment_type) ? $equipment_type : [$equipment_type]);
+//     }
+
+//     if (!empty($CityOrZipcode)) {
+//         if (is_numeric($CityOrZipcode)) {
+//             $builder->where('zipcode', $CityOrZipcode);
+//         } else {
+//             $builder->where('city', $CityOrZipcode);
+//         }
+//     }
+
+//     if (!empty($brand)) {
+//         $builder->whereIn('brand', is_array($brand) ? $brand : [$brand]);
+//     }
+
+//     if (!empty($condition)) {
+//         $builder->whereIn('equipment_condition', is_array($condition) ? $condition : [$condition]);
+//     }
+
+//     if (!empty($warranty)) {
+//         $builder->whereIn('warranty', is_array($warranty) ? $warranty : [$warranty]);
+//     }
+
+//     if (!empty($availability)) {
+//         $builder->whereIn('availability', is_array($availability) ? $availability : [$availability]);
+//     }
+
+//     if (!empty($ageofequipment)) {
+//         switch ($ageofequipment) {
+//             case 'less than 1 year':
+//                 $builder->where('manifacture_year', $currentYear);
+//                 break;
+//             case 'less than 2 years':
+//                 $builder->where('manifacture_year >=', $currentYear - 1);
+//                 break;
+//             case 'less than 5 years':
+//                 $builder->where('manifacture_year >=', $currentYear - 4);
+//                 break;
+//             case 'more than 5 years':
+//                 $builder->where('manifacture_year <', $currentYear - 5);
+//                 break;
+//         }
+//     }
+
+//     if (!empty($transaction_type) && in_array($transaction_type, ['buy', 'rent'])) {
+//         $builder->where('transaction_type', $transaction_type);
+//         if (!empty($startprice) && !empty($endprice)) {
+//             $builder->where('price >=', $startprice)
+//                     ->where('price <=', $endprice);
+//         }
+//     }
+
+//     // Apply pagination
+//     $builder->limit($perPage, $offset);
+
+//     // Get the results
+//     try {
+//         $filteredEquipments = $builder->get()->getResultArray();
+        
+//         // Get total count of items matching the filters
+//         $totalItems = $builder->countAllResults(false); // Pass false to avoid applying the limit to the count query
+//     } catch (\Exception $e) {
+//         // Log the error and return a server error response
+//         log_message('error', 'Error fetching equipment: ' . $e->getMessage());
+//         return $this->response->setStatusCode(500)->setJSON([
+//             'status' => 'error',
+//             'message' => 'Internal server error.'
+//         ]);
+//     }
+
+//     // Prepare the response with pagination metadata
+//     $totalPages = ceil($totalItems / $perPage);
+
+//     $response = [
+//         'status' => 'success',
+//         'data' => $filteredEquipments,
+//         'pagination' => [
+//             'total_items' => $totalItems,
+//             'total_pages' => $totalPages,
+//             'current_page' => $page,
+//             'per_page' => $perPage
+//         ]
+//     ];
+    
+//     return $this->response->setStatusCode(200)->setJSON($response);
+// }
 
 
 }
