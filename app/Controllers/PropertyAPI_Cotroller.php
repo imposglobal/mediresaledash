@@ -18,6 +18,16 @@ class PropertyAPI_Cotroller extends BaseController
         return $this->response->setJSON($property);
     }
 
+
+    public function get_Title_Image_Property_Api() // Api to get only title and image
+    {
+        $PropertyModel = new PropertyModel();
+        
+        $property = $PropertyModel->select('name, property_image')->findAll();
+        
+        return $this->response->setJSON($property);
+    }
+
 /*************** function To get API by price range  **********************/
 public function GetPropertiesByPriceRange_API()
     {
@@ -211,6 +221,21 @@ public function getPropertiesByCityOrZipcode()
         return $this->response->setJSON($getprice);
     }
 
+    /*************** function to get property by Monthly Rent  **********************/  
+
+    public function getEquipmentByMonthlyBuy_API()
+    {
+        $propertyModel = new PropertyModel();
+
+        $startprice = "600";
+        $endprice = "4000";
+
+        $getprice = $propertyModel->where("price BETWEEN $startprice AND $endprice AND transaction_type ='buy'")
+                                ->findAll();
+
+        return $this->response->setJSON($getprice);
+    }
+
    /*************** function to get property by Possesion **********************/  
 
     public function getPropertiesByPossesion_API()
@@ -330,19 +355,152 @@ public function getPropertiesByCityOrZipcode()
 // }
 
 
+// public function getpropertybyFilter()
+// {
+//     $propertyModel = new PropertyModel();
+
+//     // Get filter parameters from the request
+//     // $property_types = $this->request->getVar('property_type');
+//     // $transaction_type = $this->request->getVar('transaction_type');
+//     // $possession = $this->request->getVar('possession');
+//     // $CityOrZipcode = $this->request->getVar('CityOrZipcode');
+//     // $ageofproperty = $this->request->getVar('ageofproperty');
+//     // $startprice = $this->request->getVar('start_price');
+//     // $endprice = $this->request->getVar('end_price');
+//     // $amenities = $this->request->getVar('amenities'); // Changed to allow multiple amenities
+//     $transaction_type = "rent";
+
+//     // Get the current year
+//     $currentYear = date('Y');
+
+//     // Start building the query
+//     $builder = $propertyModel->builder();
+
+//     if (!empty($property_types)) {
+//         if (is_array($property_types)) {
+//             $builder->whereIn('property_type', $property_types);
+//         } else {
+//             $builder->where('property_type', $property_types);
+//         }
+//     }
+
+//     if (!empty($transaction_type)) {
+//         if (is_array($transaction_type)) {
+//             $builder->whereIn('transaction_type', $transaction_type);
+//         } else {
+//             $builder->where('transaction_type', $transaction_type);
+//         }
+//     }
+
+//     if (!empty($possession)) {
+//         $builder->where('possession', $possession);
+//     }
+
+//     if (!empty($CityOrZipcode)) {
+//         if (is_numeric($CityOrZipcode)) {
+//             $builder->where('zipcode', $CityOrZipcode);
+//         } else {
+//             $builder->where('city', $CityOrZipcode);
+//         }
+//     }
+
+//     if (!empty($ageofproperty)) {
+//         switch ($ageofproperty) {
+//             case 'less-than-1-year':
+//                 $year = $currentYear;
+//                 $builder->where('built_year', $year);
+//                 break;
+//             case 'less-than-2-years':
+//                 $year = $currentYear - 1;
+//                 $builder->where('built_year >=', $year);
+//                 break;
+//             case 'less-than-5-years':
+//                 $year = $currentYear - 4;
+//                 $builder->where('built_year >=', $year);
+//                 break;
+//             case 'more-than-5-years':
+//                 $year = $currentYear - 5;
+//                 $builder->where('built_year <', $year);
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+
+//     if (!empty($startprice) && !empty($endprice)) {
+//         $builder->where('price >=', $startprice);
+//         $builder->where('price <=', $endprice);
+//     }
+
+//     if (!empty($amenities)) {
+//         // Ensure $amenities is an array
+//         if (is_array($amenities)) {
+//             foreach ($amenities as $amenity) {
+//                 switch ($amenity) {
+//                     case 'parking':
+//                         $builder->where('parking', 'available');
+//                         break;
+//                     case 'on_site_pharmacy':
+//                         $builder->where('on_site_pharmacy', 'available');
+//                         break;
+//                     case 'laboratory':
+//                         $builder->where('laboratory', 'available');
+//                         break;
+//                     case 'cafeteria':
+//                         $builder->where('cafeteria', 'available');
+//                         break;
+//                     default:
+//                         // Ignore unknown amenities
+//                         break;
+//                 }
+//             }
+//         } else {
+//             // If $amenities is not an array, handle it (e.g., error or default behavior)
+//             $builder->where('1=0'); // This will result in an empty set
+//         }
+//     }
+
+//     // Get the results
+//     $filteredProperty = $builder->get()->getResultArray();
+
+//     // Prepare the response
+//     if (!empty($filteredProperty)) {
+//         $response = [
+//             'status' => 'success',
+//             'data' => $filteredProperty
+//         ];
+//     } else {
+//         $response = [
+//             'status' => 'error',
+//             'message' => 'No properties found.'
+//         ];
+//     }
+
+//     // Return the results as JSON
+//     return $this->response->setJSON($response);
+// }
+
+
+/********************** testt **********************/
+
+
 public function getpropertybyFilter()
 {
     $propertyModel = new PropertyModel();
 
-    // Get filter parameters from the request
-    $property_types = $this->request->getVar('property_type');
-    $transaction_type = $this->request->getVar('transaction_type');
-    $possession = $this->request->getVar('possession');
-    $CityOrZipcode = $this->request->getVar('CityOrZipcode');
-    $ageofproperty = $this->request->getVar('ageofproperty');
-    $startprice = $this->request->getVar('start_price');
-    $endprice = $this->request->getVar('end_price');
-    $amenities = $this->request->getVar('amenities'); // Changed to allow multiple amenities
+    //Get filter parameters from the request
+    // $property_types = $this->request->getVar('property_type');
+    // $transaction_type = $this->request->getVar('transaction_type');
+    // $possession = $this->request->getVar('possession');
+    // $CityOrZipcode = $this->request->getVar('CityOrZipcode');
+    // $ageofproperty = $this->request->getVar('ageofproperty');
+    // $startprice = $this->request->getVar('start_price');
+    // $endprice = $this->request->getVar('end_price');
+    // $amenities = $this->request->getVar('amenities'); // Changed to allow multiple amenities
+
+    $transaction_type = "rent";
+    $startprice  = 400;
+    $endprice  = 1700;
 
     // Get the current year
     $currentYear = date('Y');
@@ -358,13 +516,6 @@ public function getpropertybyFilter()
         }
     }
 
-    if (!empty($transaction_type)) {
-        if (is_array($transaction_type)) {
-            $builder->whereIn('transaction_type', $transaction_type);
-        } else {
-            $builder->where('transaction_type', $transaction_type);
-        }
-    }
 
     if (!empty($possession)) {
         $builder->where('possession', $possession);
@@ -401,10 +552,25 @@ public function getpropertybyFilter()
         }
     }
 
-    if (!empty($startprice) && !empty($endprice)) {
-        $builder->where('price >=', $startprice);
-        $builder->where('price <=', $endprice);
+       if (!empty($transaction_type)) {
+        if ($transaction_type === 'buy') {
+
+            if (!empty($startprice) && !empty($endprice)) {      // this will chek the price range filter for 'buy'
+                $builder->where('transaction_type', 'buy')
+                        ->where('price >=', $startprice)
+                        ->where('price <=', $endprice);
+            }
+        } elseif ($transaction_type === 'rent') {
+            
+            if (!empty($startprice) && !empty($endprice)) { // this will chek the price range filter for 'buy'
+                $builder->where('transaction_type', 'rent')
+                        ->where('price >=', $startprice)
+                        ->where('price <=', $endprice);
+            }
+        }
     }
+    
+    
 
     if (!empty($amenities)) {
         // Ensure $amenities is an array
@@ -453,8 +619,6 @@ public function getpropertybyFilter()
     // Return the results as JSON
     return $this->response->setJSON($response);
 }
-
-
 
 
  

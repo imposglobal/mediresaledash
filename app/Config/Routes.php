@@ -62,7 +62,8 @@ $routes->post('/update_profile', 'Profile::update_profile');
 
 // API to get equipments
 $routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
-$routes->get('/equipments/equipments_type/view', 'EquipmentAPI_Cotroller::getEquipmentByEquipmentType_API'); // http://localhost/mediresaledash/equipments/equipments_type/view
+$routes->get('/equipments/title_image_equipment_api/view', 'EquipmentAPI_Cotroller::get_Title_Image_Equipment_Api'); // http://localhost/mediresaledash/equipments/view
+$routes->get('/equipments/equipments_type/view', 'EquipmentAPI_Cotroller::getEquipmentByEquipmentType_API'); // http://localhost/mediresaledash/equipments/title_image_equipment_api/view
 $routes->get('/equipments/brand/view', 'EquipmentAPI_Cotroller::getEquipmentByBrand_API'); // http://localhost/mediresaledash/equipments/brand/view
 $routes->get('/equipments/condition/view', 'EquipmentAPI_Cotroller::getEquipmentByCondition_API'); // http://localhost/mediresaledash/equipments/condition/view
 $routes->get('/equipments/warranty/view', 'EquipmentAPI_Cotroller::getEquipmentByWarranty_API'); // http://localhost/mediresaledash/equipments/warranty/view
@@ -82,6 +83,8 @@ $routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipment
 // API to get Property 
 $routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); //http://localhost/mediresaledash/property/view
 
+$routes->get('/property/get_TitleImage_Property_Api/view', 'PropertyAPI_Cotroller::get_Title_Image_Property_Api'); //http://localhost/mediresaledash/get_TitleImage_Property_Api/view
+
 $routes->get('/property_by_price_range/view', 'PropertyAPI_Cotroller::GetPropertiesByPriceRange_API'); //http://localhost/mediresaledash/property_price_range/view
 
 $routes->get('/property_by_built_year/view', 'PropertyAPI_Cotroller::getPropertiesByBuiltYear_API'); //http://localhost/mediresaledash/property_built_year/view
@@ -97,6 +100,8 @@ $routes->get('/property_by_amenities/view', 'PropertyAPI_Cotroller::getPropertie
 $routes->get('/property_by_age_of_property/view', 'PropertyAPI_Cotroller::getEquipmentByAgeOfProperty_API'); //http://localhost/mediresaledash/property_by_age_of_property/view
 
 $routes->get('/property_by_monthly_rent/view', 'PropertyAPI_Cotroller::getEquipmentByMonthlyRent_API'); //http://localhost/mediresaledash/property_monthly_rent/view
+
+$routes->get('/property_by_monthly_buy/view', 'PropertyAPI_Cotroller::getEquipmentByMonthlyBuy_API'); //http://localhost/mediresaledash/property_by_monthly_buy/view
 
 $routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertiesByPossesion_API'); //http://localhost/mediresaledash/property_by_possesion/view
 
