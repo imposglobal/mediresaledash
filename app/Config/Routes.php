@@ -103,3 +103,10 @@ $routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertie
 // combine API for property listing page
 
 $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyFilter');
+
+
+// Product Detail Page
+$routes->get('/getdetails/view', 'LeadsAPI_Controller::getDetails');
+
+$routes->post('/submit-lead/add', 'LeadsAPI_Controller::addLead');  //http://localhost/mediresaledash/submit-lead/add
+

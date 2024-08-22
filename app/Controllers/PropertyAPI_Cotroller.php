@@ -2,11 +2,14 @@
 
 namespace App\Controllers;
 use App\Models\PropertyModel;
+use CodeIgniter\API\ResponseTrait; 
 
 
 
 class PropertyAPI_Cotroller extends BaseController
 {
+
+    use ResponseTrait; // Use the ResponseTrait
 
 /***************** function to get all property table data API ***************************** */
 
@@ -328,6 +331,11 @@ public function getPropertiesByCityOrZipcode()
 //     // Return the results as JSON
 //     return $this->response->setJSON($response);
 // }
+
+
+
+
+// multiple filter API
 
 
 public function getpropertybyFilter()
