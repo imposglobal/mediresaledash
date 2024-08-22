@@ -100,10 +100,13 @@
                             <label for="equipment_type" class="labelclass">Equipmnet Type</label>
                             <select name="equipment_type" class="form-control greybg">
                             <option value="<?= htmlspecialchars($editequipments->equipment_type); ?>"><?= htmlspecialchars($editequipments->equipment_type); ?></option>
-                            <option value="imaging-equipment">Imaging Equipment</option>
-                            <option value="surgical-instruments">Surgical Instruments</option>
-                            <option value="laboratory-equipment">Laboratory Equipment</option>
-                            <option value="patient-care-devices">Patient care Devices</option>                
+                            <option value="Diagnostic Equipment">Diagnostic Equipment</option>
+                            <option value="Therapeutic Equipment">Therapeutic Equipment</option>
+                            <option value="Surgical Instruments">Surgical Instruments</option>
+                            <option value="Patient Monitoring Equipment">Patient Monitoring Equipment</option>  
+                            <option value="Life Support Equipment">Life Support Equipment</option>
+                            <option value="Hospital Furniture">Hospital Furniture</option>
+                            <option value="Rehabilitation Equipment">Rehabilitation Equipment</option>                
                             </select>
                             </div>
                              <!-- Equipment Type  -->
@@ -172,9 +175,9 @@
                             <label for="Warranty" class="labelclass">Warranty</label>
                             <select name="warranty" class="form-control greybg">
                             <option value="<?= htmlspecialchars($editequipments->warranty); ?>"><?= htmlspecialchars($editequipments->warranty); ?></option>
-                            <option value="under-warranty">Under Warranty</option>
-                            <option value="warranty-period-remaining(1yr)">Warranty Period Remaining(1yr)</option>
-                            <option value="no-warranty">No Warranty</option>                        
+                            <option value="under warranty">Under Warranty</option>
+                            <option value="warranty period remaining(1yr)">Warranty Period Remaining(1yr)</option>
+                            <option value="no warranty">No Warranty</option>                        
                             </select>
                             </div>
                             <!-- Warranty-->
@@ -185,7 +188,7 @@
                             <select name="availability" class="form-control greybg">
                             <option value="<?= htmlspecialchars($editequipments->availability); ?>"><?= htmlspecialchars($editequipments->availability); ?></option>
                             <option value="in-stock">In Stock</option>
-                            <option value="pre-Oorder">Pre Order</option>
+                            <option value="pre-order">Pre Order</option>
                             <option value="out-of-stock">Out OF Stock</option>                        
                             </select>
                             </div>

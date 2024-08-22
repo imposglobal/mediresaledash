@@ -20,6 +20,18 @@ class EquipmentAPI_Cotroller extends BaseController
     }
 
 
+    public function get_Title_Image_Equipment_Api() // Api to get only title and image
+{
+    $equipmentModel = new EquipmentModel();
+    
+    $equipments = $equipmentModel->select('title, equipment_image')->findAll();
+    
+    return $this->response->setJSON($equipments);
+}
+
+
+
+
     /*************** function to get equipment by equipment Type  **********************/
 
     public function getEquipmentByEquipmentType_API()
@@ -228,13 +240,159 @@ public function getEquipmentByCityOrZipcode()
 //**************************code for multiple filter in equipment listing page*********************************
 
 
+// public function getEquipmentsByFilter()
+// {
+//     $equipmentModel = new EquipmentModel();   
+    
+//     // Get filter parameters from the request
+
+//     $equipment_type = $this->request->getVar('equipment_type');
+//     $transaction_type = $this->request->getVar('transaction_type');
+//     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
+//     $startprice = $this->request->getVar('start_price');
+//     $endprice = $this->request->getVar('end_price');
+//     $brand = $this->request->getVar('brand');
+//     $condition = $this->request->getVar('condition');
+//     $warranty = $this->request->getVar('warranty');
+//     $availability = $this->request->getVar('availability');
+//     $ageofequipment = $this->request->getVar('ageofequipment');
+
+//     // $transaction_type = "rent";
+//     // $startprice  = 400;
+//     // $endprice  = 1700;
+
+//      // Get the current year
+//      $currentYear = date('Y');
+
+//     // Start building the query
+//     $builder = $equipmentModel->builder();
+
+//     if (!empty($equipment_type)) {
+//         if (is_array($equipment_type)) {
+//             $builder->whereIn('equipment_type', $equipment_type);
+//         } else {
+//             $builder->where('equipment_type', $equipment_type);
+//         }
+//     }
+
+//     if (!empty($CityOrZipcode)) {
+//         if (is_numeric($CityOrZipcode)) {
+//             $builder->where('zipcode', $CityOrZipcode);
+//         } else {
+//             $builder->where('city', $CityOrZipcode);
+//         }
+//     }
+
+
+//     if (!empty($brand)) {
+//         if (is_array($brand)) {
+//             $builder->whereIn('brand', $brand);
+//         } else {
+//             $builder->where('brand', $brand);
+//         }
+//     }
+
+//     if (!empty($condition)) {
+//         if (is_array($condition)) {
+//             $builder->whereIn('equipment_condition', $condition);
+//         } else {
+//             $builder->where('equipment_condition', $condition);
+//         }
+//     }
+
+//     if (!empty($warranty)) {
+//         if (is_array($warranty)) {
+//             $builder->whereIn('warranty', $warranty);
+//         } else {
+//             $builder->where('warranty', $warranty);
+//         }
+//     }
+
+
+//     if (!empty($availability)) {
+//         if (is_array($availability)) {
+//             $builder->whereIn('availability', $availability);
+//         } else {
+//             $builder->where('availability', $availability);
+//         }
+//     }
+
+//     if (!empty($ageofequipment)) {
+//         switch ($ageofequipment) {
+//             case 'less-than-1-year':
+//                 $year = $currentYear;
+//                 $builder->where('manifacture_year', $year);
+//                 break;
+//             case 'less-than-2-years':
+//                 $year = $currentYear - 1;
+//                 $builder->where('manifacture_year >=', $year);
+//                 break;
+//             case 'less-than-5-years':
+//                 $year = $currentYear - 4;
+//                 $builder->where('manifacture_year >=', $year);
+//                 break;
+//             case 'more-than-5-years':
+//                 $year = $currentYear - 5;
+//                 $builder->where('manifacture_year <', $year);
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+
+//     if (!empty($transaction_type)) {
+//         if ($transaction_type === 'buy') {
+
+//             if (!empty($startprice) && !empty($endprice)) {      // this will chek the price range filter for 'buy'
+//                 $builder->where('transaction_type', 'buy')
+//                         ->where('price >=', $startprice)
+//                         ->where('price <=', $endprice);
+//             }
+//         } elseif ($transaction_type === 'rent') {
+            
+//             if (!empty($startprice) && !empty($endprice)) { // this will chek the price range filter for 'buy'
+//                 $builder->where('transaction_type', 'rent')
+//                         ->where('price >=', $startprice)
+//                         ->where('price <=', $endprice);
+//             }
+//         }
+//     }
+    
+    
+
+//     // Get the results
+//     $filteredEquipments = $builder->get()->getResultArray();
+
+
+//      // Prepare the response
+//      if (!empty($filteredEquipments)) {
+//         $response = [
+//             'status' => 'success',
+//             'data' => $filteredEquipments
+//         ];
+//     } else {
+//         $response = [
+//             'status' => 'error',
+//             'message' => 'No properties found.'
+//         ];
+//     }
+
+//     // Return the results as JSON
+//     return $this->response->setJSON($response);
+// }
+
+
+
+/********************************test api ****************************/
 public function getEquipmentsByFilter()
 {
     $equipmentModel = new EquipmentModel();   
-    
-    // Get filter parameters from the request
 
-    $equipment_type = $this->request->getVar('equipment_type');
+    // Get filter parameters from the request
+     $equipment_type = $this->request->getVar('equipment_type');
+    //$equipment_type = 'Diagnostic Equipment';
+
+    $transaction_type = $this->request->getVar('transaction_type');
     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
     $startprice = $this->request->getVar('start_price');
     $endprice = $this->request->getVar('end_price');
@@ -243,19 +401,28 @@ public function getEquipmentsByFilter()
     $warranty = $this->request->getVar('warranty');
     $availability = $this->request->getVar('availability');
     $ageofequipment = $this->request->getVar('ageofequipment');
+    //$ageofequipment = 'less-than-1-year';
 
-     // Get the current year
-     $currentYear = date('Y');
+    
+    $page = $this->request->getVar('page') ?? 1; // Default to page 1 if not provided
+    $perPage = $this->request->getVar('per_page') ?? 20; // Default to 5 items per page if not provided
+
+    // Validate pagination parameters
+    $page = (int)$page > 0 ? (int)$page : 1;
+    $perPage = (int)$perPage > 0 ? (int)$perPage : 20;
+
+    // Calculate offset
+    $offset = ($page - 1) * $perPage;
+
+    // Get the current year
+    $currentYear = date('Y');
 
     // Start building the query
     $builder = $equipmentModel->builder();
 
+    // Apply filters 
     if (!empty($equipment_type)) {
-        if (is_array($equipment_type)) {
-            $builder->whereIn('equipment_type', $equipment_type);
-        } else {
-            $builder->where('equipment_type', $equipment_type);
-        }
+        $builder->whereIn('equipment_type', is_array($equipment_type) ? $equipment_type : [$equipment_type]);
     }
 
     if (!empty($CityOrZipcode)) {
@@ -266,89 +433,81 @@ public function getEquipmentsByFilter()
         }
     }
 
-
-    if (!empty($startprice) && !empty($endprice)) {
-        $builder->where('price >=', $startprice);
-        $builder->where('price <=', $endprice);
-    }
-
-
     if (!empty($brand)) {
-        if (is_array($brand)) {
-            $builder->whereIn('brand', $brand);
-        } else {
-            $builder->where('brand', $brand);
-        }
+        $builder->whereIn('brand', is_array($brand) ? $brand : [$brand]);
     }
 
     if (!empty($condition)) {
-        if (is_array($condition)) {
-            $builder->whereIn('equipment_condition', $condition);
-        } else {
-            $builder->where('equipment_condition', $condition);
-        }
+        $builder->whereIn('equipment_condition', is_array($condition) ? $condition : [$condition]);
     }
 
     if (!empty($warranty)) {
-        if (is_array($warranty)) {
-            $builder->whereIn('warranty', $warranty);
-        } else {
-            $builder->where('warranty', $warranty);
-        }
+        $builder->whereIn('warranty', is_array($warranty) ? $warranty : [$warranty]);
     }
 
-
     if (!empty($availability)) {
-        if (is_array($availability)) {
-            $builder->whereIn('availability', $availability);
-        } else {
-            $builder->where('availability', $availability);
-        }
+        $builder->whereIn('availability', is_array($availability) ? $availability : [$availability]);
     }
 
     if (!empty($ageofequipment)) {
         switch ($ageofequipment) {
-            case 'less-than-1-year':
-                $year = $currentYear;
-                $builder->where('manifacture_year', $year);
+            case 'less than 1 year':
+                $builder->where('manifacture_year', $currentYear);
                 break;
-            case 'less-than-2-years':
-                $year = $currentYear - 1;
-                $builder->where('manifacture_year >=', $year);
+            case 'less than 2 years':
+                $builder->where('manifacture_year >=', $currentYear - 1);
                 break;
-            case 'less-than-5-years':
-                $year = $currentYear - 4;
-                $builder->where('manifacture_year >=', $year);
+            case 'less than 5 years':
+                $builder->where('manifacture_year >=', $currentYear - 4);
                 break;
-            case 'more-than-5-years':
-                $year = $currentYear - 5;
-                $builder->where('manifacture_year <', $year);
-                break;
-            default:
+            case 'more than 5 years':
+                $builder->where('manifacture_year <', $currentYear - 5);
                 break;
         }
     }
-    
 
-    // Get the results
-    $filteredEquipments = $builder->get()->getResultArray();
-
-
-     // Prepare the response
-     if (!empty($filteredEquipments)) {
-        $response = [
-            'status' => 'success',
-            'data' => $filteredEquipments
-        ];
-    } else {
-        $response = [
-            'status' => 'error',
-            'message' => 'No properties found.'
-        ];
+    if (!empty($transaction_type) && in_array($transaction_type, ['buy', 'rent'])) {
+        $builder->where('transaction_type', $transaction_type);
+        if (!empty($startprice) && !empty($endprice)) {
+            $builder->where('price >=', $startprice)
+                    ->where('price <=', $endprice);
+        }
     }
 
-    // Return the results as JSON
-    return $this->response->setJSON($response);
+    // Apply pagination
+    $builder->limit($perPage, $offset);
+
+    // Get the results
+    try {
+        $filteredEquipments = $builder->get()->getResultArray();
+        
+        // Get total count of items matching the filters
+        $totalItems = $builder->countAllResults(false); // Pass false to avoid applying the limit to the count query
+    } catch (\Exception $e) {
+        // Log the error and return a server error response
+        log_message('error', 'Error fetching equipment: ' . $e->getMessage());
+        return $this->response->setStatusCode(500)->setJSON([
+            'status' => 'error',
+            'message' => 'Internal server error.'
+        ]);
+    }
+
+    // Prepare the response with pagination metadata
+    $totalPages = ceil($totalItems / $perPage);
+
+    $response = [
+        'status' => 'success',
+        'data' => $filteredEquipments,
+        'pagination' => [
+            'total_items' => $totalItems,
+            'total_pages' => $totalPages,
+            'current_page' => $page,
+            'per_page' => $perPage
+        ]
+    ];
+    
+    return $this->response->setStatusCode(200)->setJSON($response);
 }
+
 
 }
