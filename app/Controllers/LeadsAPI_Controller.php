@@ -11,17 +11,17 @@ class LeadsAPI_Controller extends BaseController
 
     public function getDetails()
     {
-        $id = $this->request->getGet('id'); // Retrieve the 'id' from the query parameter
-
-        if (!$id) {
-            return $this->fail('No property ID provided.', 400); // Return an error if ID is missing
+        $pid = $this->request->getGet('pid'); // Retrieve the 'pid' from the query parameter
+    
+        if (!$pid) {
+            return $this->fail('No property ID provided.', 400); // Return an error if pid is missing
         }
-
+    
         $PropertyModel = new PropertyModel();
-
-        // Fetch the property by ID
-        $property = $PropertyModel->find($id);
-
+    
+        // Fetch the property by pid
+        $property = $PropertyModel->where('pid', $pid)->first();
+    
         if ($property) {
             return $this->respond([
                 'status' => 'success',
@@ -31,6 +31,8 @@ class LeadsAPI_Controller extends BaseController
             return $this->failNotFound('Property not found.');
         }
     }
+    
+
 
 
     public function addLead()
@@ -53,29 +55,33 @@ class LeadsAPI_Controller extends BaseController
         }
     }
 
-    
+
+
     public function getEquipmentDetails()
     {
-        $id = $this->request->getGet('id'); // Retrieve the 'id' from the query parameter
-
-        if (!$id) {
-            return $this->fail('No property ID provided.', 400); // Return an error if ID is missing
+        $eid = $this->request->getGet('eid'); // Retrieve the 'eid' from the query parameter
+    
+        if (!$eid) {
+            return $this->fail('No Equipment ID provided.', 400); // Return an error if eid is missing
         }
-
+    
         $EquipmentModel = new EquipmentModel();
-
-        // Fetch the property by ID
-        $equipment = $EquipmentModel->find($id);
-
+    
+        // Fetch the equipment by eid
+        $equipment = $EquipmentModel->where('eid', $eid)->first();
+    
         if ($equipment) {
             return $this->respond([
                 'status' => 'success',
-                'data' => $equipment
+                'data' => $equipment // Corrected to use the fetched equipment data
             ]);
         } else {
-            return $this->failNotFound('Property not found.');
+            return $this->failNotFound('Equipment not found.');
         }
     }
+    
+    
+  
     
 
     public function addEquipmentLead()
