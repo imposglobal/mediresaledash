@@ -128,6 +128,33 @@ class LeadsAPI_Controller extends BaseController
         return view('leads/leads', $data);
     }
 
+
+    // public function view_all_leads()
+    // {
+    //     if (!session()->get('isLoggedIn')) {
+    //         return redirect()->to('/');
+    //     }
+    
+    //     $leadsModel = new LeadsModel();
+    
+    //     // Join leads with equipments and property tables, selecting specific columns
+    //     $leads = $leadsModel
+    //         ->select('leads.*, equipments.title AS equipment_title')
+    //         ->join('equipments', 'equipments.eid = leads.eid')
+    //         // ->join('property', 'property.pid = leads.pid')
+    //         ->paginate(3);
+    
+    //     // Pass the data to the view
+    //     $data = [
+    //         'leads' => $leads,
+    //         'pager' => $leadsModel->pager,
+    //     ];
+    
+    //     return view('leads/leads', $data);
+    // }
+    
+
+
     //   delete lead
 
     public function delete_leads($id) {

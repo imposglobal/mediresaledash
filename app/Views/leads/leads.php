@@ -25,9 +25,9 @@
               </ul>
 
 
-            <div class="row">
+             <div class="row">
                 <div class="col-lg-8"> <h3 class="fw-bold mt-4">Leads</h3></div>
-                <div class="col-lg-4 text-end">
+                <!-- <div class="col-lg-4 text-end">
                 <div class="search-container mt-4">
                 <form action="">
                 <div class="input-group">
@@ -37,8 +37,8 @@
                 </button>
                 </div>
                </form>
-            </div>
-            </div>
+               </div>
+               </div> -->
             </div>
 
             
@@ -72,43 +72,55 @@
                             <th>Action</th>
                           </tr>
                         </thead>
-                    
-                        <tbody>
-                        <?php if (!empty($leads) && is_array($leads)): ?>
-                          <?php $i =1 ;?>
-                          <?php foreach ($leads as $lead): ?>
-                          <tr>
-                            <td><?= $i++;?></td>
-                            <td><?= esc($lead['created_at']) ?></td>
-                            <td><?= esc($lead['first_name'] . ' ' . $lead['last_name']) ?></td>
-                            <td><?= esc($lead['email']) ?></td>
-                            <td><?= esc($lead['phone_number']) ?></td>
-                            <td>
-                              <div class="form-button-action">
 
-                                 <a 
-                                 onclick="confirmLeadDelete(<?= $lead['id']; ?>)"
-                                  type="button"
-                                  data-bs-toggle="tooltip"
-                                  title=""
-                                  class="btn btn-link btn-danger btn-p btn-remove"
-                                  data-original-title="Remove"
-                                  
-                                >
-                                  <i class="fa fa-times"></i>
-                               </a> 
-                              </div>
-                            </td>
-                          </tr>
-                          <?php endforeach; ?>
-                                    <?php else: ?>
-                                        <tr><td colspan="6">No Leads found</td></tr>
-                                    <?php endif; ?>
-                        </tbody>
+                    <tbody>
+    <?php if (!empty($leads) && is_array($leads)): ?>
+        <?php $i = 1; ?>
+        <?php foreach ($leads as $lead): ?>
+        <tr>
+            <td><?= $i++; ?></td>
+            <td><?= esc($lead['created_at']) ?></td>
+            <td><?= esc($lead['first_name'] . ' ' . $lead['last_name']) ?></td>          
+            <td><?= esc($lead['email']) ?></td>
+            <td><?= esc($lead['phone_number']) ?></td>
+           
+            <td>
+                <div class="form-button-action">
+
+                    <a class="btn btn-link btn-success btn-lg btn-p" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="fa  fa-eye"></i>
+                    </a>
+
+                    <!-- <a class="btn btn-link btn-success btn-lg btn-p" data-bs-toggle="offcanvas" href="#offcanvasExample<?= $lead['id'] ?>" role="button" aria-controls="offcanvasExample<?= $lead['id'] ?>">
+                        <i class="fa fa-eye"></i>
+                    </a> -->
+                    <a 
+                        onclick="confirmLeadDelete(<?= $lead['id']; ?>)"
+                        type="button"
+                        data-bs-toggle="tooltip"
+                        title=""
+                        class="btn btn-link btn-danger btn-p btn-remove"
+                        data-original-title="Remove"
+                    >
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr><td colspan="10">No Leads found</td></tr>
+   <?php endif; ?>
+</tbody>
+                    
+                      
                       </table>
 
                      
                     </div>
+
+
+
 
 
      <!-- Pagination -->
@@ -128,6 +140,22 @@
             </div>
           </div>
         </div>
+
+
+
+      <!-- drawer -->
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Details</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      </div>
+      </div>
+      </div>
 
     <!-- ajax code to delete equipment -->
      <script>
