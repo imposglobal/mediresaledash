@@ -7,14 +7,16 @@ class LeadsModel extends Model
     protected $table = 'leads';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'pid',    
+        'pid', 
+        'eid',    
         'first_name',      
         'last_name',
         'email',
-        'phone_number'
+        'phone_number',
+        'created_at'
+        
     ];
-    protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
+   
 }
 
 
