@@ -79,6 +79,12 @@ $routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipment
 
 // http://localhost/mediresaledash/equipments/getfilter/view
 
+// Equipment Detail Page 
+$routes->get('/getequipmentdetails/view', 'LeadsAPI_Controller::getEquipmentDetails');
+
+//Equipment Detail Page API
+$routes->post('/submitEquipmentlead/add', 'LeadsAPI_Controller::addEquipmentLead');  //http://localhost/mediresaledash/submit-lead/add
+
 
 // API to get Property 
 $routes->get('/property/view', 'PropertyAPI_Cotroller::AllPropertyItems_API'); //http://localhost/mediresaledash/property/view
