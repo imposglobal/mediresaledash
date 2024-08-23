@@ -50,73 +50,6 @@ class Equipment extends BaseController
        echo json_encode($output);
     }
 
-/************************************* original code by shraddha ************************************* */
-    // public function add_equipments()
-    // {
-    //     $EquipmentModel = new EquipmentModel();
-        
-    //     // Handle multiple file uploads
-    //     $images = $this->request->getFiles();
-    //     $validImages = [];
-    //     $imageNames = [];
-    
-    //     foreach ($images['equipment_image'] as $file) {
-    //         if ($file->isValid() && !$file->hasMoved()) {
-    //             $newName = $file->getRandomName();
-    //             $file->move(WRITEPATH . '../assets/uploads/equipments/', $newName);
-    //             $imageNames[] = $newName; // Store the new name of the file
-    //         }
-    //     }
-    
-    //     if (!empty($imageNames)) {
-    //         $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
-    //     } else {
-    //         $imageNamesString = null; // No valid images uploaded, set to null
-    //     }
-
-    // $StateModel = new StateModel();
-    // $CityModel = new CityModel();
-
-    // $stateId = $this->request->getPost('state');
-    // $cityId = $this->request->getPost('city');
-
-    // // Fetch state name
-    // $state = $StateModel->where('id', $stateId)->first();
-    // $stateName = $state['name'] ?? 'state not found.';
-
-    // // Fetch city name
-    // $city = $CityModel->select('cities.city as city_name')
-    //                   ->join('states', 'cities.state_id = states.id')
-    //                   ->where('cities.id', $cityId)
-    //                   ->first();
-    // $cityName = $city['city_name'] ?? 'City not found.';
-    
-    //     // Get data from the form and map it to the database fields
-    //     $data = [
-    //         'title' => $this->request->getPost('title'),
-    //         'equipment_type' => $this->request->getPost('equipment_type'),
-    //         'brand' => $this->request->getPost('brand'),
-    //         'equipment_condition' => $this->request->getPost('equipment_condition'),
-    //         'warranty' => $this->request->getPost('warranty'),
-    //         'availability' => $this->request->getPost('availability'),
-    //         'serial_number' => $this->request->getPost('serial_number'),
-    //         'price' => $this->request->getPost('price'),
-    //         'manifacture_year' => $this->request->getPost('manifacture_year'),
-    //         'state' => $stateName,
-    //         'city' => $cityName,
-    //         'zipcode' => $this->request->getPost('zipcode'),
-    //         'description' => $this->request->getPost('description'),
-    //         'equipment_image' => $imageNamesString
-    //     ];
-    
-    //     // Save data to the database
-    //     $EquipmentModel->save($data);
-    
-    //     // Redirect with a success message
-    //    // Return JSON response
-    // return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment added successfully']);
-    // }
-
 /***************************************  additional code by krushna to save iamge with its path in db *****************************/
     
     
@@ -216,7 +149,7 @@ public function add_equipments()
 
     // Apply filters if search parameter is present
     if ($search) {
-        $EquipmentModel->like('id', $search)
+        $EquipmentModel->like('eid', $search)
                        ->orLike('title', $search)
                        ->orLike('serial_number', $search)
                        ->orLike('price', $search)
@@ -236,10 +169,10 @@ public function add_equipments()
 
     //************************view equipment by id*************************************8
 
-    public function view_equipments($id)
+    public function view_equipments($eid)
     {
         $EquipmentModel = new EquipmentModel();
-        $data['viewequipment'] = $EquipmentModel->view_equipment_by_id($id);
+        $data['viewequipment'] = $EquipmentModel->view_equipment_by_id($eid);
     
         // Debug statement
         error_log(print_r($data['viewequipment'], true));
@@ -251,8 +184,8 @@ public function add_equipments()
    
 //*****************************delete equipment*******************************
 
-    public function delete_equipments($id) {
-        $result = $this->equipmentModel->equipment_delete($id);
+    public function delete_equipments($eid) {
+        $result = $this->equipmentModel->equipment_delete($eid);
         if ($result) {
             echo json_encode(["status" => "success", "message" => "Equipment deleted successfully."]);
         } else {
@@ -263,8 +196,8 @@ public function add_equipments()
 //*****************************update equipment*******************************
 
 
-   public function update_equipments($id) {
-    $editequipments = $this->equipmentModel->get_equipment_by_id($id);
+   public function update_equipments($eid) {
+    $editequipments = $this->equipmentModel->get_equipment_by_id($eid);
     $city  =  $this->cityModel->getCities();
     $state  =  $this->stateModel->getStates();
 
@@ -281,7 +214,7 @@ public function add_equipments()
 
 
 
-    public function edit_equipments($id) {
+    public function edit_equipments($eid) {
 
         // $StateModel = new StateModel();
         // $CityModel = new CityModel();
@@ -332,7 +265,7 @@ public function add_equipments()
     
             if (!empty($uploadedImages)) {
                 // Fetch existing images from the database
-                $existingImages = $this->equipmentModel->get_equipment_by_id($id);
+                $existingImages = $this->equipmentModel->get_equipment_by_id($eid);
                 $existingImagesArray = !empty($existingImages->equipment_image) ? explode(',', $existingImages->equipment_image) : [];
                 
                 // Merge existing and new images
@@ -341,11 +274,11 @@ public function add_equipments()
             }
         } else {
             // If no new images, keep existing ones
-            $existingImages = $this->equipmentModel->get_equipment_by_id($id);
+            $existingImages = $this->equipmentModel->get_equipment_by_id($eid);
             $data['equipment_image'] = $existingImages ? $existingImages->equipment_image : '';
         }
     
-        $result = $this->equipmentModel->update_equipment_by_id($id, $data);
+        $result = $this->equipmentModel->update_equipment_by_id($eid, $data);
         if ($result) {
             return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment updated successfully']);
         } else {
@@ -369,7 +302,7 @@ public function add_equipments()
             $updatedImages = array_diff($images, [$imageName]);
             $newImageString = implode(',', $updatedImages);
     
-            $equipmentModel->update($equipment['id'], ['equipment_image' => $newImageString]);
+            $equipmentModel->update($equipment['eid'], ['equipment_image' => $newImageString]);
     
             // Correct the path to the image file
             $filePath = FCPATH.'assets/uploads/equipments/' . $imageName;

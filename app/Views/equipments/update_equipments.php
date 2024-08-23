@@ -241,7 +241,7 @@
                             <!-- End TinyMCE Editor -->
                           </div>
                         </div>
-                        <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editequipments->id); ?>">
+                        <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editequipments->eid); ?>">
                         <!-- <div class="card-action text-center">
                             <button class="btn btn-blue addbtnres" id="update_equipment"><i class="fa fa-plus color-info me-2"></i>Update Equipment</button>
                         </div> -->
@@ -287,7 +287,7 @@ tinymce.init({
             var formData = new FormData(form);
 
             $.ajax({
-                url: '<?php echo base_url('equipments/edit_equipments/' . $editequipments->id); ?>',
+                url: '<?php echo base_url('equipments/edit_equipments/' . $editequipments->eid); ?>',
                 type: 'POST',
                 data: formData,
                 processData: false,

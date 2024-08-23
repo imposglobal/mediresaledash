@@ -86,7 +86,7 @@
                             <td>
                               <div class="form-button-action">
 
-                                <a href="<?= base_url("view_equipments/" . $equipments["id"]); ?>"
+                                <a href="<?= base_url("view_equipments/" . $equipments["eid"]); ?>"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -97,7 +97,7 @@
                                 </a>
                                
                                  <a 
-                                  href="<?= base_url('update_equipments/' . $equipments["id"]);?>"
+                                  href="<?= base_url('update_equipments/' . $equipments["eid"]);?>"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -107,7 +107,7 @@
                                 <i class="fa fa-edit"></i>
                                 </a>
                                 <a 
-                                 onclick="confirmEquipmentDelete(<?= $equipments['id']; ?>)"
+                                 onclick="confirmEquipmentDelete(<?= $equipments['eid']; ?>)"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -151,7 +151,7 @@
 
     <!-- ajax code to delete equipment -->
     <script>
-    function confirmEquipmentDelete(id) {
+    function confirmEquipmentDelete(eid) {
         Swal.fire({
             title: 'Are you sure to delete this property?',
             text: 'You are about to delete this property. This action cannot be undone.',
@@ -164,7 +164,7 @@
             if (result.isConfirmed) {
                 // User confirmed, proceed with deletion
                 $.ajax({
-                    url: "<?= base_url('/equipments/delete_equipments/') ?>" + id,
+                    url: "<?= base_url('/equipments/delete_equipments/') ?>" + eid,
                     type: 'GET',
                     dataType: 'json', // Expect JSON response from server
                     success: function(response) {

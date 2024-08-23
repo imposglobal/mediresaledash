@@ -7,7 +7,7 @@ class EquipmentModel extends Model{
 
  
     protected $table = 'equipments';
-    protected $primarykey = 'id';
+    protected $primarykey = 'eid';
     protected $allowedFields = [
         'title',
         'equipment_type',      
@@ -31,9 +31,9 @@ class EquipmentModel extends Model{
 
   
     
-    public function equipment_delete($id) 
+    public function equipment_delete($eid) 
     {
-        return $this->db->table($this->table)->where('id', $id)->delete();
+        return $this->db->table($this->table)->where('eid', $eid)->delete();
     }
 
 
@@ -65,11 +65,11 @@ class EquipmentModel extends Model{
 
    
     
-    public function view_equipment_by_id($id) 
+    public function view_equipment_by_id($eid) 
     {
         $result = $this->db
                        ->table('equipments')
-                       ->where(["id" => $id])
+                       ->where(["eid" => $eid])
                        ->get()
                        ->getResultArray();
     
@@ -82,10 +82,10 @@ class EquipmentModel extends Model{
 
 
 
-    public function get_equipment_by_id($id) {
+    public function get_equipment_by_id($eid) {
         return $this->db
                         ->table('equipments')
-                        ->where(["id" => $id])
+                        ->where(["eid" => $eid])
                         ->get()
                         ->getRow();
                         
@@ -93,10 +93,10 @@ class EquipmentModel extends Model{
     }
 
 
-    public function update_equipment_by_id($id, $data) {
+    public function update_equipment_by_id($eid, $data) {
         return $this->db
                     ->table('equipments')
-                    ->where(["id" => $id])
+                    ->where(["eid" => $eid])
                     ->set($data)
                     ->update();
     }
