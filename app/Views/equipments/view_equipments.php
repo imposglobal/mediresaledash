@@ -50,7 +50,7 @@
       <div class="col-md-6">
         <!-- carousel -->
         <div class="bootstrap-carousel">
-          <div id="carouselExampleIndicators<?= $item['id'] ?>" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleIndicators<?= $item['eid'] ?>" class="carousel slide" data-bs-ride="carousel">
             <?php $images = explode(',', $item['equipment_image']); ?>
            
             <div class="carousel-inner">
@@ -60,17 +60,17 @@
                 </div>
               <?php endforeach; ?>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators<?= $item['id'] ?>" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators<?= $item['eid'] ?>" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators<?= $item['id'] ?>" role="button" data-bs-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators<?= $item['eid'] ?>" role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
             <!-- <ol class="carousel-indicators">
               <?php foreach ($images as $index => $image): ?>
-                <li data-bs-target="#carouselExampleIndicators<?= $item['id'] ?>" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
+                <li data-bs-target="#carouselExampleIndicators<?= $item['eid'] ?>" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
               <?php endforeach; ?>
             </ol> -->
           </div>
