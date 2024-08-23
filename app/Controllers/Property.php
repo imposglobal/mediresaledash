@@ -29,9 +29,7 @@ class Property extends BaseController
 
         $CommonModel = new CommonModel();
         $states = $CommonModel->selectData("states");
-        // echo '<pre>';
-        // print_r($states);
-        // die();
+
         $data['states'] = $states;
         
         return view('property/add_property', $data);
@@ -62,21 +60,6 @@ class Property extends BaseController
          $images = $this->request->getFiles();
          $validImages = [];
          $imageNames = [];
-     
-        //  foreach ($images['property_image'] as $file) {
-        //      if ($file->isValid() && !$file->hasMoved()) {
-        //          $newName = $file->getRandomName();
-        //          $file->move(WRITEPATH . '../assets/uploads/property', $newName);
-        //          $imageNames[] = $newName; // Store the new name of the file
-        //      }
-        //  }
-     
-        //  if (!empty($imageNames)) {
-        //      $imageNamesString = implode(',', $imageNames); // Convert array of image names to a comma-separated string
-        //  } else {
-        //      $imageNamesString = null; // No valid images uploaded, set to null
-        //  }
-
 
         if (isset($images['property_image'])) {
             foreach ($images['property_image'] as $file) {
@@ -150,16 +133,7 @@ class Property extends BaseController
     return $this->response->setJSON(['status' => 'success', 'message' => 'Property added successfully']);
     }
 
-// public function view_all_property(): string
-// {
-//      if(!session()->get('isLoggedIn'))
-//          return redirect()->to('/');
 
-         
-//     $PropertyModel = new PropertyModel();
-//     $data['properties'] =  $PropertyModel->findAll();
-//     return view('property/view_all_property', $data);
-// }
 
 //*******************view all property*********************************
 
@@ -174,7 +148,7 @@ public function view_all_property()
 
      // Apply filters if search parameter is present
      if ($search) {
-         $PropertyModel->like('id', $search)
+         $PropertyModel->like('pid', $search)
                         ->orLike('name', $search)
                         ->orLike('state', $search)
                         ->orLike('city', $search)
@@ -187,7 +161,7 @@ public function view_all_property()
      }
  
      $data = [
-        'properties' => $PropertyModel->paginate(3),
+        'properties' => $PropertyModel->paginate(6),
         'pager' => $PropertyModel->pager,
          'search' => $search
      ];
@@ -232,7 +206,7 @@ public function view_all_property()
         $updatedImages = array_diff($images, [$imageName]);
         $newImageString = implode(',', $updatedImages);
 
-        $propertyModel->update($property['id'], ['property_image' => $newImageString]);
+        $propertyModel->update($property['pid'], ['property_image' => $newImageString]);
 
         // Correct the path to the image file
         $filePath = FCPATH . 'http://localhost/mediresaledash/assets/uploads/property/' . $imageName;

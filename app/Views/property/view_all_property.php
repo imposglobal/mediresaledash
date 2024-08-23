@@ -49,21 +49,6 @@
                     <div class="d-flex align-items-center">
                       <h4 class="card-title">Property List</h4>
                     </div>
-
-                        <!-- Search Form -->
-                        <!-- <form method="POST" action="<?= base_url('view_all_property') ?>">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type="text" name="search" class="form-control" placeholder="Search here..." value="">
-                                </div>
-                               
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                </div>
-                            </div>
-                        </form> -->
-                        <!-- End of Search Form -->
-
                   </div>
                   <div class="card-body">
                    
@@ -101,7 +86,7 @@
                             <td>
                               <div class="form-button-action">
 
-                                <a href="<?= base_url("view_property/" . $property["id"]); ?>"
+                                <a href="<?= base_url("view_property/" . $property["pid"]); ?>"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -112,7 +97,7 @@
                                 </a>
                                
                                  <a 
-                                  href="<?= base_url('update_property/' . $property["id"]);?>"
+                                  href="<?= base_url('update_property/' . $property["pid"]);?>"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -122,7 +107,7 @@
                                 <i class="fa fa-edit"></i>
                                 </a>
                                 <a 
-                                  onclick="ConfirmPropertyDelete(<?= $property['id']; ?>)"
+                                  onclick="ConfirmPropertyDelete(<?= $property['pid']; ?>)"
                                   type="button"
                                   data-bs-toggle="tooltip"
                                   title=""
@@ -138,14 +123,7 @@
                           <?php endforeach; ?>
                                     <?php else: ?>
                                         <tr><td colspan="6">No property found</td></tr>
-                                    <?php endif; ?>
-                        
-
-
-
-                         
-                        
-                          
+                                    <?php endif; ?>         
                         </tbody>
                       </table>
                     </div>

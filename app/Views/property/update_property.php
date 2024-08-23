@@ -258,10 +258,7 @@
                           </div>
 
                         </div>
-                        <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->id); ?>">
-                        <!-- <div class="card-action text-center">
-                            <button class="btn btn-blue addbtnres" id="update_property"><i class="fa fa-plus color-info me-2"></i>Update Property</button>
-                        </div> -->
+                        <input type="hidden" class="form-control" name="id" value="<?= htmlspecialchars($editproperty->pid); ?>">
                     </form>
                     <?php endif; ?>
                 </div>
@@ -272,19 +269,8 @@
 
 <!-- Include jQuery if not already included -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- Include CKEditor 5 -->
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script> -->
 
-<!-- Initialize CKEditor 5 -->
-<!-- <script>
-  $(document).ready(function() {
-    ClassicEditor
-      .create(document.querySelector('#editor'))
-      .catch(error => {
-        console.error(error);
-      });
-  });
-</script> -->
+
 
 <!-- tiny mce editor -->
 <script src="https://dds.doodlodesign.com/assets/vendor/tinymce/tinymce.min.js"></script>
@@ -311,7 +297,7 @@ tinymce.init({
             var formData = new FormData(form);
 
             $.ajax({
-                url: '<?php echo base_url('property/edit_property/' . $editproperty->id); ?>',
+                url: '<?php echo base_url('property/edit_property/' . $editproperty->pid); ?>',
                 type: 'POST',
                 data: formData,
                 processData: false,

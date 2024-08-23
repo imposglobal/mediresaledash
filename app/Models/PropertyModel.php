@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class PropertyModel extends Model{
     protected $table = 'property';
-    protected $primarykey = 'id';
+    protected $primarykey = 'pid';
     protected $allowedFields = [
         'name',       
         'description',
@@ -32,7 +32,7 @@ class PropertyModel extends Model{
 {
     return $this->db
                     ->table('property')
-                    ->where(["id" => $id])
+                    ->where(["pid" => $id])
                     ->get()
                     ->getResultArray(); // Get an array of results
 }
@@ -40,14 +40,14 @@ class PropertyModel extends Model{
 
     public function property_delete($id) 
     {
-        return $this->db->table($this->table)->where('id', $id)->delete();
+        return $this->db->table($this->table)->where('pid', $id)->delete();
     }
 
     public function get_property_by_id($id) 
     {
         return $this->db
                         ->table('property')
-                        ->where(["id" => $id])
+                        ->where(["pid" => $id])
                         ->get()
                         ->getRow();
                         
@@ -58,7 +58,7 @@ class PropertyModel extends Model{
      {
         return $this->db
                     ->table('property')
-                    ->where(["id" => $id])
+                    ->where(["pid" => $id])
                     ->set($data)
                     ->update();
     }

@@ -34,7 +34,6 @@ $routes->get('dashboard', 'Dashboard::dashboard');
 $routes->get('/equipments', 'Equipment::equipments');
 $routes->post('/equipments/add_equipments', 'Equipment::add_equipments');
 $routes->get('/view_equipments/(:num)', 'Equipment::view_equipments/$1');
-// $routes->get('/view_all_equipments', 'Equipment::view_all_equipments');
 $routes->match(['get', 'post'], '/view_all_equipments', 'Equipment::view_all_equipments');
 $routes->get('/equipments/delete_equipments/(:num)', 'Equipment::delete_equipments/$1');
 $routes->get('/update_equipments/(:num)', 'Equipment::update_equipments/$1');
@@ -46,7 +45,6 @@ $routes->post('/equipments/delete_equipment_image', 'Equipment::delete_equipment
 $routes->get('/property', 'Property::property');
 $routes->POST('/property/add_property', 'Property::add_property');
 $routes->POST('cities', 'Property::cities');
-// $routes->get('/view_all_property', 'Property::view_all_property');
 $routes->match(['get', 'post'], '/view_all_property', 'Property::view_all_property');
 $routes->get('/view_property/(:num)', 'Property::view_property/$1');
 $routes->get('/property/delete_property/(:num)', 'Property::delete_property/$1');
