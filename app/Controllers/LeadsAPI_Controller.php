@@ -9,6 +9,7 @@ class LeadsAPI_Controller extends BaseController
     use ResponseTrait; // Use the ResponseTrait
 
 
+
     public function getDetails()
     {
         $pid = $this->request->getGet('pid'); // Retrieve the 'pid' from the query parameter
@@ -103,6 +104,51 @@ class LeadsAPI_Controller extends BaseController
             return $this->failServerError('Failed to create lead');
         }
     }
+
+
+
+    // get all leads  -  equipment lead and property lead
+
+     
+
+    public function view_all_leads()
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/');
+        }
+    
+        $leadsModel = new LeadsModel();
+    
+        // pagination
+        $data = [
+            'leads' => $leadsModel->paginate(3),
+            'pager' => $leadsModel->pager,
+        ];
+    
+        return view('leads/leads', $data);
+    }
+
+    //   delete lead
+
+    public function delete_leads($id) {
+        $leadsModel = new LeadsModel(); // Instantiate the LeadsModel
+    
+        $result = $leadsModel->leads_delete($id); // Use the instantiated model
+        if ($result) {
+            echo json_encode(["status" => "success", "message" => "Lead deleted successfully."]);
+        } else {
+            echo json_encode(["status" => "error", "message" => "Failed to delete Lead record."]);
+        }
+    }
+
+
+  
+
+
+
+
+    
+    
 
 
 }

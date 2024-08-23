@@ -151,6 +151,23 @@
               </li>
 
               <hr class="text-dark mt-4 mb-4">
+
+                <!-- leads -->
+                <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                  <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Operation</h4>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('leads')?>">
+                  <i class="fas fa-user"></i>
+                  <p>Leads</p>
+                 
+                </a>
+              </li>
+              <hr class="text-dark mt-4 mb-4"> 
+
                <!-- settings -->
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
@@ -166,7 +183,10 @@
                 </a>
               </li>
               <hr class="text-dark mt-4 mb-4">   
-              <!-- property -->
+            
+
+
+
             </ul>
           </div>
         </div>

@@ -199,8 +199,5 @@
         });
     }
 </script>
-
-
-
-        <?= $this->endSection() ?>  
+<?= $this->endSection() ?>  
    

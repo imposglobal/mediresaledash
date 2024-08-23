@@ -16,8 +16,18 @@ class LeadsModel extends Model
         'created_at'
         
     ];
+
+
+    
+public function leads_delete($id) 
+{
+ return $this->db->table($this->table)->where('id', $id)->delete();
+}
    
 }
+
+
+
 
 
 ?>
