@@ -59,7 +59,7 @@
                            
                              
                           <div class="col-sm-12">
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <?php
                                         $images = explode(',', $editequipments->equipment_image);
                                         ?>
@@ -72,8 +72,22 @@
                                                 
                                             </div>
                                         <?php endforeach; ?>
-                                    </div>
-                                </div>
+                                    </div> -->
+
+
+                                    <div class="row">
+    <?php
+    $images = explode(',', $editequipments->equipment_image);
+    ?>
+
+    <?php foreach ($images as $index => $equipmentimage): ?>
+        <div id="image-<?= $index ?>" class="col-lg-3 col-4">
+            <img class="d-block w-100" src="<?= $equipmentimage ?>">
+            <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
+        </div>
+    <?php endforeach; ?>
+</div>
+                           </div>
                            
                             <!-- image -->
                             <div class="col-lg-6 inputmargintop">
@@ -324,9 +338,12 @@ tinymce.init({
     });
 </script>
 
- 
+<!-- Delete equipment image  -->
+
+
 <script>
-    function deleteImage(imageName, index) {
+    function deleteImage(imageUrl, index) {
+        // Use SweetAlert for the confirmation dialog
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -340,31 +357,35 @@ tinymce.init({
                 $.ajax({
                     url: '<?= base_url('equipments/delete_equipment_image') ?>',
                     type: 'POST',
-                    data: { image_name: imageName },
+                    data: {
+                        image: imageUrl,
+                        equipment_id: <?= $editequipments->eid ?>
+                    },
                     success: function(response) {
-                        if (response === 'success') {
-                            Swal.fire({
-                                title: 'Deleted!',
-                                text: 'Your image has been deleted.',
-                                icon: 'success',
-                                confirmButtonText: 'OK'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.reload();
-                                }
+                        if (response.success) {
+                            // Show a success message with SweetAlert
+                            Swal.fire(
+                                'Deleted!',
+                                'The image has been deleted.',
+                                'success'
+                            ).then(() => {
+                                // Remove the image container from the DOM after success
+                                $('#image-' + index).remove();
                             });
                         } else {
+                            // Show an error message with SweetAlert
                             Swal.fire(
                                 'Error!',
-                                'Failed to delete the image. Please try again.',
+                                'Image could not be deleted.',
                                 'error'
                             );
                         }
                     },
                     error: function() {
+                        // Show an error message with SweetAlert
                         Swal.fire(
                             'Error!',
-                            'Error occurred while deleting the image.',
+                            'An error occurred. Please try again.',
                             'error'
                         );
                     }
@@ -372,34 +393,9 @@ tinymce.init({
             }
         });
     }
-</script> 
-<!-- 
-<script>
-    function deleteImage(imagePath, index) {
-    if(confirm("Are you sure you want to delete this image?")) {
-        $.ajax({
-            url: '<?= base_url('equipments/delete_equipment_image'); ?>',  // Replace with your actual controller
-            type: 'POST',
-            data: { 
-                image: imagePath,
-                index: index,
-                equipmentId: <?= $editequipments->eid; ?>  // Pass the equipment ID
-            },
-            success: function(response) {
-                if(response.success) {
-                    // Remove the image from the DOM
-                    $("div.col-lg-3.col-4").eq(index).remove();
-                } else {
-                    alert("Failed to delete the image.");
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error("AJAX Error: ", status, error);
-            }
-        });
-    }
-}
+</script>
 
-</script> -->
+
+
 
 <?= $this->endSection() ?>

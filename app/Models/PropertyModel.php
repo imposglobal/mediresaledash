@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class PropertyModel extends Model{
     protected $table = 'property';
-    protected $primarykey = 'pid';
+    protected $primaryKey = 'pid';
     protected $allowedFields = [
         'name',       
         'description',

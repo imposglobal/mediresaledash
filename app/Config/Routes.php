@@ -39,7 +39,7 @@ $routes->get('/equipments/delete_equipments/(:num)', 'Equipment::delete_equipmen
 $routes->get('/update_equipments/(:num)', 'Equipment::update_equipments/$1');
 $routes->post('/equipments/edit_equipments/(:num)', 'Equipment::edit_equipments/$1');
 // $routes->post('/equipments/delete_equipment_image', 'Equipment::delete_equipment_image');
-$routes->post('/equipments/delete_equipment_image', 'Equipment::deleteImage');
+$routes->post('/equipments/delete_equipment_image', 'Equipment::deleteEquipmentImage');
 
 
 // Properties
@@ -51,7 +51,7 @@ $routes->get('/view_property/(:num)', 'Property::view_property/$1');
 $routes->get('/property/delete_property/(:num)', 'Property::delete_property/$1');
 $routes->get('/update_property/(:num)', 'Property::update_property/$1');
 $routes->post('/property/edit_property/(:num)', 'Property::edit_property/$1');
-$routes->post('/property/delete_property_image', 'Property::delete_property_image');
+$routes->post('/property/delete_property_image', 'Property::deletePropertyImage');
 
 //profile
 // $routes->get('/profile', 'Profile::profile');
@@ -126,4 +126,5 @@ $routes->post('/submit-lead/add', 'LeadsAPI_Controller::addLead');  //http://loc
 
 $routes->get('/leads', 'LeadsAPI_Controller::view_all_leads');
 $routes->get('/leads/delete_lead/(:num)', 'LeadsAPI_Controller::delete_leads/$1');
+$routes->get('/leads/view_leads/(:num)', 'LeadsAPI_Controller::view_all_leads_by_id/$1');
 

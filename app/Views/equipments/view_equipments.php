@@ -110,7 +110,7 @@
             <div class="col-lg-12"><span class="textdarkgrey">Manufacture Year</span> - <span class="ms-2 fs16"><?= esc($item['manifacture_year']) ?></div>
           </div>       
         </div>
-      </div>
+    </div>
 
 
     

@@ -338,7 +338,8 @@ tinymce.init({
 
 
 <script>
-    function deleteImage(imageName, index) {
+    function deleteImage(imageUrl, index) {
+        // Use SweetAlert for the confirmation dialog
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -350,33 +351,37 @@ tinymce.init({
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: '<?= base_url('property/delete_property_image') ?>',
+                    url: '<?= base_url('/property/delete_property_image') ?>',
                     type: 'POST',
-                    data: { image_name: imageName },
+                    data: {
+                        image: imageUrl,
+                        property_id: <?= $editproperty->pid ?>
+                    },
                     success: function(response) {
-                        if (response === 'success') {
-                            Swal.fire({
-                                title: 'Deleted!',
-                                text: 'Your image has been deleted.',
-                                icon: 'success',
-                                confirmButtonText: 'OK'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.reload();
-                                }
+                        if (response.success) {
+                            // Show a success message with SweetAlert and reload the page
+                            Swal.fire(
+                                'Deleted!',
+                                'The image has been deleted.',
+                                'success'
+                            ).then(() => {
+                                // Reload the page after displaying the success message
+                                window.location.reload();
                             });
                         } else {
+                            // Show an error message with SweetAlert
                             Swal.fire(
                                 'Error!',
-                                'Failed to delete the image. Please try again.',
+                                'Image could not be deleted.',
                                 'error'
                             );
                         }
                     },
                     error: function() {
+                        // Show an error message with SweetAlert
                         Swal.fire(
                             'Error!',
-                            'Error occurred while deleting the image.',
+                            'An error occurred. Please try again.',
                             'error'
                         );
                     }
@@ -385,4 +390,5 @@ tinymce.init({
         });
     }
 </script>
+
 <?= $this->endSection() ?>

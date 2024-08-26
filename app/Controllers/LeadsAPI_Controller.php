@@ -121,39 +121,13 @@ class LeadsAPI_Controller extends BaseController
     
         // pagination
         $data = [
-            'leads' => $leadsModel->paginate(3),
+            'leads' => $leadsModel->paginate(10),
             'pager' => $leadsModel->pager,
         ];
     
         return view('leads/leads', $data);
     }
-
-
-    // public function view_all_leads()
-    // {
-    //     if (!session()->get('isLoggedIn')) {
-    //         return redirect()->to('/');
-    //     }
     
-    //     $leadsModel = new LeadsModel();
-    
-    //     // Join leads with equipments and property tables, selecting specific columns
-    //     $leads = $leadsModel
-    //         ->select('leads.*, equipments.title AS equipment_title')
-    //         ->join('equipments', 'equipments.eid = leads.eid')
-    //         // ->join('property', 'property.pid = leads.pid')
-    //         ->paginate(3);
-    
-    //     // Pass the data to the view
-    //     $data = [
-    //         'leads' => $leads,
-    //         'pager' => $leadsModel->pager,
-    //     ];
-    
-    //     return view('leads/leads', $data);
-    // }
-    
-
 
     //   delete lead
 
@@ -167,6 +141,55 @@ class LeadsAPI_Controller extends BaseController
             echo json_encode(["status" => "error", "message" => "Failed to delete Lead record."]);
         }
     }
+
+
+    public function view_all_leads_by_id($id)
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/');
+        }
+    
+        $leadsModel = new LeadsModel();
+    
+        // Fetch the specific lead by ID, joining with the equipments and property tables
+        $lead = $leadsModel
+            ->select('leads.*, 
+                      equipments.title AS equipment_title,
+                      equipments.equipment_image AS equipment_image, 
+                      equipments.equipment_type AS equipment_type, 
+                      equipments.transaction_type AS etransaction_type, 
+                      equipments.serial_number AS serial_number, 
+                      equipments.price AS price, 
+                      property.property_image AS property_image,
+                      property.name AS property_name,
+                      property.property_type As property_type,
+                      property.transaction_type	 As ptransaction_type,
+                      property.state As state,
+                      property.city As city,
+                      property.zipcode As zipcode,
+
+                      ')
+            ->join('equipments', 'equipments.eid = leads.eid', 'left') // Use left join in case of no equipment
+            ->join('property', 'property.pid = leads.pid', 'left') // Use left join in case of no property
+            ->where(['leads.id' => $id])
+            ->first(); // Fetch the specific record by ID
+    
+        // Check if lead exists
+        if (empty($lead)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => "Lead with ID $id not found."
+            ]);
+        }
+    
+        // Return the lead data as JSON
+        return $this->response->setJSON([
+            'status' => 'success',
+            'data' => $lead
+        ]);
+    }
+    
+    
 
 
   

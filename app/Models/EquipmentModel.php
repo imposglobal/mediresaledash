@@ -7,7 +7,7 @@ class EquipmentModel extends Model{
 
  
     protected $table = 'equipments';
-    protected $primarykey = 'eid';
+    protected $primaryKey = 'eid';
     protected $allowedFields = [
         'title',
         'equipment_type',      

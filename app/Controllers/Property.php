@@ -226,6 +226,40 @@ public function view_all_property()
 
 
 
+    public function deletePropertyImage()
+    {
+        // Get the POST data
+        $imageUrl = $this->request->getPost('image');
+        $propertyId = $this->request->getPost('property_id');
+
+        // Load the model
+        $propertyModel = new PropertyModel();
+
+        // Fetch the current images from the database using the correct primary key 'eid'
+        $property = $propertyModel->where('pid', $propertyId)->first();
+        if (!$property) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Property not found']);
+        }
+
+        // Remove the image file from the server
+        if (file_exists($imageUrl)) {
+            unlink($imageUrl);
+        }
+
+        // Update the database to remove the image URL
+        $images = explode(',', $property['property_image']);
+        $newImages = array_diff($images, [$imageUrl]);
+        $newImagesString = implode(',', $newImages);
+
+        // Update the database with the new image string
+        $propertyModel->update($propertyId, ['property_image' => $newImagesString]);
+
+        // Return a success response
+        return $this->response->setJSON(['success' => true]);
+    }
+
+
+
 
 //****************************update propert****************************
 
