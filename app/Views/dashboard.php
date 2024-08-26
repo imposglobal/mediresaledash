@@ -106,7 +106,7 @@
                     </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-end">
-                      <a href="#" class="btn greybtn leads">View Leads</a>
+                      <a href="<?php echo base_url('leads')?>" class="btn greybtn leads">View Leads</a>
                       </div>
                     </div>
                     

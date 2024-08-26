@@ -19,21 +19,37 @@
 
 .leadtitle
 {
-  font-size:18px;
-  color: #4664AE;
+  font-size:16px;
+  color: #000;
   padding-left: 12px;
+  font-weight:500;
 }
 
 .lead
 {
   color:#000;
-  font-weight:500;
+  font-weight:700;
+  font-size:16px;
 }
 
 .carousel {
     padding: 30px 10px;
-    width: 300px;
 }
+
+.carousel-inner {
+    border-radius: 30px;
+}
+
+.offcanvas-header .btn-close
+{
+    border-radius:50%;
+    background-color:#56C6DD;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e) !important;
+}
+
 </style>
 
 <div class="container">
