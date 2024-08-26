@@ -68,8 +68,8 @@
                                             <div class="col-lg-3 col-4">
                                               
                                                 <img class="d-block w-100" src="<?= $equipmentimage ?>">
-                                             <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
-                                                
+                                             <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>, '<?= $editequipments->eid ?>')"><i class="fa fa-trash text-danger"></i></a>
+                                               
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
@@ -86,6 +86,7 @@
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="title" value="<?= htmlspecialchars($editequipments->title);?>" />
                             </div>
+                           
                             <!-- title -->
 
                             <!-- preview -->
@@ -255,7 +256,8 @@
 
 <!-- Include jQuery if not already included -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- Include CKEditor 5 -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
@@ -324,9 +326,11 @@ tinymce.init({
     });
 </script>
 
- 
+
+<!-- script to delete equipment image -->
+
 <script>
-    function deleteImage(imageName, index) {
+    function deleteImage(imageUrl, index, equipmentId) {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -340,18 +344,20 @@ tinymce.init({
                 $.ajax({
                     url: '<?= base_url('equipments/delete_equipment_image') ?>',
                     type: 'POST',
-                    data: { image_name: imageName },
+                    data: {
+                        image: imageUrl, 
+                        index: index,
+                        equipmentId: equipmentId
+                    },
                     success: function(response) {
-                        if (response === 'success') {
+                        if (response.success) {
                             Swal.fire({
                                 title: 'Deleted!',
                                 text: 'Your image has been deleted.',
                                 icon: 'success',
                                 confirmButtonText: 'OK'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.reload();
-                                }
+                            }).then(() => {
+                                window.location.reload();
                             });
                         } else {
                             Swal.fire(
@@ -372,34 +378,9 @@ tinymce.init({
             }
         });
     }
-</script> 
-<!-- 
-<script>
-    function deleteImage(imagePath, index) {
-    if(confirm("Are you sure you want to delete this image?")) {
-        $.ajax({
-            url: '<?= base_url('equipments/delete_equipment_image'); ?>',  // Replace with your actual controller
-            type: 'POST',
-            data: { 
-                image: imagePath,
-                index: index,
-                equipmentId: <?= $editequipments->eid; ?>  // Pass the equipment ID
-            },
-            success: function(response) {
-                if(response.success) {
-                    // Remove the image from the DOM
-                    $("div.col-lg-3.col-4").eq(index).remove();
-                } else {
-                    alert("Failed to delete the image.");
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error("AJAX Error: ", status, error);
-            }
-        });
-    }
-}
+</script>
 
-</script> -->
+
+
 
 <?= $this->endSection() ?>

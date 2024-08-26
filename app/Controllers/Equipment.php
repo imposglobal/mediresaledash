@@ -290,59 +290,29 @@ public function add_equipments()
 //*************delete equipment image in update_equipment form**************************
 
 
-    // public function delete_equipment_image()
-    // {
-    //     $imageName = $this->request->getPost('image_name');
-    
-    //     $equipmentModel = new EquipmentModel();
-    //     $equipment = $equipmentModel->where('equipment_image LIKE', "%$imageName%")->first();
-    
-    //     if ($equipment) {
-    //         $images = explode(',', $equipment['equipment_image']);
-    //         $updatedImages = array_diff($images, [$imageName]);
-    //         $newImageString = implode(',', $updatedImages);
-    
-    //         $equipmentModel->update($equipment['eid'], ['equipment_image' => $newImageString]);
-    
-    //         // Correct the path to the image file
-    //         $filePath = FCPATH.'assets/uploads/equipments/' . $imageName;
-    //         if (file_exists($filePath)) {
-    //             if (unlink($filePath)) {
-    //                 return $this->response->setStatusCode(200)->setBody('success');
-    //             } else {
-    //                 return $this->response->setStatusCode(500)->setBody('file_delete_failed');
-    //             }
-    //         } else {
-    //             return $this->response->setStatusCode(404)->setBody('file_not_found');
-    //         }
-    //     } else {
-    //         return $this->response->setStatusCode(404)->setBody('not_found');
-    //     }
-    // }
-
     public function deleteImage() {
         $imageUrl = $this->request->getPost('image');
         $index = $this->request->getPost('index');
         $equipmentId = $this->request->getPost('equipmentId');
     
-       
-    
         // Convert the URL path to the local file system path
         $imagePath = str_replace('http://localhost/mediresaledash/', FCPATH, $imageUrl);
-    
+
+        $equipmentModel = new EquipmentModel();
         // Fetch the equipment details
-        $equipment = $this->equipmentModel->get_equipment_by_id($equipmentId);    
-        if($equipment) {
+        $equipment = $this->equipmentModel->get_equipment_by_id($equipmentId);
+    
+        if ($equipment) {
             $images = explode(',', $equipment['equipment_image']);
-            
+    
             // Remove the image file from the server
-            if(file_exists($imagePath) && unlink($imagePath)) {
+            if (file_exists($imagePath) && unlink($imagePath)) {
                 // Remove the image from the array
                 unset($images[$index]);
                 $updatedImages = implode(',', $images);
     
                 // Update the equipment_image field in the database
-                $equipmentModel->update($equipmentId, ['equipment_image' => $updatedImages]);
+                $this->equipmentModel->update($equipmentId, ['equipment_image' => $updatedImages]);
     
                 // Send success response
                 return $this->response->setJSON(['success' => true]);
