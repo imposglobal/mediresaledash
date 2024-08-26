@@ -340,20 +340,15 @@ tinymce.init({
     });
 </script>
 
-<<<<<<< HEAD
+
+
+
 <!-- Delete equipment image  -->
 
 
 <script>
     function deleteImage(imageUrl, index) {
         // Use SweetAlert for the confirmation dialog
-=======
-
-<!-- script to delete equipment image -->
-
-<script>
-    function deleteImage(imageUrl, index, equipmentId) {
->>>>>>> origin/krushna
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -368,7 +363,6 @@ tinymce.init({
                     url: '<?= base_url('equipments/delete_equipment_image') ?>',
                     type: 'POST',
                     data: {
-<<<<<<< HEAD
                         image: imageUrl,
                         equipment_id: <?= $editequipments->eid ?>
                     },
@@ -382,21 +376,6 @@ tinymce.init({
                             ).then(() => {
                                 // Remove the image container from the DOM after success
                                 $('#image-' + index).remove();
-=======
-                        image: imageUrl, 
-                        index: index,
-                        equipmentId: equipmentId
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            Swal.fire({
-                                title: 'Deleted!',
-                                text: 'Your image has been deleted.',
-                                icon: 'success',
-                                confirmButtonText: 'OK'
-                            }).then(() => {
-                                window.location.reload();
->>>>>>> origin/krushna
                             });
                         } else {
                             // Show an error message with SweetAlert

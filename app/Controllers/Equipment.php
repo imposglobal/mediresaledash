@@ -289,12 +289,9 @@ public function add_equipments()
 
 //*************delete equipment image in update_equipment form**************************
 
-
-    public function deleteEquipmentImage()
+public function deleteEquipmentImage()
     {
         // Get the POST data
-
-    public function deleteImage() {
         $imageUrl = $this->request->getPost('image');
         $equipmentId = $this->request->getPost('equipment_id');
 
@@ -323,6 +320,7 @@ public function add_equipments()
         // Return a success response
         return $this->response->setJSON(['success' => true]);
     }
+
     
     
 
