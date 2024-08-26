@@ -324,7 +324,7 @@ tinymce.init({
     });
 </script>
 
-
+ 
 <script>
     function deleteImage(imageName, index) {
         Swal.fire({
@@ -372,6 +372,34 @@ tinymce.init({
             }
         });
     }
-</script>
+</script> 
+<!-- 
+<script>
+    function deleteImage(imagePath, index) {
+    if(confirm("Are you sure you want to delete this image?")) {
+        $.ajax({
+            url: '<?= base_url('equipments/delete_equipment_image'); ?>',  // Replace with your actual controller
+            type: 'POST',
+            data: { 
+                image: imagePath,
+                index: index,
+                equipmentId: <?= $editequipments->eid; ?>  // Pass the equipment ID
+            },
+            success: function(response) {
+                if(response.success) {
+                    // Remove the image from the DOM
+                    $("div.col-lg-3.col-4").eq(index).remove();
+                } else {
+                    alert("Failed to delete the image.");
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX Error: ", status, error);
+            }
+        });
+    }
+}
+
+</script> -->
 
 <?= $this->endSection() ?>
