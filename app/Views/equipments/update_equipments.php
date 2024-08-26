@@ -68,8 +68,8 @@
                                             <div class="col-lg-3 col-4">
                                               
                                                 <img class="d-block w-100" src="<?= $equipmentimage ?>">
-                                             <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>)"><i class="fa fa-trash text-danger"></i></a>
-                                                
+                                             <a onclick="deleteImage('<?= $equipmentimage; ?>', <?= $index; ?>, '<?= $editequipments->eid ?>')"><i class="fa fa-trash text-danger"></i></a>
+                                               
                                             </div>
                                         <?php endforeach; ?>
                                     </div> -->
@@ -100,6 +100,7 @@
                             <label for="title" class="labelclass">Title</label>
                             <input type="text" class="form-control greybg" name="title" value="<?= htmlspecialchars($editequipments->title);?>" />
                             </div>
+                           
                             <!-- title -->
 
                             <!-- preview -->
@@ -269,7 +270,8 @@
 
 <!-- Include jQuery if not already included -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- Include CKEditor 5 -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
@@ -338,12 +340,20 @@ tinymce.init({
     });
 </script>
 
+<<<<<<< HEAD
 <!-- Delete equipment image  -->
 
 
 <script>
     function deleteImage(imageUrl, index) {
         // Use SweetAlert for the confirmation dialog
+=======
+
+<!-- script to delete equipment image -->
+
+<script>
+    function deleteImage(imageUrl, index, equipmentId) {
+>>>>>>> origin/krushna
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -358,6 +368,7 @@ tinymce.init({
                     url: '<?= base_url('equipments/delete_equipment_image') ?>',
                     type: 'POST',
                     data: {
+<<<<<<< HEAD
                         image: imageUrl,
                         equipment_id: <?= $editequipments->eid ?>
                     },
@@ -371,6 +382,21 @@ tinymce.init({
                             ).then(() => {
                                 // Remove the image container from the DOM after success
                                 $('#image-' + index).remove();
+=======
+                        image: imageUrl, 
+                        index: index,
+                        equipmentId: equipmentId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            Swal.fire({
+                                title: 'Deleted!',
+                                text: 'Your image has been deleted.',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then(() => {
+                                window.location.reload();
+>>>>>>> origin/krushna
                             });
                         } else {
                             // Show an error message with SweetAlert

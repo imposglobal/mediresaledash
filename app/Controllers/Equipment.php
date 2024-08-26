@@ -293,6 +293,8 @@ public function add_equipments()
     public function deleteEquipmentImage()
     {
         // Get the POST data
+
+    public function deleteImage() {
         $imageUrl = $this->request->getPost('image');
         $equipmentId = $this->request->getPost('equipment_id');
 
