@@ -214,24 +214,62 @@ public function add_equipments()
 
 
 
-    public function edit_equipments($eid) {
+    // public function edit_equipments($eid) {
+    //     $data = [
+    //         'title' => $this->request->getPost('title'),
+    //         'equipment_type' => $this->request->getPost('equipment_type'),
+    //         'transaction_type' => $this->request->getPost('transaction_type'),
+    //         'brand' => $this->request->getPost('brand'),
+    //         'equipment_condition' => $this->request->getPost('equipment_condition'),
+    //         'warranty' => $this->request->getPost('warranty'),
+    //         'availability' => $this->request->getPost('availability'),
+    //         'serial_number' => $this->request->getPost('serial_number'),
+    //         'price' => $this->request->getPost('price'),
+    //         'manifacture_year' => $this->request->getPost('manifacture_year'),
+    //          'state' => $this->request->getPost('state'),
+    //         'city' => $this->request->getPost('city'),
+    //         'zipcode' => $this->request->getPost('zipcode'),
+    //         'description' => $this->request->getPost('description'),
+    //     ];
+    
+    //     // Handle file upload
+    //     $files = $this->request->getFiles();
+    //     if (isset($files['equipment_image'])) {
+    //         $uploadedImages = [];
+    //         foreach ($files['equipment_image'] as $file) {
+    //             if ($file->isValid() && !$file->hasMoved()) {
+    //                 $newName = $file->getRandomName();
+    //                 $file->move(WRITEPATH . '../assets/uploads/equipments/', $newName);
+    //                 // $uploadedImages[] = $newName;
+    //                 $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName;
+    //             }
+    //         }
+    
+    //         if (!empty($uploadedImages)) {
+    //             // Fetch existing images from the database
+    //             $existingImages = $this->equipmentModel->get_equipment_by_id($eid);
+    //             $existingImagesArray = !empty($existingImages->equipment_image) ? explode(',', $existingImages->equipment_image) : [];
+                
+    //             // Merge existing and new images
+    //             $allImages = array_merge($existingImagesArray, $uploadedImages);
+    //             $data['equipment_image'] = implode(',', $allImages);
+    //         }
+    //     } else {
+    //         // If no new images, keep existing ones
+    //         $existingImages = $this->equipmentModel->get_equipment_by_id($eid);
+    //         $data['equipment_image'] = $existingImages ? $existingImages->equipment_image : '';
+    //     }
+    
+    //     $result = $this->equipmentModel->update_equipment_by_id($eid, $data);
+    //     if ($result) {
+    //         return $this->response->setJSON(['status' => 'success', 'message' => 'Equipment updated successfully']);
+    //     } else {
+    //         return $this->response->setJSON(['status' => 'error', 'message' => 'Error']);
+    //     }
+    // }
+    
 
-        // $StateModel = new StateModel();
-        // $CityModel = new CityModel();
-    
-        // $stateId = $this->request->getPost('state');
-        // $cityId = $this->request->getPost('city');
-    
-        // // Fetch state name
-        // $state = $StateModel->where('id', $stateId)->first();
-        // $stateName = $state['name'] ?? 'state not found.';
-    
-        // // Fetch city name
-        // $city = $CityModel->select('cities.city as city_name')
-        //                   ->join('states', 'cities.state_id = states.id')
-        //                   ->where('cities.id', $cityId)
-        //                   ->first();
-        // $cityName = $city['city_name'] ?? 'City not found.';
+    public function edit_equipments($eid) {
 
         $data = [
             'title' => $this->request->getPost('title'),
