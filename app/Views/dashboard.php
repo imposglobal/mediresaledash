@@ -81,7 +81,7 @@
                       <div class="col-7 col-stats">
                         <div class="numbers">
                           <p class="card-category">Leads</p>
-                          <h4 class="card-title">70+</h4>
+                          <h4 class="card-title"><?= $total_leads_Count; ?>+</h4>
                         </div>
                       </div>
                     </div>
@@ -119,82 +119,24 @@
                         <thead class="thead-light">
                           <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Year</th>
-                            <th scope="col">Serial-Number</th>
+                            <th scope="col">Name </th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile Number</th>
+                            
+                            
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $i=1 ?>
+                        <?php foreach ($leads as $lead): ?>
                           <tr>
-                            <th scope="row">
-                              
-                             1
-                            </th>
-                            <td>2014-07-15</td>
-                            <td>Testing data1</td>
-                            <td>25000</td>
-                            <td>2024</td>
-                            <td>
-                            EQ43463265
-                            </td>
+                              <th scope="row"><?php echo $i++; ?></th>
+                              <td><?php echo $lead['first_name'] . ' ' . $lead['last_name']; ?></td>
+                              <td><?php echo $lead['email']; ?></td>
+                              <td><?php echo $lead['phone_number']; ?></td>
+                             
                           </tr>
-                          <tr>
-                          <th scope="row">
-                              
-                              2
-                             </th>
-                             <td>2014-07-16</td>
-                             <td>Testing data2</td>
-                             <td>20000</td>
-                             <td>2024</td>
-                             <td>
-                             EQ43463265
-                             </td>
-                          </tr>
-                          <tr>
-                          <th scope="row">
-                              
-                              3
-                             </th>
-                             <td>2014-07-17</td>
-                             <td>Testing data3</td>
-                             <td>21000</td>
-                             <td>2024</td>
-                             <td>
-                             EQ43463265
-                             </td>
-                          </tr>
-                          <tr>
-                          <th scope="row">
-                              
-                              4
-                             </th>
-                             <td>2014-07-18</td>
-                             <td>Testing data4</td>
-                             <td>15000</td>
-                             <td>2024</td>
-                             <td>
-                             EQ43463265
-                             </td>
-                          </tr>
-                          <tr>
-                         
-                          <tr>
-                          <th scope="row">
-                              
-                              5
-                             </th>
-                             <td>2014-07-20</td>
-                             <td>Testing data5</td>
-                             <td>25000</td>
-                             <td>2024</td>
-                             <td>
-                             EQ43463265
-                             </td>
-                          </tr>
-                         
+                          <?php endforeach; ?>            
                         </tbody>
                       </table>
                     </div>

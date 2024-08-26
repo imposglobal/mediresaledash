@@ -38,7 +38,8 @@ $routes->match(['get', 'post'], '/view_all_equipments', 'Equipment::view_all_equ
 $routes->get('/equipments/delete_equipments/(:num)', 'Equipment::delete_equipments/$1');
 $routes->get('/update_equipments/(:num)', 'Equipment::update_equipments/$1');
 $routes->post('/equipments/edit_equipments/(:num)', 'Equipment::edit_equipments/$1');
-$routes->post('/equipments/delete_equipment_image', 'Equipment::delete_equipment_image');
+// $routes->post('/equipments/delete_equipment_image', 'Equipment::delete_equipment_image');
+$routes->post('/equipments/delete_equipment_image', 'Equipment::deleteImage');
 
 
 // Properties
