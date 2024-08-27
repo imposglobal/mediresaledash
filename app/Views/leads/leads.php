@@ -132,7 +132,7 @@
                          <!-- Pagination -->
                          <div class="d-flex justify-content-end">
     <?php if ($pager) : ?>
-        <?php $pagi_path = '/leads/view_leads/'; // Base path without placeholder ?>
+        <?php $pagi_path = '/leads';?>
         <?php $pager->setPath($pagi_path); ?>
         <nav aria-label="Page navigation">
             <?= $pager->links() ?>
