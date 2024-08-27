@@ -387,7 +387,8 @@ document.getElementById('property_image').addEventListener('change', function(ev
                                  // Clear the form fields
                             $('#propertyForm')[0].reset();
                                 //redirect  the page
-                                window.location.href = 'http://localhost/mediresaledash/view_all_property';
+                               // window.location.href = 'http://localhost/mediresaledash/view_all_property';
+                                window.location.href = 'https://app.mediresale.in/view_all_property';
                             }
                         });
                     } else {

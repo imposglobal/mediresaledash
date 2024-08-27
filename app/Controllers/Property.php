@@ -5,6 +5,7 @@ use App\Models\PropertyModel;
 use App\Models\CommonModel;
 use App\Models\StateModel;
 use App\Models\CityModel;
+use Config\App;
 
 class Property extends BaseController
 {
@@ -15,6 +16,8 @@ class Property extends BaseController
 
     public function __construct()
     {
+        $config = new App();
+        $this->baseURL = $config->baseURL;
         $this->propertyModel = new PropertyModel();
         $this->cityModel = new CityModel();
         $this->stateModel = new StateModel();
@@ -75,8 +78,8 @@ class Property extends BaseController
                     $newName = $file->getRandomName();
                     $file->move($uploadPath, $newName);
     
-                    $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName; // image will be saved with this path in db
-                    
+                    // $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName; // image will be saved with this path in db
+                    $imagePaths[] = $this->baseURL . '/assets/uploads/property/' . $newName;    
                 }
             }
         }
@@ -209,7 +212,8 @@ public function view_all_property()
         $propertyModel->update($property['pid'], ['property_image' => $newImageString]);
 
         // Correct the path to the image file
-        $filePath = FCPATH . 'http://localhost/mediresaledash/assets/uploads/property/' . $imageName;
+        // $filePath = FCPATH . 'http://localhost/mediresaledash/assets/uploads/property/' . $imageName;
+        $filePath = $this->baseURL . '/assets/uploads/property/' . $imageName;
         if (file_exists($filePath)) {
             if (unlink($filePath)) {
                 return $this->response->setStatusCode(200)->setBody('success');
@@ -314,7 +318,8 @@ public function edit_property($id)
                 if ($file->isValid() && !$file->hasMoved()) {
                     $newName = $file->getRandomName();
                     $file->move(WRITEPATH . '../assets/uploads/property', $newName);
-                    $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName;
+                    // $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/property/' . $newName;
+                    $uploadedImages[] = $this->baseURL . '/assets/uploads/property/' . $newName;
 
                 }
             }

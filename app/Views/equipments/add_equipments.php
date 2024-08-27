@@ -354,7 +354,8 @@ document.getElementById('equipment_image').addEventListener('change', function(e
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 // Redirect the page
-                                window.location.href = 'http://localhost/mediresaledash/view_all_equipments';
+                                // window.location.href = 'http://localhost/mediresaledash/view_all_equipments';
+                                window.location.href = 'https://app.mediresale.in/view_all_equipments';
                             }
                         });
                     } else {
