@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'mediresale',
+        'username'     => 'ballapo7_app_mediresale',
         'password'     => 'mediresale@2024',
-        'database'     => 'mediresale',
+        'database'     => 'ballapo7_app_mediresale',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
