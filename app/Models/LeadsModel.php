@@ -25,7 +25,6 @@ public function leads_delete($id)
 }
 
 
-
     public function view_leads_by_id($id) 
     {
         $result = $this->db
