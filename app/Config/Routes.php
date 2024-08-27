@@ -26,7 +26,7 @@ $routes->get('reset_password/(:num)', 'ResetPassword::reset_password/$1');
 $routes->post('update_password', 'ResetPassword::update_password');
 
 // dashboard
-$routes->get('dashboard', 'Dashboard::dashboard');
+$routes->get('dashboard', 'DashBoard::dashboard');
 
 
 
