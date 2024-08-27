@@ -316,7 +316,8 @@ tinymce.init({
                             text: response.message,
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                window.location.href = 'http://localhost/mediresaledash/view_all_equipments';
+                                // window.location.href = 'http://localhost/mediresaledash/view_all_equipments';
+                                window.location.href = 'https://app.mediresale.in/view_all_equipments';
                             }
                         });
                     } else {

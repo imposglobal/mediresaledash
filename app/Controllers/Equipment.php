@@ -5,6 +5,7 @@ use App\Models\EquipmentModel;
 use App\Models\CommonModel;
 use App\Models\StateModel;
 use App\Models\CityModel;
+use Config\App;
 
 
 
@@ -16,6 +17,8 @@ class Equipment extends BaseController
     protected $stateModel;
 
     public function __construct() {
+        $config = new App();
+        $this->baseURL = $config->baseURL;
         $this->equipmentModel = new EquipmentModel();
         $this->cityModel = new CityModel();
         $this->stateModel = new StateModel();
@@ -55,6 +58,9 @@ class Equipment extends BaseController
     
 public function add_equipments()
 {
+
+    
+
     $EquipmentModel = new EquipmentModel();
     
     // Handle multiple file uploads
@@ -78,8 +84,8 @@ public function add_equipments()
                 $newName = $file->getRandomName();
                 $file->move($uploadPath, $newName);
 
-                $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName; // image will be saved with this path in db
-                
+                // $imagePaths[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName; // image will be saved with this path in db
+                $imagePaths[] = $this->baseURL . '/assets/uploads/equipments/' . $newName;
             }
         }
     }
@@ -240,7 +246,7 @@ public function add_equipments()
                     $newName = $file->getRandomName();
                     $file->move(WRITEPATH . '../assets/uploads/equipments/', $newName);
                     // $uploadedImages[] = $newName;
-                    $uploadedImages[] = 'http://localhost/mediresaledash/assets/uploads/equipments/' . $newName;
+                    $uploadedImages[] =  $this->baseURL.'/assets/uploads/equipments/' . $newName;
                 }
             }
     

@@ -310,7 +310,8 @@ tinymce.init({
                             text: response.message,
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                window.location.href = 'http://localhost/mediresaledash/view_all_property';
+                                //window.location.href = 'http://localhost/mediresaledash/view_all_property';
+                                window.location.href = 'https://app.mediresale.in/view_all_property';
                             }
                         });
                     } else {
