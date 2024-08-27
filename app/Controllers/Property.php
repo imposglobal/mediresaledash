@@ -161,7 +161,7 @@ public function view_all_property()
      }
  
      $data = [
-        'properties' => $PropertyModel->paginate(6),
+        'properties' => $PropertyModel->paginate(10),
         'pager' => $PropertyModel->pager,
          'search' => $search
      ];
