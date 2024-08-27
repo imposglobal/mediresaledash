@@ -72,7 +72,7 @@ $routes->get('/equipments/price/view', 'EquipmentAPI_Cotroller::getEquipmentByPr
 $routes->get('/equipments/city-zipcode/view', 'EquipmentAPI_Cotroller::getEquipmentByCityOrZipcode'); // http://localhost/mediresaledash/equipments/city-zipcode/view
 
 
-// combine API for equipment listing page
+// combine API for equipment listing page-  multiple filter
 
 $routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipmentsByFilter');
 
@@ -110,14 +110,13 @@ $routes->get('/property_by_monthly_buy/view', 'PropertyAPI_Cotroller::getEquipme
 
 $routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertiesByPossesion_API'); //http://localhost/mediresaledash/property_by_possesion/view
 
-// combine API for property listing page
+// combine API for property listing page-- multiple filter
 
 $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyFilter');
 
 
 // Product Detail Page
 $routes->get('/getdetails/view', 'LeadsAPI_Controller::getDetails');
-
 $routes->post('/submit-lead/add', 'LeadsAPI_Controller::addLead');  //http://localhost/mediresaledash/submit-lead/add
 
 
