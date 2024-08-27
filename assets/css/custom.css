@@ -306,11 +306,13 @@ padding: 12.5px 10px !important;
 
 /* Additional styling for active page number */
 .pagination .active {
-    background-color: rgba(86,198,221,0.5) !important;
-    color: white !important; /* Ensures text is visible on the background */
+    background-color: rgba(86, 198, 221, 0.5) !important;
+    color: white !important;
     border-radius: 50% !important;
     margin-right: 5px;
     margin-left: 5px;
+    padding: 3px 2px;
+    font-weight: 900;
 }
 
 .pagination .active a:hover, .pagination .active span:hover {
