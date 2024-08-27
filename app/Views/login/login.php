@@ -119,10 +119,13 @@
 
 <!-- Prevent back navigation after logout -->
 <script>
+    window.onload = function() {
     history.pushState(null, null, window.location.href);
     window.onpopstate = function() {
         history.go(1);
     };
+};
+
 </script>
 
 </body>
