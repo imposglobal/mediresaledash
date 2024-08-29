@@ -119,12 +119,15 @@ $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyF
 $routes->get('/getdetails/view', 'LeadsAPI_Controller::getDetails');
 $routes->post('/submit-lead/add', 'LeadsAPI_Controller::addLead');  //http://localhost/mediresaledash/submit-lead/add
 
-
-
 // Leads
 
 $routes->get('/leads', 'LeadsAPI_Controller::view_all_leads');
 $routes->get('/leads/delete_lead/(:num)', 'LeadsAPI_Controller::delete_leads/$1');
 $routes->get('/leads/view_leads/(:num)', 'LeadsAPI_Controller::view_all_leads_by_id/$1');
 
+// get in touch form API route
+$routes->post('/get_in_touch/add', 'GetInTouch_API_Controller::GetInTouchFormAPI');  //http://localhost/mediresaledash/get_in_touch/add
 
+
+// news letter API route
+$routes->post('/news_letter/add', 'NewsLetter_API_Controller::NewsLetterAPI');  //http://localhost/mediresaledash/news_letter/add

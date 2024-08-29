@@ -16,8 +16,8 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://app.mediresale.in/';
-    //public string $baseURL = 'http://localhost/mediresaledash/';
+    //public string $baseURL = 'https://app.mediresale.in/';
+    public string $baseURL = 'http://localhost/mediresaledash/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
