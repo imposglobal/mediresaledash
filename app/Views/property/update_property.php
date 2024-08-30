@@ -126,7 +126,7 @@
 
                             <!-- price-->
                             <div class="row inputmargintop">
-                                <div class="col-lg-4 res_mt">
+                                <div class="col-lg-4">
                                     <label for="price" class="labelclass">Price</label>
                                     <input type="text" class="form-control greybg" name="price" value="<?= htmlspecialchars($editproperty->price); ?>" placeholder="Price">
                                 </div>
@@ -201,7 +201,7 @@
 
                               
                             <!--parking-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                                 <label for="parking" class="labelclass">Parking</label>
                                 <select name="parking" class="form-control greybg">
                                 <option  value="<?= htmlspecialchars($editproperty->parking); ?>"><?= htmlspecialchars($editproperty->parking); ?></option>
@@ -237,7 +237,7 @@
 
                               
                             <!--cafeteria-->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 res_mt">
                                 <label for="parking" class="labelclass">Cafeteria</label>
                                 <select name="cafeteria" class="form-control greybg">
                                 <option  value="<?= htmlspecialchars($editproperty->cafeteria); ?>"><?= htmlspecialchars($editproperty->cafeteria); ?></option>

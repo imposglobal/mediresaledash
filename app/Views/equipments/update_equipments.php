@@ -125,7 +125,7 @@
                             </select>
                             </div>
                              <!-- Equipment Type  -->
-                             <div class="col-lg-4">
+                             <div class="col-lg-4 res_mt">
                                 <label for="transaction_type" class="labelclass">Transaction Type</label>
                                 <select name="transaction_type" class="form-control greybg">
                                 <option value="<?= htmlspecialchars($editequipments->transaction_type); ?>"><?= htmlspecialchars($editequipments->transaction_type); ?></option>

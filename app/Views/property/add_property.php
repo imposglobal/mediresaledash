@@ -78,7 +78,7 @@
                           <div class="row inputmargintop">
 
                             <!-- property type -->
-                            <div class="col-lg-6 res_mt">
+                            <div class="col-lg-6">
                             <label for="property_type" class="labelclass">Property_type</label>
                             <select name="property_type" class="form-control greybg">
                             <option selected disabled="true">select type</option>
@@ -92,7 +92,7 @@
                             <!-- property type -->
 
                             <!--transaction type-->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 res_mt">
                             <label for="transaction_type" class="labelclass">Transaction Type</label>
                             <select name="transaction_type" class="form-control greybg">
                             <option selected disabled="true">Select</option>
@@ -109,7 +109,7 @@
                          
                           <div class="row inputmargintop">
                              <!-- price-->
-                             <div class="col-lg-4 res_mt">
+                             <div class="col-lg-4">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" placeholder="Price">
                             </div>
@@ -122,7 +122,7 @@
 <!-- Built Year -->
 
 <!--Possession Year-->
-<div class="col-lg-4">
+<div class="col-lg-4 res_mt">
 <label for="possession" class="labelclass">Possession</label>
                             <select name="possession" class="form-control greybg">
                             <option selected disabled="true">select year</option>
@@ -141,7 +141,7 @@
 
                           <div class="row addressmargintop">
                             <!-- address -->
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 res_mt">
                             <label for="address" class="labelclass">Adderess</label>
                             <input type="text" class="form-control greybg" name="address" placeholder="Address">
                             
