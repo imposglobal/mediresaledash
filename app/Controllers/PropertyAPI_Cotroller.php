@@ -494,7 +494,7 @@ public function getPropertyByFiltersHome()
     ]);
 }
 
-//Api function to get property_type and adress only
+//Api function to get property_type and adress, price and property images
 public function getProperty_types_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
