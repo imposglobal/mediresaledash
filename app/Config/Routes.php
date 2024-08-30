@@ -136,13 +136,12 @@ $routes->get('/property/getProperty_types_and_Address/view', 'PropertyAPI_Cotrol
 $routes->get('/property/city_property_transaction/view', 'PropertyAPI_Cotroller::getPropertyByFiltersHome'); // http://localhost/mediresaledash/property/city_property_transaction/view
 
 
-
 // Product Detail Page
 $routes->get('/getdetails/view', 'LeadsAPI_Controller::getDetails');
 $routes->post('/submit-lead/add', 'LeadsAPI_Controller::addLead');  //http://localhost/mediresaledash/submit-lead/add
 
-// Leads
 
+// Leads
 $routes->get('/leads', 'LeadsAPI_Controller::view_all_leads');
 $routes->get('/leads/delete_lead/(:num)', 'LeadsAPI_Controller::delete_leads/$1');
 $routes->get('/leads/view_leads/(:num)', 'LeadsAPI_Controller::view_all_leads_by_id/$1');

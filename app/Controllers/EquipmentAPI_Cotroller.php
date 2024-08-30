@@ -432,15 +432,35 @@ public function getEquipmentsByFilter()
 
 /***************Api function to get property_type and address only **********/
 
+// public function getEquipment_types_and_Condition_Price_API()
+// {
+//     $equipmentModel = new EquipmentModel();
+//     $equipment = $equipmentModel->select('equipment_type, equipment_condition,price,equipment_image,')
+//                               ->orderBy('eid', 'DESC')
+//                               ->findAll();
+    
+//     return $this->response->setJSON($equipment);
+// }
+ 
 public function getEquipment_types_and_Condition_Price_API()
 {
     $equipmentModel = new EquipmentModel();
-    $equipment = $equipmentModel->select('equipment_type, equipment_condition,price,equipment_image,')
-                              ->orderBy('eid', 'DESC')
-                              ->findAll();
+    $equipments = $equipmentModel->select('equipment_type, equipment_condition, price, equipment_image')
+                                 ->orderBy('eid', 'DESC')
+                                 ->findAll();
     
-    return $this->response->setJSON($equipment);
+    
+    foreach ($equipments as &$equipment) {
+        if (!empty($equipment['equipment_image'])) {
+            $images = explode(',', $equipment['equipment_image']);
+            $equipment['equipment_image'] = $images[0]; // Get the first image
+        } else {
+            $equipment['equipment_image'] = null; // Handle the case where there are no images
+        }
+    }
+
+    return $this->response->setJSON($equipments);
 }
- 
+
 
 }

@@ -113,6 +113,8 @@
                             <option value="Medtronic">Medtronic</option> 
                             <option value="Johnson&Johnson">Johnson & Johnson</option>                
                             <option value="Olympus">Olympus</option> 
+                            <option value="Schiller">Schiller</option>
+                            <option value=" B.Braun"> B. Braun</option>
                             <option value="Other">Other</option> 
                             </select>
                             </div>
