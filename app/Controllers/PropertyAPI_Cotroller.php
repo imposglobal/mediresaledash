@@ -552,20 +552,16 @@ public function getPropertyByFiltersHome()
     ]);
 }
 
-<<<<<<< HEAD
-
-=======
 //Api function to get property_type and adress, price and property images
 public function getProperty_types_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
-    $property = $PropertyModel->select('property_image,property_type, address,price,')
+    $property = $PropertyModel->select('property_image,property_type, address,price')
                               ->orderBy('pid', 'DESC')
                               ->findAll();
     
     return $this->response->setJSON($property);
 }
->>>>>>> origin/krushna
 
 
 
