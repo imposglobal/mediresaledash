@@ -132,7 +132,7 @@ $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyF
 $routes->get('/property/getProperty_types_and_Adress/view', 'PropertyAPI_Cotroller::getProperty_types_and_Adress_API'); // http://localhost/mediresaledash/property/getProperty_types_and_Adress/view
 
 
-//Api to get address, property type and price on wordpress homepage
+//Api to get property type and price on wordpress homepage
 $routes->get('/property/city_property_transaction/view', 'PropertyAPI_Cotroller::getPropertyByFiltersHome'); // http://localhost/mediresaledash/property/city_property_transaction/view
 
 
