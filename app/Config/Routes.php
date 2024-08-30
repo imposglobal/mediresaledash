@@ -59,6 +59,9 @@ $routes->get('/profile', 'Profile::profile_show');
 $routes->post('/update_profile', 'Profile::update_profile');
 
 
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ All Equiupment related API's routes defined below @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
 // API to get equipments
 $routes->get('/equipments/view', 'EquipmentAPI_Cotroller::equipment_api'); // http://localhost/mediresaledash/equipments/view
 $routes->get('/equipments/title_image_equipment_api/view', 'EquipmentAPI_Cotroller::get_Title_Image_Equipment_Api'); // http://localhost/mediresaledash/equipments/view
@@ -70,6 +73,13 @@ $routes->get('/equipments/availability/view', 'EquipmentAPI_Cotroller::getEquipm
 $routes->get('/equipments/year/view', 'EquipmentAPI_Cotroller::getEquipmentByAge_API'); // http://localhost/mediresaledash/equipments/year/view
 $routes->get('/equipments/price/view', 'EquipmentAPI_Cotroller::getEquipmentByPrice_API'); // http://localhost/mediresaledash/equipments/price/view
 $routes->get('/equipments/city-zipcode/view', 'EquipmentAPI_Cotroller::getEquipmentByCityOrZipcode'); // http://localhost/mediresaledash/equipments/city-zipcode/view
+
+//Api to get cit , equipment type and transsaction type on wordpress homepage
+$routes->get('/equipments/city_equipment_transaction/view', 'EquipmentAPI_Cotroller::getEquipmentByFiltersHome'); // http://localhost/mediresaledash/equipments/city_equipment_transaction/view
+
+
+//Api function to get equipment type, condition , price only
+$routes->get('/equipments/getEquipments_types_Condition_Price_API/view', 'EquipmentAPI_Cotroller::getEquipment_types_and_Condition_Price_API'); // http://localhost/mediresaledash/equipments/getEquipments_types_Condition_Price_API/view
 
 
 // combine API for equipment listing page-  multiple filter
@@ -83,6 +93,10 @@ $routes->get('/getequipmentdetails/view', 'LeadsAPI_Controller::getEquipmentDeta
 
 //Equipment Detail Page API
 $routes->post('/submitEquipmentlead/add', 'LeadsAPI_Controller::addEquipmentLead');  //http://localhost/mediresaledash/submit-lead/add
+
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ All Property related API's routes defined below @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
 
 // API to get Property 
@@ -113,6 +127,14 @@ $routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertie
 // combine API for property listing page-- multiple filter
 
 $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyFilter');
+
+//Api function to get property_type and adress ,price , image only
+$routes->get('/property/getProperty_types_and_Adress/view', 'PropertyAPI_Cotroller::getProperty_types_and_Adress_API'); // http://localhost/mediresaledash/property/getProperty_types_and_Adress/view
+
+
+//Api to get address, property type and price on wordpress homepage
+$routes->get('/property/city_property_transaction/view', 'PropertyAPI_Cotroller::getPropertyByFiltersHome'); // http://localhost/mediresaledash/property/city_property_transaction/view
+
 
 
 // Product Detail Page

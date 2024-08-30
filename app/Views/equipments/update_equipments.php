@@ -243,6 +243,13 @@
                             <input type="text" class="form-control greybg" name="zipcode" placeholder="Zip Code" value="<?= htmlspecialchars($editequipments->zipcode); ?>">
                             </div>
                              <!-- zipcode-->
+                             <div class="row inputmargintop">
+                                <div class="col-lg-4 res_mt">
+                                <label for="quantity" class="labelclass">Quantity</label>
+                                <input type="text" class="form-control greybg" name="quantity" placeholder="quantity" value="<?= htmlspecialchars($editequipments->quantity); ?>">
+                                </div>
+                            </div>
+
                           </div>
 
                           

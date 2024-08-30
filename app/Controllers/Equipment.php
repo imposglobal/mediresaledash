@@ -126,6 +126,7 @@ public function add_equipments()
         'city' => $cityName,
         'zipcode' => $this->request->getPost('zipcode'),
         'description' => $this->request->getPost('description'),
+        'quantity' => $this->request->getPost('quantity'),
         'equipment_image' => $imageNamesString
     ];
 
@@ -235,6 +236,7 @@ public function add_equipments()
             'city' => $this->request->getPost('city'),
             'zipcode' => $this->request->getPost('zipcode'),
             'description' => $this->request->getPost('description'),
+            'quantity' => $this->request->getPost('quantity'),
         ];
     
         // Handle file upload

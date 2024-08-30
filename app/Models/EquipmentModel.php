@@ -23,6 +23,7 @@ class EquipmentModel extends Model{
         'city',
         'zipcode',
         'description',
+        'quantity',
         'equipment_image',
         'created_at'
 
