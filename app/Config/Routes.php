@@ -128,8 +128,8 @@ $routes->get('/property_by_possesion/view', 'PropertyAPI_Cotroller::getPropertie
 
 $routes->get('/getpropertybyFilter/view', 'PropertyAPI_Cotroller::getpropertybyFilter');
 
-//Api function to get property_type and adress ,price , image only
-$routes->get('/property/getProperty_types_and_Adress/view', 'PropertyAPI_Cotroller::getProperty_types_and_Adress_API'); // http://localhost/mediresaledash/property/getProperty_types_and_Adress/view
+//Api function to get property_type and adress ,price , image only  Home Page Slider
+$routes->get('/property/getProperty_types_and_Address/view', 'PropertyAPI_Cotroller::getProperty_types_and_Address_API'); // http://localhost/mediresaledash/property/getProperty_types_and_Adress/view
 
 
 //Api to get property type and price on wordpress homepage
