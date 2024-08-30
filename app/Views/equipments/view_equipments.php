@@ -88,6 +88,7 @@
             </h3> -->
             </div>
             <div class="col-lg-12"><span class="textdarkgrey">Equipment Type</span> - <span class="ms-2 fs16"><?= esc($item['equipment_type']) ?></div>
+            <div class="col-lg-12"><span class="textdarkgrey">Quantity</span> - <span class="ms-2 fs16"><?= esc($item['quantity']) ?></div>
             <div class="col-lg-12"><span class="textdarkgrey">Transaction Type</span> - <span class="ms-2 fs16"><?= esc($item['transaction_type']) ?></div>
             <div class="col-lg-12"><span class="textdarkgrey">Brand</span> - <span class="ms-2 fs16"><?= esc($item['brand']) ?></div>
             <div class="col-lg-12"><span class="textdarkgrey">Equipment Condition	</span> - <span class="ms-2 fs16"><?= esc($item['equipment_condition']) ?></div>
