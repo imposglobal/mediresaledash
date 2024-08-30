@@ -501,7 +501,7 @@ public function getpropertybyFilter()
 //     return $this->response->setJSON($property);
 // }
 
-// API for Home Page
+// Home Page API
 public function getPropertyByFiltersHome()
 {
     $propertyModel = new PropertyModel();
