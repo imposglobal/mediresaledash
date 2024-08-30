@@ -446,9 +446,67 @@ public function getpropertybyFilter()
 
 
 
+//**************************code for multiple filter in Home Page*********************************
+
+public function getPropertyByFiltersHome()
+{
+    $propertyModel = new PropertyModel();
+
+    // $propertyType = $this->request->getVar('hospitals');
+    // $cityOrZipcode = $this->request->getVar('Bilaspur');
+    // $transactionType = $this->request->getVar('rent');
+
+    $propertyType = 'hospitals'; 
+    $cityOrZipcode = 'Bilaspur'; 
+    $transactionType = 'rent'; // or 'rent'
+
+    $builder = $propertyModel->builder();
+
+    if (!empty($cityOrZipcode)) {
+        if (is_numeric($cityOrZipcode)) {
+            $builder->where('zipcode', $cityOrZipcode);
+        } else {
+            $builder->where('city', $cityOrZipcode);
+        }
+    }
+
+    if (!empty($propertyType)) {
+        $builder->where('property_type', $propertyType);
+    }
+
+    if (!empty($transactionType)) {
+        $builder->where('transaction_type', $transactionType);
+    }
+
+    $query = $builder->get();
+    $properties = $query->getResultArray();
+
+    if (empty($properties))
+    {
+        return $this->response->setJSON([
+            'message' => 'No properties found for the provided filters.'
+        ])->setStatusCode(404);
+    }
+
+    return $this->response->setJSON([
+        'status' => 'success',
+        'data' => $properties
+    ]);
+}
+
+//Api function to get property_type and adress only
+public function getProperty_types_and_Adress_API()
+{
+    $PropertyModel = new PropertyModel();
+    $property = $PropertyModel->select('property_image,property_type, address,price,')
+                              ->orderBy('pid', 'DESC')
+                              ->findAll();
+    
+    return $this->response->setJSON($property);
+}
 
 
- 
+
 
 }
 

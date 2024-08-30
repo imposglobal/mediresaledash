@@ -199,13 +199,17 @@ public function getEquipmentByCityOrZipcode()
 
 //**************************code for multiple filter in Home Page*********************************
 
-
 public function getEquipmentByFiltersHome()
 {
     $equipmentModel = new EquipmentModel();
-    $equipmentType = 'imaging-equipment'; 
-    $cityOrZipcode = 'Gandhinagar'; 
 
+    // $equipmentType = $this->request->getVar('Diagnostic Equipment');
+    // $cityOrZipcode = $this->request->getVar('Adilabad');
+    // $transactionType = $this->request->getVar('buy');
+
+    $equipmentType = 'Diagnostic Equipment'; 
+    $cityOrZipcode = 'Adilabad'; 
+    $transactionType = 'buy'; // or 'rent'
 
     $builder = $equipmentModel->builder();
 
@@ -221,10 +225,15 @@ public function getEquipmentByFiltersHome()
         $builder->where('equipment_type', $equipmentType);
     }
 
+    if (!empty($transactionType)) {
+        $builder->where('transaction_type', $transactionType);
+    }
+
     $query = $builder->get();
     $equipments = $query->getResultArray();
 
-    if (empty($equipments)) {
+    if (empty($equipments))
+    {
         return $this->response->setJSON([
             'message' => 'No equipment found for the provided filters.'
         ])->setStatusCode(404);
@@ -235,6 +244,7 @@ public function getEquipmentByFiltersHome()
         'data' => $equipments
     ]);
 }
+
 
 
 //**************************code for multiple filter in equipment listing page*********************************
@@ -420,130 +430,17 @@ public function getEquipmentsByFilter()
 
 
 
+/***************Api function to get property_type and address only **********/
 
-/********************************test api ****************************/
-// public function getEquipmentsByFilter()
-// {
-//     $equipmentModel = new EquipmentModel();   
-
-//     // Get filter parameters from the request
-//      $equipment_type = $this->request->getVar('equipment_type');
-//     $transaction_type = $this->request->getVar('transaction_type');
-//     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
-//     $startprice = $this->request->getVar('start_price');
-//     $endprice = $this->request->getVar('end_price');
-//     $brand = $this->request->getVar('brand');
-//     $condition = $this->request->getVar('condition');
-//     $warranty = $this->request->getVar('warranty');
-//     $availability = $this->request->getVar('availability');
-//     $ageofequipment = $this->request->getVar('ageofequipment');
-//     //$ageofequipment = 'less-than-1-year';
-
+public function getEquipment_types_and_Condition_Price_API()
+{
+    $equipmentModel = new EquipmentModel();
+    $equipment = $equipmentModel->select('equipment_type, equipment_condition,price,equipment_image,')
+                              ->orderBy('eid', 'DESC')
+                              ->findAll();
     
-//     $page = $this->request->getVar('page') ?? 1; // Default to page 1 if not provided
-//     $perPage = $this->request->getVar('per_page') ?? 20; // Default to 5 items per page if not provided
-
-//     // Validate pagination parameters
-//     $page = (int)$page > 0 ? (int)$page : 1;
-//     $perPage = (int)$perPage > 0 ? (int)$perPage : 20;
-
-//     // Calculate offset
-//     $offset = ($page - 1) * $perPage;
-
-//     // Get the current year
-//     $currentYear = date('Y');
-
-//     // Start building the query
-//     $builder = $equipmentModel->builder();
-
-//     // Apply filters 
-//     if (!empty($equipment_type)) {
-//         $builder->whereIn('equipment_type', is_array($equipment_type) ? $equipment_type : [$equipment_type]);
-//     }
-
-//     if (!empty($CityOrZipcode)) {
-//         if (is_numeric($CityOrZipcode)) {
-//             $builder->where('zipcode', $CityOrZipcode);
-//         } else {
-//             $builder->where('city', $CityOrZipcode);
-//         }
-//     }
-
-//     if (!empty($brand)) {
-//         $builder->whereIn('brand', is_array($brand) ? $brand : [$brand]);
-//     }
-
-//     if (!empty($condition)) {
-//         $builder->whereIn('equipment_condition', is_array($condition) ? $condition : [$condition]);
-//     }
-
-//     if (!empty($warranty)) {
-//         $builder->whereIn('warranty', is_array($warranty) ? $warranty : [$warranty]);
-//     }
-
-//     if (!empty($availability)) {
-//         $builder->whereIn('availability', is_array($availability) ? $availability : [$availability]);
-//     }
-
-//     if (!empty($ageofequipment)) {
-//         switch ($ageofequipment) {
-//             case 'less than 1 year':
-//                 $builder->where('manifacture_year', $currentYear);
-//                 break;
-//             case 'less than 2 years':
-//                 $builder->where('manifacture_year >=', $currentYear - 1);
-//                 break;
-//             case 'less than 5 years':
-//                 $builder->where('manifacture_year >=', $currentYear - 4);
-//                 break;
-//             case 'more than 5 years':
-//                 $builder->where('manifacture_year <', $currentYear - 5);
-//                 break;
-//         }
-//     }
-
-//     if (!empty($transaction_type) && in_array($transaction_type, ['buy', 'rent'])) {
-//         $builder->where('transaction_type', $transaction_type);
-//         if (!empty($startprice) && !empty($endprice)) {
-//             $builder->where('price >=', $startprice)
-//                     ->where('price <=', $endprice);
-//         }
-//     }
-
-//     // Apply pagination
-//     $builder->limit($perPage, $offset);
-
-//     // Get the results
-//     try {
-//         $filteredEquipments = $builder->get()->getResultArray();
-        
-//         // Get total count of items matching the filters
-//         $totalItems = $builder->countAllResults(false); // Pass false to avoid applying the limit to the count query
-//     } catch (\Exception $e) {
-//         // Log the error and return a server error response
-//         log_message('error', 'Error fetching equipment: ' . $e->getMessage());
-//         return $this->response->setStatusCode(500)->setJSON([
-//             'status' => 'error',
-//             'message' => 'Internal server error.'
-//         ]);
-//     }
-
-//     // Prepare the response with pagination metadata
-//     $totalPages = ceil($totalItems / $perPage);
-
-//     $response = [
-//         'status' => 'success',
-//         'data' => $filteredEquipments,
-//         'pagination' => [
-//             'total_items' => $totalItems,
-//             'total_pages' => $totalPages,
-//             'current_page' => $page,
-//             'per_page' => $perPage
-//         ]
-//     ];
-    
-//     return $this->response->setStatusCode(200)->setJSON($response);
-// }
-
+    return $this->response->setJSON($equipment);
+}
+ 
 
 }

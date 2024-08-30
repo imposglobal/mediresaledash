@@ -207,11 +207,14 @@
                             <div class="col-lg-4 res_mt">
                             <label for="price" class="labelclass">Price</label>
                             <input type="text" class="form-control greybg" name="price" placeholder="Price" />
-                            </div>
+                        </div>
                             <!--Price -->
-
-                             
-
+                            <div class="row inputmargintop">
+                            <div class="col-lg-4 res_mt">
+                            <label for="quantity" class="labelclass">Quantity</label>
+                            <input type="text" class="form-control greybg" name="quantity" placeholder="Quantity" />
+                            </div>
+                            </div>
                               <!-- TinyMCE Editor -->
                               <div class="col-lg-12 inputmargintop">
                              <label for="description" class="labelclass">Description</label>
