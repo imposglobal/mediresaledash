@@ -4100,8 +4100,12 @@ WARNING - 2024-08-30 06:12:44 --> [DEPRECATED] Creation of dynamic property App\
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 INFO - 2024-08-30 06:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 >>>>>>> origin/krushna
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:34:38 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4111,7 +4115,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:34:38 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4121,7 +4129,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:34:38 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4131,7 +4143,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:34:38 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4141,7 +4157,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4151,7 +4171,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4161,7 +4185,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4171,7 +4199,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4181,7 +4213,11 @@ WARNING - 2024-08-30 07:07:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4191,7 +4227,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4201,7 +4241,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4211,7 +4255,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4221,7 +4269,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4231,7 +4283,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4241,7 +4297,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4251,7 +4311,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4261,7 +4325,11 @@ WARNING - 2024-08-30 07:08:12 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4271,7 +4339,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4281,7 +4353,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4291,7 +4367,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:48:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4301,7 +4381,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:49:46 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4311,7 +4395,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:49:46 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4321,7 +4409,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:49:46 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4331,7 +4423,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 12:49:46 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4341,7 +4437,11 @@ WARNING - 2024-08-30 07:10:23 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:15:04 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4351,7 +4451,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:15:04 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4361,7 +4465,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:15:04 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4371,7 +4479,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:15:04 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4381,7 +4493,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:20:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4391,7 +4507,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:20:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4401,7 +4521,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:20:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4411,7 +4535,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:20:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4421,7 +4549,11 @@ WARNING - 2024-08-30 07:15:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:23:11 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4431,7 +4563,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:23:11 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4441,7 +4577,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:23:11 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4451,7 +4591,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:23:11 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4461,7 +4605,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:26:27 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4471,7 +4619,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:26:27 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4481,7 +4633,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:26:27 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4491,7 +4647,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:26:27 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4501,7 +4661,11 @@ WARNING - 2024-08-30 07:16:36 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4511,7 +4675,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4521,7 +4689,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4531,7 +4703,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4541,7 +4717,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4551,7 +4731,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4561,7 +4745,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4571,7 +4759,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:38:17 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4581,7 +4773,11 @@ WARNING - 2024-08-30 07:20:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4591,7 +4787,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4601,7 +4801,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4611,7 +4815,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4621,7 +4829,19 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:39:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4631,7 +4851,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4641,7 +4865,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4651,7 +4879,11 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:39:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4661,7 +4893,12 @@ WARNING - 2024-08-30 07:24:14 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+INFO - 2024-08-30 13:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4671,7 +4908,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4681,7 +4922,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4691,7 +4936,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4701,7 +4950,12 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+INFO - 2024-08-30 13:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4711,7 +4965,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4721,7 +4979,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4731,7 +4993,11 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:00 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4741,7 +5007,12 @@ WARNING - 2024-08-30 07:27:35 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+INFO - 2024-08-30 13:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4751,7 +5022,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4761,7 +5036,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4771,7 +5050,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4781,7 +5064,12 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+INFO - 2024-08-30 13:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4791,7 +5079,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4801,7 +5093,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4811,7 +5107,11 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:09 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4821,7 +5121,12 @@ WARNING - 2024-08-30 07:28:16 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+INFO - 2024-08-30 13:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:40:13 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4831,7 +5136,11 @@ WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:13 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4841,7 +5150,11 @@ WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:14 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4851,7 +5164,11 @@ WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4861,7 +5178,19 @@ WARNING - 2024-08-30 07:29:38 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:41:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4871,7 +5200,11 @@ WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:41:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4881,7 +5214,11 @@ WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:41:16 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -4891,6 +5228,7 @@ WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 07:29:39 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
@@ -9965,6 +10303,9 @@ WARNING - 2024-08-30 13:37:58 --> [DEPRECATED] Passing lowercase HTTP method "ge
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 WARNING - 2024-08-30 13:37:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:41:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -9974,6 +10315,17 @@ WARNING - 2024-08-30 13:37:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+=======
+WARNING - 2024-08-30 13:41:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> origin/krushna
 WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
@@ -10014,7 +10366,19 @@ WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:45:15 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10024,7 +10388,11 @@ WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:15 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10034,7 +10402,11 @@ WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:15 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10044,7 +10416,11 @@ WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:15 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10054,7 +10430,19 @@ WARNING - 2024-08-30 13:41:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:45:57 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10064,7 +10452,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10074,7 +10466,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:57 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10084,7 +10480,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10094,7 +10494,19 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:45:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Equipment::$baseURL is deprecated in APPPATH\Controllers\Equipment.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Equipment->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-30 13:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-30 13:54:31 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10104,7 +10516,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:31 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10114,7 +10530,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:31 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10124,7 +10544,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:31 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10134,7 +10558,11 @@ WARNING - 2024-08-30 13:43:33 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:47 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10144,7 +10572,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:47 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10154,7 +10586,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:47 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10164,7 +10600,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:54:47 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10174,7 +10614,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10184,7 +10628,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10194,7 +10642,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:53 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10204,7 +10656,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10214,7 +10670,11 @@ WARNING - 2024-08-30 13:45:52 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:57 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10224,7 +10684,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10234,7 +10698,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:57 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10244,7 +10712,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 13:59:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10254,7 +10726,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 14:00:59 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10264,7 +10740,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 14:00:59 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], '/view_all_equipments', 'Equipment::view_all_equipments')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10274,7 +10754,11 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 14:00:59 --> [DEPRECATED] Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "get" is deprecated. Use uppercase HTTP method like "GET".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')
@@ -10284,6 +10768,7 @@ WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "ge
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 WARNING - 2024-08-30 13:46:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
@@ -11526,6 +12011,9 @@ WARNING - 2024-08-30 14:03:47 --> [DEPRECATED] Passing lowercase HTTP method "ge
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 WARNING - 2024-08-30 14:03:47 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+=======
+WARNING - 2024-08-30 14:00:59 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1027.
+>>>>>>> origin/krushna
  1 SYSTEMPATH\Router\RouteCollection.php(1027): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(49): CodeIgniter\Router\RouteCollection->match([...], '/view_all_property', 'Property::view_all_property')
  3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\mediresaledash\\app\\Config\\Routes.php')

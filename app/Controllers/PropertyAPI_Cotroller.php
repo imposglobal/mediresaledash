@@ -553,14 +553,37 @@ public function getPropertyByFiltersHome()
 }
 
 //Api function to get property_type and adress, price and property images
+// public function getProperty_types_and_Adress_API()
+// {
+//     $PropertyModel = new PropertyModel();
+//     $property = $PropertyModel->select('property_image,property_type, address,price,name')
+//                               ->orderBy('pid', 'DESC')
+//                               ->findAll();
+    
+//     return $this->response->setJSON($property);
+// }
+
 public function getProperty_types_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
+<<<<<<< HEAD
     $property = $PropertyModel->select('property_image,property_type, address,price')
                               ->orderBy('pid', 'DESC')
                               ->findAll();
     
     return $this->response->setJSON($property);
+=======
+    $properties = $PropertyModel->select('property_image, property_type, address, price,name')
+                                ->orderBy('pid', 'DESC')
+                                ->findAll();
+
+    foreach ($properties as &$property) {
+        $images = explode(',', $property['property_image']);
+        $property['property_image'] = $images[0] ?? ''; // Fetch the first image or set it to an empty string if not found
+    }
+
+    return $this->response->setJSON($properties);
+>>>>>>> origin/krushna
 }
 
 
