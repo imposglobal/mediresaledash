@@ -1,2 +1,2 @@
-assets/images/*.log
-writable/logs/*.log
+# remove file
+writable/logs/.log
