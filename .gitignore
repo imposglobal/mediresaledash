@@ -1,2 +1,2 @@
-assets/images
-.log
+assets/images/*.log
+*.log
