@@ -1,2 +1,2 @@
-assets/images
-writtable/logs
+assets/images/*.log
+writable/logs/*.log
