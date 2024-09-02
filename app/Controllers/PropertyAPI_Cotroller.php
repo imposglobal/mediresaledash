@@ -491,15 +491,15 @@ public function getpropertybyFilter()
 // }
 
 // //Api function to get property_type and adress only
-public function getProperty_types_and_Address_API()
-{
-    $PropertyModel = new PropertyModel();
-    $property = $PropertyModel->select('property_image,property_type, address,price,')
-                              ->orderBy('pid', 'DESC')
-                              ->findAll();
+// public function getProperty_types_and_Address_API()
+// {
+//     $PropertyModel = new PropertyModel();
+//     $property = $PropertyModel->select('property_image,property_type, address,price,')
+//                               ->orderBy('pid', 'DESC')
+//                               ->findAll();
     
-    return $this->response->setJSON($property);
-}
+//     return $this->response->setJSON($property);
+// }
 
 // Home Page API
 public function getPropertyByFiltersHome()
