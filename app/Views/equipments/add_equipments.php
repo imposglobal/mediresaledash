@@ -115,6 +115,9 @@
                             <option value="Olympus">Olympus</option> 
                             <option value="Schiller">Schiller</option>
                             <option value=" B.Braun"> B. Braun</option>
+                            <option value=" Mindray">Mindray</option>
+                            <option value="Bharat Surgicals">Bharat Surgicals</option>
+                            <option value=" Toshiba">Toshiba</option>
                             <option value="Other">Other</option> 
                             </select>
                             </div>

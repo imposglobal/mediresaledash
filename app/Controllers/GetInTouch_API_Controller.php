@@ -13,8 +13,8 @@ class GetInTouch_API_Controller extends BaseController
     
         $data = [
             'full_name' => $this->request->getVar('full_name'),
-            'email' => $this->request->getVar('email'),
             'phone' => $this->request->getVar('phone'),
+            'subject' => $this->request->getVar('subject'),
             'message' => $this->request->getVar('message')
         ];
 
