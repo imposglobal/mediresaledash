@@ -278,7 +278,7 @@ public function getpropertybyFilter()
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
-    $perPage = (int)($this->request->getVar('per_page') ?? 20);
+    $perPage = (int)($this->request->getVar('per_page') ?? 3);
     $offset = ($page - 1) * $perPage;
 
     // Get the current year
@@ -491,16 +491,7 @@ public function getpropertybyFilter()
 // }
 
 
-//Api function to get property_type and adress only
-public function getProperty_types_and_Address_API()
-{
-    $PropertyModel = new PropertyModel();
-    $property = $PropertyModel->select('property_image,property_type, address,price,name')
-                              ->orderBy('pid', 'DESC')
-                              ->findAll();
-    
-    return $this->response->setJSON($property);
-}
+
 
 // Home Page API
 public function getPropertyByFiltersHome()
@@ -553,25 +544,12 @@ public function getPropertyByFiltersHome()
     ]);
 }
 
-//Api function to get property_type and adress, price and property images
-// public function getProperty_types_and_Adress_API()
-// {
-//     $PropertyModel = new PropertyModel();
-//     $property = $PropertyModel->select('property_image,property_type, address,price,name')
-//                               ->orderBy('pid', 'DESC')
-//                               ->findAll();
-    
-//     return $this->response->setJSON($property);
-// }
 
-public function getProperty_types_and_Adress_API()
+
+public function getProperty_types_name_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
-    $property = $PropertyModel->select('property_image,property_type, address,price')
-                              ->orderBy('pid', 'DESC')
-                              ->findAll();
     
-    return $this->response->setJSON($property);
     $properties = $PropertyModel->select('property_image, property_type, address, price,name')
                                 ->orderBy('pid', 'DESC')
                                 ->findAll();
@@ -583,7 +561,6 @@ public function getProperty_types_and_Adress_API()
 
     return $this->response->setJSON($properties);
 }
-
 
 
 
