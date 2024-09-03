@@ -550,7 +550,7 @@ public function getProperty_types_name_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
     
-    $properties = $PropertyModel->select('property_image, property_type, address, price,name')
+    $properties = $PropertyModel->select('pid,property_image, property_type, address, price,name')
                                 ->orderBy('pid', 'DESC')
                                 ->findAll();
 
