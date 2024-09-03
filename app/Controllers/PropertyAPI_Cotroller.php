@@ -448,58 +448,58 @@ public function getpropertybyFilter()
 
 //**************************code for multiple filter in Home Page*********************************
 
-// public function getPropertyByFiltersHome()
-// {
-//     $propertyModel = new PropertyModel();
+public function getPropertyByFiltersHome()
+{
+    $propertyModel = new PropertyModel();
 
-//     $propertyType = $this->request->getVar('property_type');
-//     $cityOrZipcode = $this->request->getVar('cityZipcode');
-//     $transactionType = $this->request->getVar('transaction_type');
+    $propertyType = $this->request->getVar('property_type');
+    $cityOrZipcode = $this->request->getVar('cityZipcode');
+    $transactionType = $this->request->getVar('transaction_type');
 
-//     $builder = $propertyModel->builder();
+    $builder = $propertyModel->builder();
 
-//     if (!empty($cityOrZipcode)) {
-//         if (is_numeric($cityOrZipcode)) {
-//             $builder->where('zipcode', $cityOrZipcode);
-//         } else {
-//             $builder->where('city', $cityOrZipcode);
-//         }
-//     }
+    if (!empty($cityOrZipcode)) {
+        if (is_numeric($cityOrZipcode)) {
+            $builder->where('zipcode', $cityOrZipcode);
+        } else {
+            $builder->where('city', $cityOrZipcode);
+        }
+    }
 
-//     if (!empty($propertyType)) {
-//         $builder->where('property_type', $propertyType);
-//     }
+    if (!empty($propertyType)) {
+        $builder->where('property_type', $propertyType);
+    }
 
-//     if (!empty($transactionType)) {
-//         $builder->where('transaction_type', $transactionType);
-//     }
+    if (!empty($transactionType)) {
+        $builder->where('transaction_type', $transactionType);
+    }
 
-//     $query = $builder->get();
-//     $properties = $query->getResultArray();
+    $query = $builder->get();
+    $properties = $query->getResultArray();
 
-//     if (empty($properties))
-//     {
-//         return $this->response->setJSON([
-//             'message' => 'No properties found for the provided filters.'
-//         ])->setStatusCode(404);
-//     }
+    if (empty($properties))
+    {
+        return $this->response->setJSON([
+            'message' => 'No properties found for the provided filters.'
+        ])->setStatusCode(404);
+    }
 
-//     return $this->response->setJSON([
-//         'status' => 'success',
-//         'data' => $properties
-//     ]);
-// }
+    return $this->response->setJSON([
+        'status' => 'success',
+        'data' => $properties
+    ]);
+}
 
-// //Api function to get property_type and adress only
-// public function getProperty_types_and_Address_API()
-// {
-//     $PropertyModel = new PropertyModel();
-//     $property = $PropertyModel->select('property_image,property_type, address,price,')
-//                               ->orderBy('pid', 'DESC')
-//                               ->findAll();
+//Api function to get property_type and adress only
+public function getProperty_types_and_Address_API()
+{
+    $PropertyModel = new PropertyModel();
+    $property = $PropertyModel->select('property_image,property_type, address,price,')
+                              ->orderBy('pid', 'DESC')
+                              ->findAll();
     
-//     return $this->response->setJSON($property);
-// }
+    return $this->response->setJSON($property);
+}
 
 // Home Page API
 public function getPropertyByFiltersHome()
