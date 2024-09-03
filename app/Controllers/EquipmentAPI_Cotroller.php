@@ -445,7 +445,7 @@ public function getEquipmentsByFilter()
 public function getEquipment_types_and_Condition_Price_API()
 {
     $equipmentModel = new EquipmentModel();
-    $equipments = $equipmentModel->select('equipment_type, equipment_condition, price, equipment_image')
+    $equipments = $equipmentModel->select('eid,equipment_type, equipment_condition, price, equipment_image')
                                  ->orderBy('eid', 'DESC')
                                  ->findAll();
     
