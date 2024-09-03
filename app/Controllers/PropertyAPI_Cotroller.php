@@ -278,7 +278,7 @@ public function getpropertybyFilter()
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
-    $perPage = (int)($this->request->getVar('per_page') ?? 3);
+    $perPage = (int)($this->request->getVar('per_page') ?? 10);
     $offset = ($page - 1) * $perPage;
 
     // Get the current year
