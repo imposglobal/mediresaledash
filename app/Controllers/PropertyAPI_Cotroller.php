@@ -566,13 +566,11 @@ public function getPropertyByFiltersHome()
 public function getProperty_types_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
-<<<<<<< HEAD
     $property = $PropertyModel->select('property_image,property_type, address,price')
                               ->orderBy('pid', 'DESC')
                               ->findAll();
     
     return $this->response->setJSON($property);
-=======
     $properties = $PropertyModel->select('property_image, property_type, address, price,name')
                                 ->orderBy('pid', 'DESC')
                                 ->findAll();
@@ -583,7 +581,6 @@ public function getProperty_types_and_Adress_API()
     }
 
     return $this->response->setJSON($properties);
->>>>>>> origin/krushna
 }
 
 
