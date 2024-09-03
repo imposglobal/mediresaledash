@@ -495,7 +495,7 @@ public function getpropertybyFilter()
 public function getProperty_types_and_Address_API()
 {
     $PropertyModel = new PropertyModel();
-    $property = $PropertyModel->select('property_image,property_type, address,price,')
+    $property = $PropertyModel->select('property_image,property_type, address,price,name')
                               ->orderBy('pid', 'DESC')
                               ->findAll();
     
