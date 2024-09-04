@@ -265,7 +265,7 @@ public function getEquipmentsByFilter()
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
-    $perPage = (int)($this->request->getVar('per_page') ?? 20);
+    $perPage = (int)($this->request->getVar('per_page') ?? 10);
     $offset = ($page - 1) * $perPage;
 
     // Get the current year
