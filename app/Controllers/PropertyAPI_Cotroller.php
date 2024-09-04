@@ -380,40 +380,45 @@ public function getpropertybyFilter()
         $builder->groupEnd(); // End the group for OR conditions
     }
 
+
     // Handling transaction type filtering
-    if (!empty($transaction_types)) {
-        $builder->groupStart(); // Start a group for OR conditions
+if (!empty($transaction_types)) {
+    $builder->groupStart(); // Start a group for OR conditions
 
-        if (in_array('Buy', $transaction_types)) {
-            if (!empty($startprice) && !empty($endprice)) {
-                // Filter by price if both start and end prices are provided
-                $builder->orGroupStart()
-                        ->where('transaction_type', 'Buy')
-                        ->where('price >=', $startprice)
-                        ->where('price <=', $endprice)
-                        ->groupEnd();
-            } else {
-                // Filter by transaction type only if price fields are not provided
-                $builder->orWhere('transaction_type', 'Buy');
-            }
+    if (in_array('Buy', $transaction_types)) {
+        if (!empty($startprice) && !empty($endprice)) {
+            // Filter by price if both start and end prices are provided
+            $builder->orGroupStart()
+                    ->where('transaction_type', 'Buy')
+                    ->where('price >=', $startprice)
+                    ->where('price <=', $endprice)
+                    ->groupEnd();
+        } else {
+            // Ensure that we add at least the transaction_type condition
+            $builder->orWhere('transaction_type', 'Buy');
         }
-
-        if (in_array('Rent', $transaction_types)) {
-            if (!empty($start_rent_price) && !empty($end_rent_price)) {
-                // Filter by rent price if both start and end rent prices are provided
-                $builder->orGroupStart()
-                        ->where('transaction_type', 'Rent')
-                        ->where('price >=', $start_rent_price)
-                        ->where('price <=', $end_rent_price)
-                        ->groupEnd();
-            } else {
-                // Filter by transaction type only if price fields are not provided
-                $builder->orWhere('transaction_type', 'Rent');
-            }
-        }
-
-        $builder->groupEnd(); // End the group for OR conditions
     }
+
+    if (in_array('Rent', $transaction_types)) {
+        if (!empty($start_rent_price) && !empty($end_rent_price)) {
+            // Filter by rent price if both start and end rent prices are provided
+            $builder->orGroupStart()
+                    ->where('transaction_type', 'Rent')
+                    ->where('price >=', $start_rent_price)
+                    ->where('price <=', $end_rent_price)
+                    ->groupEnd();
+        } else {
+            // Ensure that we add at least the transaction_type condition
+            $builder->orWhere('transaction_type', 'Rent');
+        }
+    }
+
+    $builder->groupEnd(); // End the group for OR conditions
+}
+
+   
+
+
 
     // Clone the builder to get the total count of filtered items
     $countBuilder = clone $builder;
