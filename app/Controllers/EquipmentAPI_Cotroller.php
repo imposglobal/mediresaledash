@@ -203,13 +203,9 @@ public function getEquipmentByFiltersHome()
 {
     $equipmentModel = new EquipmentModel();
 
-    // $equipmentType = $this->request->getVar('Diagnostic Equipment');
-    // $cityOrZipcode = $this->request->getVar('Adilabad');
-    // $transactionType = $this->request->getVar('buy');
-
-    $equipmentType = 'Diagnostic Equipment'; 
-    $cityOrZipcode = 'Adilabad'; 
-    $transactionType = 'buy'; // or 'rent'
+    $equipmentType = $this->request->getVar('equipment_type');
+    $cityOrZipcode = $this->request->getVar('cityzipcode');
+    $transactionType = $this->request->getVar('transaction_type');
 
     $builder = $equipmentModel->builder();
 
