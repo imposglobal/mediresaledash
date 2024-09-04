@@ -278,7 +278,7 @@ public function getpropertybyFilter()
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
-    $perPage = (int)($this->request->getVar('per_page') ?? 3);
+    $perPage = (int)($this->request->getVar('per_page') ?? 10);
     $offset = ($page - 1) * $perPage;
 
     // Get the current year
@@ -550,7 +550,7 @@ public function getProperty_types_name_and_Adress_API()
 {
     $PropertyModel = new PropertyModel();
     
-    $properties = $PropertyModel->select('property_image, property_type, address, price,name')
+    $properties = $PropertyModel->select('pid,property_image, property_type, address, price,name')
                                 ->orderBy('pid', 'DESC')
                                 ->findAll();
 
