@@ -84,7 +84,7 @@ $routes->get('/equipments/getEquipments_types_Condition_Price_API/view', 'Equipm
 
 // combine API for equipment listing page-  multiple filter
 
-$routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipmentsByFilter');
+$routes->get('getEquipmentsByFilter/view', 'EquipmentAPI_Cotroller::getEquipmentsByFilter'); // http://localhost/mediresaledash/getEquipmentsByFilter/view
 
 // http://localhost/mediresaledash/equipments/getfilter/view
 
