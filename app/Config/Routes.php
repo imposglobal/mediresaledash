@@ -146,6 +146,11 @@ $routes->get('/leads', 'LeadsAPI_Controller::view_all_leads');
 $routes->get('/leads/delete_lead/(:num)', 'LeadsAPI_Controller::delete_leads/$1');
 $routes->get('/leads/view_leads/(:num)', 'LeadsAPI_Controller::view_all_leads_by_id/$1');
 
+//Website leads
+$routes->get('/WebsiteLeads', 'GetInTouch_API_Controller::view_all_website_leads');
+$routes->get('/websiteleads/delete_lead/(:num)', 'GetInTouch_API_Controller::delete_website_leads/$1');
+
+
 // get in touch form API route
 $routes->post('/get_in_touch/add', 'GetInTouch_API_Controller::GetInTouchFormAPI');  //http://localhost/mediresaledash/get_in_touch/add
 

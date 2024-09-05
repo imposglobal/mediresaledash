@@ -166,6 +166,13 @@
                  
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('WebsiteLeads')?>">
+                  <i class="fas fa-user"></i>
+                  <p>Website Leads</p>
+                 
+                </a>
+              </li>
               <hr class="text-dark mt-4 mb-4"> 
 
                <!-- settings -->

@@ -2,7 +2,7 @@
           <div class="container-fluid d-flex justify-content-center">          
             <div class="copyright text-center">
               2024, made with <i class="fa fa-heart heart text-danger"></i> by
-              <a href="">Mediresale</a>
+              <a href="https://doodlodesigns.com/" target="blank">Doodlo Designs Studio</a>
             </div>          
           </div>
         </footer>
