@@ -253,28 +253,24 @@ public function getPropertiesByCityOrZipcode()
         return $this->response->setJSON($properties);
     }
 
-    //**************************code for multiple filter in Property listing page*********************************
-
-
-// code with pagination
+//**************************code for multiple filter in Property listing page*********************************
 
 public function getpropertybyFilter()
 {
     $propertyModel = new PropertyModel();
 
-
-     // Get filter parameters from the request
-
-     $CityOrZipcode = $this->request->getVar('CityOrZipcode');
-     $property_types = $this->request->getVar('property_type');
-     $transaction_types = $this->request->getVar('transaction_type');
-     $startprice = $this->request->getVar('start_price');
-     $endprice = $this->request->getVar('end_price');
-     $start_rent_price = $this->request->getVar('start_rent_price');
-     $end_rent_price = $this->request->getVar('end_rent_price');
-     $ageofproperty = $this->request->getVar('ageofproperty');
-     $amenities = $this->request->getVar('amenities');
-     $possession = $this->request->getVar('possession'); 
+    // Get filter parameters from the request
+    $CityOrZipcode = $this->request->getVar('CityOrZipcode');
+    $property_types = $this->request->getVar('property_type');
+    $transaction_types = $this->request->getVar('transaction_type');
+    $startprice = $this->request->getVar('start_price');
+    $endprice = $this->request->getVar('end_price');
+    $start_rent_price = $this->request->getVar('start_rent_price');
+    $end_rent_price = $this->request->getVar('end_rent_price');
+    $ageofproperty = $this->request->getVar('ageofproperty');
+    $amenities = $this->request->getVar('amenities');
+    $possession = $this->request->getVar('possession'); 
+    $price = $this->request->getVar('price'); 
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
@@ -287,7 +283,7 @@ public function getpropertybyFilter()
     // Build the query for filtering
     $builder = $propertyModel->builder();
 
-    // location
+    // Location
     if (!empty($CityOrZipcode)) {
         if (is_numeric($CityOrZipcode)) {
             $builder->where('zipcode', $CityOrZipcode);
@@ -296,7 +292,7 @@ public function getpropertybyFilter()
         }
     }
 
-    // property type
+    // Property type
     if (!empty($property_types)) {
         if (is_array($property_types)) {
             $builder->whereIn('property_type', $property_types);
@@ -305,14 +301,13 @@ public function getpropertybyFilter()
         }
     }
 
-    // possesion
+    // Possession
     if (!empty($possession)) {
         $builder->where('possession', $possession);
     }
 
-    // amenities
+    // Amenities
     if (!empty($amenities)) {
-        // Ensure $amenities is an array
         if (is_array($amenities)) {
             foreach ($amenities as $amenity) {
                 switch ($amenity) {
@@ -334,16 +329,12 @@ public function getpropertybyFilter()
                 }
             }
         } else {
-            // If $amenities is not an array, handle it (e.g., error or default behavior)
-            $builder->where('1=0'); // This will result in an empty set
+            $builder->where('1=0'); // No records will be matched
         }
     }
 
-
-
-    // Handling age of equipment filtering
-    if (!empty($ageofproperty) && is_array($ageofproperty)) 
-    {
+    // Age of property
+    if (!empty($ageofproperty) && is_array($ageofproperty)) {
         $builder->groupStart(); // Start a group for OR conditions
 
         foreach ($ageofproperty as $age) {
@@ -380,45 +371,42 @@ public function getpropertybyFilter()
         $builder->groupEnd(); // End the group for OR conditions
     }
 
+    // Transaction type filtering
+    if (!empty($transaction_types)) {
+        $builder->groupStart(); // Start a group for OR conditions
 
-    // Handling transaction type filtering
-if (!empty($transaction_types)) {
-    $builder->groupStart(); // Start a group for OR conditions
-
-    if (in_array('Buy', $transaction_types)) {
-        if (!empty($startprice) && !empty($endprice)) {
-            // Filter by price if both start and end prices are provided
-            $builder->orGroupStart()
-                    ->where('transaction_type', 'Buy')
-                    ->where('price >=', $startprice)
-                    ->where('price <=', $endprice)
-                    ->groupEnd();
-        } else {
-            // Ensure that we add at least the transaction_type condition
-            $builder->orWhere('transaction_type', 'Buy');
+        if (in_array('Buy', $transaction_types)) {
+            if (!empty($startprice) && !empty($endprice)) {
+                $builder->orGroupStart()
+                        ->where('transaction_type', 'Buy')
+                        ->where('price >=', $startprice)
+                        ->where('price <=', $endprice)
+                        ->groupEnd();
+            } else {
+                $builder->orWhere('transaction_type', 'Buy');
+            }
         }
+
+        if (in_array('Rent', $transaction_types)) {
+            if (!empty($start_rent_price) && !empty($end_rent_price)) {
+                $builder->orGroupStart()
+                        ->where('transaction_type', 'Rent')
+                        ->where('price >=', $start_rent_price)
+                        ->where('price <=', $end_rent_price)
+                        ->groupEnd();
+            } else {
+                $builder->orWhere('transaction_type', 'Rent');
+            }
+        }
+
+        $builder->groupEnd(); // End the group for OR conditions
     }
 
-    if (in_array('Rent', $transaction_types)) {
-        if (!empty($start_rent_price) && !empty($end_rent_price)) {
-            // Filter by rent price if both start and end rent prices are provided
-            $builder->orGroupStart()
-                    ->where('transaction_type', 'Rent')
-                    ->where('price >=', $start_rent_price)
-                    ->where('price <=', $end_rent_price)
-                    ->groupEnd();
-        } else {
-            // Ensure that we add at least the transaction_type condition
-            $builder->orWhere('transaction_type', 'Rent');
-        }
+    // Low to high & High to Low Price
+    if (!empty($price) && $price !== 'All') {
+        $sortOrder = ($price === 'low') ? 'ASC' : 'DESC';
+        $builder->orderBy('price', $sortOrder);
     }
-
-    $builder->groupEnd(); // End the group for OR conditions
-}
-
-   
-
-
 
     // Clone the builder to get the total count of filtered items
     $countBuilder = clone $builder;
@@ -437,6 +425,7 @@ if (!empty($transaction_types)) {
     $response = [
         'status' => 'success',
         'data' => $filteredproperty,
+        'total_items' => $totalItems,
         'pagination' => [
             'total_items' => $totalItems,
             'total_pages' => $totalPages,
@@ -450,55 +439,7 @@ if (!empty($transaction_types)) {
 }
 
 
-
-//**************************code for multiple filter in Home Page*********************************
-
-// public function getPropertyByFiltersHome()
-// {
-//     $propertyModel = new PropertyModel();
-
-//     $propertyType = $this->request->getVar('property_type');
-//     $cityOrZipcode = $this->request->getVar('cityZipcode');
-//     $transactionType = $this->request->getVar('transaction_type');
-
-//     $builder = $propertyModel->builder();
-
-//     if (!empty($cityOrZipcode)) {
-//         if (is_numeric($cityOrZipcode)) {
-//             $builder->where('zipcode', $cityOrZipcode);
-//         } else {
-//             $builder->where('city', $cityOrZipcode);
-//         }
-//     }
-
-//     if (!empty($propertyType)) {
-//         $builder->where('property_type', $propertyType);
-//     }
-
-//     if (!empty($transactionType)) {
-//         $builder->where('transaction_type', $transactionType);
-//     }
-
-//     $query = $builder->get();
-//     $properties = $query->getResultArray();
-
-//     if (empty($properties))
-//     {
-//         return $this->response->setJSON([
-//             'message' => 'No properties found for the provided filters.'
-//         ])->setStatusCode(404);
-//     }
-
-//     return $this->response->setJSON([
-//         'status' => 'success',
-//         'data' => $properties
-//     ]);
-// }
-
-
-
-
-// Home Page API
+//*************************Home Page API Hero Section Form API*********************************
 public function getPropertyByFiltersHome()
 {
     $propertyModel = new PropertyModel();
@@ -549,7 +490,7 @@ public function getPropertyByFiltersHome()
     ]);
 }
 
-
+//*************************Slider Home Page API***************************
 
 public function getProperty_types_name_and_Adress_API()
 {
@@ -566,6 +507,7 @@ public function getProperty_types_name_and_Adress_API()
 
     return $this->response->setJSON($properties);
 }
+
 
 
 

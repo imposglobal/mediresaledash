@@ -157,3 +157,5 @@ $routes->post('/get_in_touch/add', 'GetInTouch_API_Controller::GetInTouchFormAPI
 
 // news letter API route
 $routes->post('/news_letter/add', 'NewsLetter_API_Controller::NewsLetterAPI');  //http://localhost/mediresaledash/news_letter/add
+
+

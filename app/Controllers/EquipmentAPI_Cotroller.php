@@ -262,6 +262,7 @@ public function getEquipmentsByFilter()
     $warranty = $this->request->getVar('warranty');
     $availability = $this->request->getVar('availability');
     $ageofequipment = $this->request->getVar('ageofequipment');
+    $price = $this->request->getVar('price');
 
     // Pagination parameters
     $page = (int)($this->request->getVar('page') ?? 1);
@@ -395,6 +396,13 @@ public function getEquipmentsByFilter()
         $builder->groupEnd(); // End the group for OR conditions
     }
 
+
+     // Low to high & High to Low Price
+     if (!empty($price) && $price !== 'All') {
+        $sortOrder = ($price === 'low') ? 'ASC' : 'DESC';
+        $builder->orderBy('price', $sortOrder);
+    }
+
     // Clone the builder to get the total count of filtered items
     $countBuilder = clone $builder;
     $totalItems = $countBuilder->countAllResults(false);
@@ -412,6 +420,7 @@ public function getEquipmentsByFilter()
     $response = [
         'status' => 'success',
         'data' => $filteredEquipments,
+        'total_items' => $totalItems,
         'pagination' => [
             'total_items' => $totalItems,
             'total_pages' => $totalPages,
@@ -424,19 +433,7 @@ public function getEquipmentsByFilter()
     return $this->response->setJSON($response);
 }
 
-
-
-/***************Api function to get property_type and address only **********/
-
-// public function getEquipment_types_and_Condition_Price_API()
-// {
-//     $equipmentModel = new EquipmentModel();
-//     $equipment = $equipmentModel->select('equipment_type, equipment_condition,price,equipment_image,')
-//                               ->orderBy('eid', 'DESC')
-//                               ->findAll();
-    
-//     return $this->response->setJSON($equipment);
-// }
+// ************************Slider Home Page API*************************************
  
 public function getEquipment_types_and_Condition_Price_API()
 {
@@ -458,6 +455,8 @@ public function getEquipment_types_and_Condition_Price_API()
 
     return $this->response->setJSON($equipments);
 }
+
+
 
 
 }
