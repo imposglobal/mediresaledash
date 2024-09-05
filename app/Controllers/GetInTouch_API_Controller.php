@@ -45,7 +45,7 @@ class GetInTouch_API_Controller extends BaseController
             'pager' => $getInTouchModel->pager,
         ];
     
-        return view('leads/wesite_leads', $data);
+        return view('leads/website_leads', $data);
     }
 
 
@@ -66,6 +66,36 @@ class GetInTouch_API_Controller extends BaseController
         }
     }
 
+
+    public function view_all_website_leads_by_id($gid)
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/');
+        }
+    
+        $getInTouchModel = new GetInTouchModel();
+        
+        // Fetch all data from the get_in_touch table for a specific ID
+        $lead = $getInTouchModel
+            ->select('*') // Select all columns from the table
+            ->where(['get_in_touch.gid' => $gid]) // Match the ID column with the provided $id
+            ->first(); // Fetch the specific record by ID
+    
+        // Check if lead exists
+        if (empty($lead)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => "Lead with ID $gid not found."
+            ]);
+        }
+    
+        // Return the lead data as JSON
+        return $this->response->setJSON([
+            'status' => 'success',
+            'data' => $lead
+        ]);
+    }
+    
 
 }
  ?>

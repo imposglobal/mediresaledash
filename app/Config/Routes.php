@@ -149,6 +149,7 @@ $routes->get('/leads/view_leads/(:num)', 'LeadsAPI_Controller::view_all_leads_by
 //Website leads
 $routes->get('/WebsiteLeads', 'GetInTouch_API_Controller::view_all_website_leads');
 $routes->get('/websiteleads/delete_lead/(:num)', 'GetInTouch_API_Controller::delete_website_leads/$1');
+$routes->get('/websiteleads/view_leads/(:num)', 'GetInTouch_API_Controller::view_all_website_leads_by_id/$1');
 
 
 // get in touch form API route
