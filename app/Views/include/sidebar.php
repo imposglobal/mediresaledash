@@ -173,7 +173,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url('WebsiteLeads')?>">
+                <a href="<?php echo base_url('news_letter_email')?>">
                   <i class="fa fa-newspaper"></i>
                   <p>Newsletter Email</p>
                 </a>
