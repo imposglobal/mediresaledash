@@ -152,11 +152,15 @@ $routes->get('/websiteleads/delete_lead/(:num)', 'GetInTouch_API_Controller::del
 $routes->get('/websiteleads/view_leads/(:num)', 'GetInTouch_API_Controller::view_all_website_leads_by_id/$1');
 
 
-// get in touch form API route
+// get in touch form submit POST API route
 $routes->post('/get_in_touch/add', 'GetInTouch_API_Controller::GetInTouchFormAPI');  //http://localhost/mediresaledash/get_in_touch/add
+
 
 
 // news letter API route
 $routes->post('/news_letter/add', 'NewsLetter_API_Controller::NewsLetterAPI');  //http://localhost/mediresaledash/news_letter/add
 
+   // TO FETCH newsletter data
+$routes->get('/news_letter_email', 'NewsLetter_API_Controller::view_all_newsletter_leads'); 
+$routes->get('/newsletter/delete_lead/(:num)', 'NewsLetter_API_Controller::delete_newsletter_lead/$1'); 
 
